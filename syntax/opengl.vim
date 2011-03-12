@@ -1108,6 +1108,7 @@ syntax keyword glFunction glBlendEquationSeparate
 syntax keyword glFunction glBlendFuncSeparate
 syntax keyword glFunction glBufferData
 syntax keyword glFunction glBufferSubData
+syntax keyword glFunction glCompileShader
 syntax keyword glFunction glCreateProgram
 syntax keyword glFunction glCreateShader
 syntax keyword glFunction glDeleteBuffers
