@@ -8,8 +8,8 @@ Using the Pathogen plugin:
 From your ~/.vim directory:
     git submodule add git@github.com:beyondmarc/opengl.vim.git bundle/syntax_opengl
 
-Add a symlink to your ~/.vim/after/syntax/cpp
-    ln -s bundle/syntax_opengl/syntax/opengl.vim after/syntax/cpp
+Add a hard link to your ~/.vim/after/syntax/cpp
+    ln bundle/syntax_opengl/syntax/opengl.vim after/syntax/cpp
 
 If not using the Pathogen plugin:
 Add the opengl.vim file into your vim syntax folder (in most Linux distros:
