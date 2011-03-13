@@ -1341,11 +1341,11 @@ syntax keyword glConstant GL_RG8
 syntax keyword glConstant GL_RG16
 syntax keyword glConstant GL_R16F
 syntax keyword glConstant GL_RG16F
-syntax keyword glConstant GL_RGA16F
+syntax keyword glConstant GL_RGB16F
 syntax keyword glConstant GL_RGBA16F
 syntax keyword glConstant GL_R32F
 syntax keyword glConstant GL_RG32F
-syntax keyword glConstant GL_RGA32F
+syntax keyword glConstant GL_RGB32F
 syntax keyword glConstant GL_RGBA32F
 syntax keyword glConstant GL_R11F_G11F_B10F
 syntax keyword glConstant GL_RGB9_E5
