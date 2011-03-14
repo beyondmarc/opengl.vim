@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:     C OpenGL
 " Author:       Marc Costa <beyond.marc@gmail.com>
-" Version:      3.1
+" Version:      3.2
 " Last Change:  March 14, 2011
 " Notes:        Adapted from opengl.vim - Andreeshchev Eugene <admix@pisem.net>
 
@@ -10,6 +10,8 @@
 "   Source it from somewhere
 "
 " Changelog: 
+"   2011-03-14
+"       * Updated to OpenGL 3.2 specification.
 "
 "   2011-03-14
 "       * Updated to OpenGL 3.1 specification.
@@ -1701,6 +1703,104 @@ syntax keyword glFunction glGetVertexAttribIuiv
 syntax keyword glFunction glMultiDrawArrays
 syntax keyword glFunction glPrimitiveRestartIndex
 syntax keyword glFunction glTexBuffer
+"}}}
+"}}}
+
+" OpenGL 3.2 {{{
+" Constants
+"{{{
+" Color formats
+syntax keyword glConstant GL_R8_SNORM
+syntax keyword glConstant GL_R16_SNORM
+syntax keyword glConstant GL_RG8_SNORM
+syntax keyword glConstant GL_RG16_SNORM
+syntax keyword glConstant GL_RGB8_SNORM
+syntax keyword glConstant GL_RGB16_SNORM
+syntax keyword glConstant GL_RGBA8_SNORM
+syntax keyword glConstant GL_RGBA16_SNORM
+
+" Multisample
+syntax keyword glConstant GL_SAMPLE_POSITION
+
+" Primitives
+syntax keyword glConstant GL_LINES_ADJACENCY
+syntax keyword glConstant GL_LINE_STRIP_ADJACENCY
+syntax keyword glConstant GL_TRIANGLES_ADJACENCY
+syntax keyword glConstant GL_TRIANGLE_STRIP_ADJACENCY
+
+" Shaders
+syntax keyword glConstant GL_SAMPLER_2D_MULTISAMPLE
+syntax keyword glConstant GL_SAMPLER_2D_MULTISAMPLE_ARRAY
+syntax keyword glConstant GL_SAMPLER_2D_RECT
+syntax keyword glConstant GL_SAMPLER_2D_RECT_SHADOW
+syntax keyword glConstant GL_SAMPLER_BUFFER
+syntax keyword glConstant GL_INT_SAMPLER_2D_MULTISAMPLE
+syntax keyword glConstant GL_INT_SAMPLER_2D_MULTISAMPLE_ARRAY
+syntax keyword glConstant GL_INT_SAMPLER_2D_RECT
+syntax keyword glConstant GL_INT_SAMPLER_BUFFER
+syntax keyword glConstant GL_UNSIGNED_INT_SAMPLER_2D_MULTISAMPLE
+syntax keyword glConstant GL_UNSIGNED_INT_SAMPLER_2D_MULTISAMPLE_ARRAY
+syntax keyword glConstant GL_UNSIGNED_INT_SAMPLER_2D_RECT
+syntax keyword glConstant GL_UNSIGNED_INT_SAMPLER_BUFFER
+
+syntax keyword glConstant GL_MAX_GEOMETRY_TEXTURE_IMAGE_UNITS
+syntax keyword glConstant GL_MAX_GEOMETRY_UNIFORM_COMPONENTS
+syntax keyword glConstant GL_MAX_GEOMETRY_OUTPUT_VERTICES
+syntax keyword glConstant GL_MAX_GEOMETRY_TOTAL_OUTPUT_COMPONENTS
+syntax keyword glConstant GL_MAX_GEOMETRY_INPUT_COMPONENTS
+syntax keyword glConstant GL_MAX_GEOMETRY_OUTPUT_COMPONENTS
+syntax keyword glConstant GL_MAX_GEOMETRY_SHADER_INVOCATIONS
+syntax keyword glConstant GL_MAX_GEOMETRY_UNIFORM_BLOCKS
+
+syntax keyword glConstant GL_GEOMETRY_SHADER
+syntax keyword glConstant GL_GEOMETRY_VERTICES_OUT
+syntax keyword glConstant GL_GEOMETRY_INPUT_TYPE
+syntax keyword glConstant GL_GEOMETRY_OUTPUT_TYPE
+syntax keyword glConstant GL_GEOMETRY_SHADER_INVOCATIONS
+syntax keyword glConstant GL_GEOMETRY_SHADER_BIT
+
+" State queries
+syntax keyword glConstant GL_CONTEXT_CORE_PROFILE_BIT
+syntax keyword glConstant GL_CONTEXT_COMPATIBILITY_PROFILE_BIT
+
+" Sync
+syntax keyword glConstant GL_CONDITION_SATISFIED
+syntax keyword glConstant GL_MAX_SERVER_WAIT_TIMEOUT
+syntax keyword glConstant GL_OBJECT_TYPE
+syntax keyword glConstant GL_SIGNALED
+syntax keyword glConstant GL_UNSIGNALED
+syntax keyword glConstant GL_SYNC_CONDITION
+syntax keyword glConstant GL_SYNC_FENCE
+syntax keyword glConstant GL_SYNC_FLAGS
+syntax keyword glConstant GL_SYNC_FLUSH_COMMANDS_BIT
+syntax keyword glConstant GL_SYNC_GPU_COMMANDS_COMPLETE
+syntax keyword glConstant GL_SYNC_STATUS
+syntax keyword glConstant GL_TIMEOUT_EXPIRED
+syntax keyword glConstant GL_TIMEOUT_IGNORED
+syntax keyword glConstant GL_WAIT_FAILED
+
+" Texturing
+syntax keyword glConstant GL_TEXTURE_2D_MULTISAMPLE
+syntax keyword glConstant GL_TEXTURE_2D_MULTISAMPLE_ARRAY
+syntax keyword glConstant GL_PROXY_TEXTURE_2D_MULTISAMPLE
+syntax keyword glConstant GL_PROXY_TEXTURE_2D_MULTISAMPLE_ARRAY
+syntax keyword glConstant GL_TEXTURE_FIXED_SAMPLE_LOCATIONS
+"}}}
+
+" Functions
+"{{{
+syntax keyword glFunction glClientWaitSync
+syntax keyword glFunction glDeleteSync
+syntax keyword glFunction glFenceSync
+syntax keyword glFunction glGetBufferParameteri64v
+syntax keyword glFunction glGetInteger64i_v
+syntax keyword glFunction glGetInteger64v
+syntax keyword glFunction glGetMultisamplefv
+syntax keyword glFunction glGetSynciv
+syntax keyword glFunction glIsSync
+syntax keyword glFunction glTexImage2DMultisample
+syntax keyword glFunction glTexImage3DMultisample
+syntax keyword glFunction glWaitSync
 "}}}
 "}}}
 
