@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:     C OpenGL
 " Author:       Marc Costa <beyond.marc@gmail.com>
-" Version:      3.2
+" Version:      3.3
 " Last Change:  March 14, 2011
 " Notes:        Adapted from opengl.vim - Andreeshchev Eugene <admix@pisem.net>
 
@@ -10,6 +10,9 @@
 "   Source it from somewhere
 "
 " Changelog: 
+"   2011-03-14
+"       * Updated to OpenGL 3.3 specification.
+"
 "   2011-03-14
 "       * Updated to OpenGL 3.2 specification.
 "
@@ -1801,6 +1804,72 @@ syntax keyword glFunction glIsSync
 syntax keyword glFunction glTexImage2DMultisample
 syntax keyword glFunction glTexImage3DMultisample
 syntax keyword glFunction glWaitSync
+"}}}
+"}}}
+
+" OpenGL 3.3 {{{
+" Constants
+"{{{
+" Blending
+syntax keyword glConstant GL_SRC1_COLOR
+syntax keyword glConstant GL_ONE_MINUS_SRC1_COLOR
+syntax keyword glConstant GL_ONE_MINUS_SRC1_ALPHA
+
+" Buffers
+syntax keyword glConstant GL_MAX_DUAL_SOURCE_DRAW_BUFFERS
+
+" Color formats
+syntax keyword glConstant GL_RGB10_A2UI
+
+" Queries
+syntax keyword glConstant GL_ANY_SAMPLES_PASSED
+syntax keyword glConstant GL_TIME_ELAPSED
+syntax keyword glConstant GL_TIMESTAMP
+
+" Samplers
+syntax keyword glConstant GL_SAMPLER_BINDING
+
+" Texturing
+syntax keyword glConstant GL_TEXTURE_SWIZZLE_R
+syntax keyword glConstant GL_TEXTURE_SWIZZLE_G
+syntax keyword glConstant GL_TEXTURE_SWIZZLE_B
+syntax keyword glConstant GL_TEXTURE_SWIZZLE_A
+syntax keyword glConstant GL_TEXTURE_SWIZZLE_RGBA
+
+" Vertex Attribs
+syntax keyword glConstant GL_VERTEX_ATTRIB_ARRAY_DIVISOR
+"}}}
+
+" Functions
+"{{{
+syntax keyword glFunction glBindSampler
+syntax keyword glFunction glBindFragDataLocationIndexed
+syntax keyword glFunction glDeleteSamplers
+syntax keyword glFunction glDrawElementsBaseVertex
+syntax keyword glFunction glDrawRangeElementsBaseVertex
+syntax keyword glFunction glDrawElementsInstancedBaseVertex
+syntax keyword glFunction glGenSamplers
+syntax keyword glFunction glGetFragDataIndex
+syntax keyword glFunction glIsSampler
+syntax keyword glFunction glMultiDrawElementsBaseVertex
+syntax keyword glFunction glQueryCounter
+syntax keyword glFunction glGetQueryObjecti64v
+syntax keyword glFunction glGetQueryObjectui64v
+syntax keyword glFunction glSamplerParameteri
+syntax keyword glFunction glSamplerParameterf
+syntax keyword glFunction glSamplerParameteriv
+syntax keyword glFunction glSamplerParameterfv
+syntax keyword glFunction glSamplerParameterIiv
+syntax keyword glFunction glSamplerParameterIuiv
+syntax keyword glFunction glVertexAttribDivisor
+syntax keyword glFunction glVertexAttribP1ui
+syntax keyword glFunction glVertexAttribP2ui
+syntax keyword glFunction glVertexAttribP3ui
+syntax keyword glFunction glVertexAttribP4ui
+syntax keyword glFunction glVertexAttribP1uiv
+syntax keyword glFunction glVertexAttribP2uiv
+syntax keyword glFunction glVertexAttribP3uiv
+syntax keyword glFunction glVertexAttribP4uiv
 "}}}
 "}}}
 
