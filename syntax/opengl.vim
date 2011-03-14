@@ -1,8 +1,8 @@
 " Vim syntax file
 " Language:     C OpenGL
 " Author:       Marc Costa <beyond.marc@gmail.com>
-" Version:      3.0
-" Last Change:  March 13, 2011
+" Version:      3.1
+" Last Change:  March 14, 2011
 " Notes:        Adapted from opengl.vim - Andreeshchev Eugene <admix@pisem.net>
 
 " Usage: 
@@ -10,6 +10,12 @@
 "   Source it from somewhere
 "
 " Changelog: 
+"
+"   2011-03-14
+"       * Updated to OpenGL 3.1 specification.
+"       * Some fixes for OpenGL 2.1 specification.
+"       * Some fixes for OpenGL 3.0 specification.
+"       * Some tidy up
 "
 "   2011-03-13
 "       * Updated to OpenGL 3.0 specification.
@@ -42,6 +48,7 @@
 "   2003-08-29 (v0.1)
 "       Initial release
 "
+" TODO: add support for ARB and EXT extensions from OpenGL 2.1 and on
 " TODO: add support for vendor specific extensions (NVidia and ATI at least)
 "
 
@@ -1145,9 +1152,6 @@ syntax keyword glFunction glGetUniformfv
 syntax keyword glFunction glGetUniformiv
 syntax keyword glFunction glGetUniformLocation
 syntax keyword glFunction glGetVertexAttribdv
-syntax keyword glFunction glGetVertexAttribfv
-syntax keyword glFunction glGetVertexAttribiv
-syntax keyword glFunction glGetVertexAttribPointerv
 syntax keyword glFunction glIsBuffer
 syntax keyword glFunction glIsProgram
 syntax keyword glFunction glIsQuery
@@ -1156,6 +1160,7 @@ syntax keyword glFunction glLinkProgram
 syntax keyword glFunction glMultiDrawElements
 syntax keyword glFunction glPointParameterf
 syntax keyword glFunction glPointParameterfv
+syntax keyword glFunction glShaderSource
 syntax keyword glFunction glSecondaryColor3b
 syntax keyword glFunction glSecondaryColor3d
 syntax keyword glFunction glSecondaryColor3f
@@ -1259,7 +1264,7 @@ syntax keyword glFunction glWindowPos3fv
 syntax keyword glFunction glWindowPos3dv
 "}}}
 "}}}
-"
+
 " OpenGL 3.0 {{{
 " Data types
 " {{{
@@ -1278,8 +1283,6 @@ syntax keyword glType GLtime
 
 " Constants
 "{{{
-" Blending
-
 " Buffers
 syntax keyword glConstant GL_MAP_FLUSH_EXPLICIT_BIT
 syntax keyword glConstant GL_MAP_INVALIDATE_RANGE_BIT
@@ -1382,10 +1385,12 @@ syntax keyword glConstant GL_COMPRESSED_RG_RGTC2
 syntax keyword glConstant GL_COMPRESSED_SIGNED_RG_RGTC2
 
 syntax keyword glConstant GL_DEPTH_COMPONENT32F
+syntax keyword glConstant GL_DEPTH24_STENCIL8
 syntax keyword glConstant GL_DEPTH32F_STENCIL8
 
 " Errors
 syntax keyword glConstant GL_INVALID_FRAMEBUFFER_OPERATION
+syntax keyword glConstant GL_FRAMEBUFFER_COMPLETE
 syntax keyword glConstant GL_FRAMEBUFFER_UNDEFINED
 syntax keyword glConstant GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT
 syntax keyword glConstant GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT
@@ -1428,8 +1433,6 @@ syntax keyword glConstant GL_RGB_INTEGER
 syntax keyword glConstant GL_RGBA_INTEGER
 syntax keyword glConstant GL_BGR_INTEGER
 syntax keyword glConstant GL_BGRA_INTEGER
-
-" Points
 
 " Queries
 syntax keyword glConstant GL_PRIMITIVES_GENERATED
@@ -1623,6 +1626,81 @@ syntax keyword glFunction glVertexAttribI4sv
 syntax keyword glFunction glVertexAttribI4ubv
 syntax keyword glFunction glVertexAttribI4usv
 syntax keyword glFunction glVertexAttribIPointer
+"}}}
+"}}}
+
+" OpenGL 3.1 {{{
+" Constants
+"{{{
+" Buffers
+syntax keyword glConstant GL_BUFFER_ACCESS_FLAGS
+syntax keyword glConstant GL_BUFFER_MAP_LENGTH
+syntax keyword glConstant GL_BUFFER_MAP_OFFSET
+syntax keyword glConstant GL_COPY_READ_BUFFER
+syntax keyword glConstant GL_COPY_WRITE_BUFFER
+
+" Primitive restart
+syntax keyword glConstant GL_PRIMITIVE_RESTART
+syntax keyword glConstant GL_PRIMITIVE_RESTART_INDEX
+
+" Textures
+syntax keyword glConstant GL_MAX_RECTANGLE_TEXTURE_SIZE
+syntax keyword glConstant GL_TEXTURE_RECTANGLE
+syntax keyword glConstant GL_PROXY_TEXTURE_RECTANGLE
+
+" Texturebuffer
+syntax keyword glConstant GL_MAX_TEXTURE_BUFFER_SIZE
+syntax keyword glConstant GL_TEXTURE_BUFFER
+syntax keyword glConstant GL_TEXTURE_BUFFER_DATA_STORE_BINDING
+
+" Uniform blocks
+syntax keyword glConstant GL_ACTIVE_UNIFORM_BLOCKS
+syntax keyword glConstant GL_UNIFORM_BLOCK_ACTIVE_UNIFORMS
+syntax keyword glConstant GL_UNIFORM_BLOCK_BINDING
+syntax keyword glConstant GL_UNIFORM_BLOCK_DATA_SIZE
+syntax keyword glConstant GL_UNIFORM_BLOCK_INDEX
+syntax keyword glConstant GL_UNIFORM_BLOCK_NAME_LENGTH
+syntax keyword glConstant GL_UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER
+syntax keyword glConstant GL_UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER
+syntax keyword glConstant GL_MAX_UNIFORM_BLOCK_SIZE
+syntax keyword glConstant GL_MAX_UNIFORM_BUFFER_BINDINGS
+syntax keyword glConstant GL_MAX_COMBINED_UNIFORM_BLOCKS
+syntax keyword glConstant GL_MAX_FRAGMENT_UNIFORM_BLOCKS
+syntax keyword glConstant GL_MAX_VERTEX_UNIFORM_BLOCKS
+syntax keyword glConstant GL_UNIFORM_ARRAY_STRIDE
+syntax keyword glConstant GL_UNIFORM_IS_ROW_MAJOR
+syntax keyword glConstant GL_UNIFORM_MATRIX_STRIDE
+syntax keyword glConstant GL_UNIFORM_NAME_LENGTH
+syntax keyword glConstant GL_UNIFORM_OFFSET
+syntax keyword glConstant GL_UNIFORM_SIZE
+syntax keyword glConstant GL_UNIFORM_TYPE
+
+" Uniformbuffer
+syntax keyword glConstant GL_UNIFORM_BUFFER
+syntax keyword glConstant GL_UNIFORM_BUFFER_BINDING
+syntax keyword glConstant GL_UNIFORM_BUFFER_OFFSET_ALIGNMENT
+syntax keyword glConstant GL_UNIFORM_BUFFER_SIZE
+syntax keyword glConstant GL_UNIFORM_BUFFER_START
+"}}}
+
+" Functions
+"{{{
+syntax keyword glFunction glBlitFramebuffer
+syntax keyword glFunction glCopyBufferSubData
+syntax keyword glFunction glDrawArraysInstanced
+syntax keyword glFunction glDrawElementsInstanced
+syntax keyword glFunction glGetActiveUniformBlockiv
+syntax keyword glFunction glGetActiveUniformBlockName
+syntax keyword glFunction glGetActiveUniformsiv
+syntax keyword glFunction glGetActiveUniformName
+syntax keyword glFunction glGetUniformBlockBinding
+syntax keyword glFunction glGetUniformBlockIndex
+syntax keyword glFunction glGetUniformIndices
+syntax keyword glFunction glGetVertexAttribIiv
+syntax keyword glFunction glGetVertexAttribIuiv
+syntax keyword glFunction glMultiDrawArrays
+syntax keyword glFunction glPrimitiveRestartIndex
+syntax keyword glFunction glTexBuffer
 "}}}
 "}}}
 
@@ -3318,6 +3396,7 @@ if !exists ("c_opengl_no_gles2")
   syntax keyword glConstant GL_STATIC_DRAW
   syntax keyword glConstant GL_DYNAMIC_DRAW
   syntax keyword glConstant GL_STREAM_DRAW
+  syntax keyword glConstant GL_READ_ONLY
   syntax keyword glConstant GL_WRITE_ONLY
   syntax keyword glConstant GL_BUFFER_SIZE
   syntax keyword glConstant GL_BUFFER_USAGE
