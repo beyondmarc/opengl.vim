@@ -1,8 +1,8 @@
 " Vim syntax file
 " Language:     C OpenGL
 " Author:       Marc Costa <beyond.marc@gmail.com>
-" Version:      3.3
-" Last Change:  March 14, 2011
+" Version:      4.0
+" Last Change:  March 15, 2011
 " Notes:        Adapted from opengl.vim - Andreeshchev Eugene <admix@pisem.net>
 
 " Usage: 
@@ -10,6 +10,9 @@
 "   Source it from somewhere
 "
 " Changelog: 
+"   2011-03-15
+"       * Updated to OpenGL 4.0 specification.
+"
 "   2011-03-14
 "       * Updated to OpenGL 3.3 specification.
 "
@@ -1070,10 +1073,8 @@ syntax keyword glConstant GL_FRAGMENT_SHADER
 syntax keyword glConstant GL_LINK_STATUS
 syntax keyword glConstant GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS
 syntax keyword glConstant GL_MAX_FRAGMENT_UNIFORM_COMPONENTS
-syntax keyword glConstant GL_MAX_TEXTURE_IMAGE_UNITS
 syntax keyword glConstant GL_MAX_VARYING_FLOATS
 syntax keyword glConstant GL_MAX_VERTEX_ATTRIBS
-syntax keyword glConstant GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS
 syntax keyword glConstant GL_MAX_VERTEX_UNIFORM_COMPONENTS
 syntax keyword glConstant GL_SHADER_SOURCE_LENGTH
 syntax keyword glConstant GL_SHADER_TYPE
@@ -1651,11 +1652,13 @@ syntax keyword glConstant GL_PRIMITIVE_RESTART_INDEX
 " Textures
 syntax keyword glConstant GL_MAX_RECTANGLE_TEXTURE_SIZE
 syntax keyword glConstant GL_TEXTURE_RECTANGLE
+syntax keyword glConstant GL_TEXTURE_BINDING_RECTANGLE
 syntax keyword glConstant GL_PROXY_TEXTURE_RECTANGLE
 
 " Texturebuffer
 syntax keyword glConstant GL_MAX_TEXTURE_BUFFER_SIZE
 syntax keyword glConstant GL_TEXTURE_BUFFER
+syntax keyword glConstant GL_TEXTURE_BINDING_BUFFER
 syntax keyword glConstant GL_TEXTURE_BUFFER_DATA_STORE_BINDING
 
 " Uniform blocks
@@ -1731,6 +1734,10 @@ syntax keyword glConstant GL_LINE_STRIP_ADJACENCY
 syntax keyword glConstant GL_TRIANGLES_ADJACENCY
 syntax keyword glConstant GL_TRIANGLE_STRIP_ADJACENCY
 
+" Provoking vertex
+syntax keyword glConstant GL_FIRST_VERTEX_CONVENTION
+syntax keyword glConstant GL_LAST_VERTEX_CONVENTION
+
 " Shaders
 syntax keyword glConstant GL_SAMPLER_2D_MULTISAMPLE
 syntax keyword glConstant GL_SAMPLER_2D_MULTISAMPLE_ARRAY
@@ -1746,7 +1753,6 @@ syntax keyword glConstant GL_UNSIGNED_INT_SAMPLER_2D_MULTISAMPLE_ARRAY
 syntax keyword glConstant GL_UNSIGNED_INT_SAMPLER_2D_RECT
 syntax keyword glConstant GL_UNSIGNED_INT_SAMPLER_BUFFER
 
-syntax keyword glConstant GL_MAX_GEOMETRY_TEXTURE_IMAGE_UNITS
 syntax keyword glConstant GL_MAX_GEOMETRY_UNIFORM_COMPONENTS
 syntax keyword glConstant GL_MAX_GEOMETRY_OUTPUT_VERTICES
 syntax keyword glConstant GL_MAX_GEOMETRY_TOTAL_OUTPUT_COMPONENTS
@@ -1759,7 +1765,6 @@ syntax keyword glConstant GL_GEOMETRY_SHADER
 syntax keyword glConstant GL_GEOMETRY_VERTICES_OUT
 syntax keyword glConstant GL_GEOMETRY_INPUT_TYPE
 syntax keyword glConstant GL_GEOMETRY_OUTPUT_TYPE
-syntax keyword glConstant GL_GEOMETRY_SHADER_INVOCATIONS
 syntax keyword glConstant GL_GEOMETRY_SHADER_BIT
 
 " State queries
@@ -1785,9 +1790,14 @@ syntax keyword glConstant GL_WAIT_FAILED
 " Texturing
 syntax keyword glConstant GL_TEXTURE_2D_MULTISAMPLE
 syntax keyword glConstant GL_TEXTURE_2D_MULTISAMPLE_ARRAY
+syntax keyword glConstant GL_TEXTURE_BINDING_2D_MULTISAMPLE
+syntax keyword glConstant GL_TEXTURE_BINDING_2D_MULTISAMPLE_ARRAY
 syntax keyword glConstant GL_PROXY_TEXTURE_2D_MULTISAMPLE
 syntax keyword glConstant GL_PROXY_TEXTURE_2D_MULTISAMPLE_ARRAY
 syntax keyword glConstant GL_TEXTURE_FIXED_SAMPLE_LOCATIONS
+
+" Uniform blocks
+syntax keyword glConstant GL_UNIFORM_BLOCK_REFERENCED_BY_GEOMETRY_SHADER
 "}}}
 
 " Functions
@@ -1801,6 +1811,7 @@ syntax keyword glFunction glGetInteger64v
 syntax keyword glFunction glGetMultisamplefv
 syntax keyword glFunction glGetSynciv
 syntax keyword glFunction glIsSync
+syntax keyword glFunction glProvokingVertex
 syntax keyword glFunction glTexImage2DMultisample
 syntax keyword glFunction glTexImage3DMultisample
 syntax keyword glFunction glWaitSync
@@ -1855,6 +1866,10 @@ syntax keyword glFunction glMultiDrawElementsBaseVertex
 syntax keyword glFunction glQueryCounter
 syntax keyword glFunction glGetQueryObjecti64v
 syntax keyword glFunction glGetQueryObjectui64v
+syntax keyword glFunction glGetSamplerParameteriv
+syntax keyword glFunction glGetSamplerParameterfv
+syntax keyword glFunction glGetSamplerParameterIiv
+syntax keyword glFunction glGetSamplerParameterIuiv
 syntax keyword glFunction glSamplerParameteri
 syntax keyword glFunction glSamplerParameterf
 syntax keyword glFunction glSamplerParameteriv
@@ -1870,6 +1885,175 @@ syntax keyword glFunction glVertexAttribP1uiv
 syntax keyword glFunction glVertexAttribP2uiv
 syntax keyword glFunction glVertexAttribP3uiv
 syntax keyword glFunction glVertexAttribP4uiv
+"}}}
+"}}}
+
+" OpenGL 4.0 {{{
+" Data types
+" {{{
+syntax keyword glConstant GL_INT_2_10_10_10_REV
+" }}}
+" Constants
+"{{{
+" Buffers
+syntax keyword glConstant GL_DRAW_INDIRECT_BUFFER
+syntax keyword glConstant GL_DRAW_INDIRECT_BUFFER_BINDING
+
+" Patches
+syntax keyword glConstant GL_PATCH_DEFAULT_INNER_LEVEL
+syntax keyword glConstant GL_PATCH_DEFAULT_OUTER_LEVEL
+syntax keyword glConstant GL_PATCH_VERTICES
+syntax keyword glConstant GL_MAX_PATCH_VERTICES
+
+" Primitives
+syntax keyword glConstant GL_PATCHES
+
+" Queries
+syntax keyword glConstant GL_MAX_VERTEX_STREAMS
+
+" Sample shading
+syntax keyword glConstant GL_SAMPLE_SHADING
+syntax keyword glConstant GL_SAMPLE_MASK
+syntax keyword glConstant GL_SAMPLE_MASK_VALUE
+syntax keyword glConstant GL_MIN_SAMPLE_SHADING_VALUE
+
+" Shaders
+syntax keyword glConstant GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS
+syntax keyword glConstant GL_MAX_GEOMETRY_TEXTURE_IMAGE_UNITS
+syntax keyword glConstant GL_MAX_TESS_CONTROL_TEXTURE_IMAGE_UNITS
+syntax keyword glConstant GL_MAX_TESS_EVALUATION_TEXTURE_IMAGE_UNITS
+syntax keyword glConstant GL_MAX_TEXTURE_IMAGE_UNITS
+
+syntax keyword glConstant GL_MAX_VERTEX_OUTPUT_COMPONENTS
+syntax keyword glConstant GL_MAX_TESS_CONTROL_OUTPUT_COMPONENTS
+syntax keyword glConstant GL_MAX_TESS_CONTROL_TOTAL_OUTPUT_COMPONENTS
+syntax keyword glConstant GL_MAX_TESS_EVALUATION_OUTPUT_COMPONENTS
+syntax keyword glConstant GL_MAX_TESS_EVALUATION_TOTAL_OUTPUT_COMPONENTS
+
+syntax keyword glConstant GL_MAX_TESS_PATCH_COMPONENTS
+syntax keyword glConstant GL_MAX_TESS_GEN_LEVEL
+syntax keyword glConstant GL_MAX_TESS_CONTROL_SHADER
+syntax keyword glConstant GL_MAX_TESS_CONTROL_UNIFORM_BLOCKS
+syntax keyword glConstant GL_MAX_TESS_CONTROL_UNIFORM_COMPONENTS
+syntax keyword glConstant GL_MAX_TESS_CONTROL_OUTPUT_VERTICES
+syntax keyword glConstant GL_MAX_TESS_CONTROL_INPUT_COMPONENTS
+syntax keyword glConstant GL_MAX_TESS_EVALUATION_SHADER
+syntax keyword glConstant GL_MAX_TESS_EVALUATION_UNIFORM_BLOCKS
+syntax keyword glConstant GL_MAX_TESS_EVALUATION_UNIFORM_COMPONENTS
+syntax keyword glConstant GL_MAX_TESS_EVALUATION_INPUT_COMPONENTS
+syntax keyword glConstant GL_MAX_COMBINED_TESS_CONTROL_UNIFORM_COMPONENTS
+syntax keyword glConstant GL_MAX_COMBINED_TESS_EVALUATION_UNIFORM_COMPONENTS
+
+syntax keyword glConstant GL_MIN_PROGRAM_TEXTURE_GATHER_OFFSET
+syntax keyword glConstant GL_MAX_PROGRAM_TEXTURE_GATHER_OFFSET
+
+syntax keyword glConstant GL_TESS_GEN_MODE
+syntax keyword glConstant GL_TESS_GEN_SPACING
+syntax keyword glConstant GL_FRACTIONAL_EVEN
+syntax keyword glConstant GL_FRACTIONAL_ODD
+syntax keyword glConstant GL_TESS_GEN_VERTEX_ORDER
+syntax keyword glConstant GL_TESS_GEN_POINT_MODE
+
+syntax keyword glConstant GL_GEOMETRY_SHADER_INVOCATIONS
+
+syntax keyword glConstant GL_MIN_FRAGMENT_INTERPOLATION_OFFSET
+syntax keyword glConstant GL_MAX_FRAGMENT_INTERPOLATION_OFFSET
+syntax keyword glConstant GL_FRAGMENT_INTERPOLATION_OFFSET_BITS
+
+" Shaders data types
+syntax keyword glConstant GL_DOUBLE
+syntax keyword glConstant GL_DOUBLE_VEC2
+syntax keyword glConstant GL_DOUBLE_VEC3
+syntax keyword glConstant GL_DOUBLE_VEC4
+syntax keyword glConstant GL_DOUBLE_MAT2
+syntax keyword glConstant GL_DOUBLE_MAT3
+syntax keyword glConstant GL_DOUBLE_MAT4
+syntax keyword glConstant GL_DOUBLE_MAT2x3
+syntax keyword glConstant GL_DOUBLE_MAT2x4
+syntax keyword glConstant GL_DOUBLE_MAT3x2
+syntax keyword glConstant GL_DOUBLE_MAT3x4
+syntax keyword glConstant GL_DOUBLE_MAT4x2
+syntax keyword glConstant GL_DOUBLE_MAT4x3
+syntax keyword glConstant GL_SAMPLER_CUBE_MAP_ARRAY
+syntax keyword glConstant GL_SAMPLER_CUBE_MAP_ARRAY_SHADOW
+syntax keyword glConstant GL_INT_SAMPLER_CUBE_MAP_ARRAY
+syntax keyword glConstant GL_UNSIGNED_INT_SAMPLER_CUBE_MAP_ARRAY
+
+" Subroutines
+syntax keyword glConstant GL_ACTIVE_SUBROUTINES
+syntax keyword glConstant GL_ACTIVE_SUBROUTINE_UNIFORMS
+syntax keyword glConstant GL_ACTIVE_SUBROUTINE_UNIFORM_LOCATIONS
+syntax keyword glConstant GL_ACTIVE_SUBROUTINE_MAX_LENGTH
+syntax keyword glConstant GL_ACTIVE_SUBROUTINE_UNIFORM_MAX_LENGTH
+syntax keyword glConstant GL_MAX_SUBROUTINES
+syntax keyword glConstant GL_MAX_SUBROUTINE_UNIFORM_LOCATIONS
+syntax keyword glConstant GL_COMPATIBLE_SUBROUTINES
+syntax keyword glConstant GL_NUM_COMPATIBLE_SUBROUTINES
+
+" Texturing
+syntax keyword glConstant GL_TEXTURE_BINDING_CUBE_MAP_ARRAY
+syntax keyword glConstant GL_TEXTURE_CUBE_MAP_ARRAY
+syntax keyword glConstant GL_PROXY_TEXTURE_CUBE_MAP_ARRAY
+
+" Transform Feedback
+syntax keyword glConstant GL_MAX_TRANSFORM_FEEDBACK_BUFFERS
+syntax keyword glConstant GL_TRANSFORM_FEEDBACK
+syntax keyword glConstant GL_TRANSFORM_FEEDBACK_BINDING
+
+" Uniform blocks
+syntax keyword glConstant GL_ACTIVE_UNIFORM_BLOCK_MAX_NAME_LENGTH
+syntax keyword glConstant GL_UNIFORM_BLOCK_REFERENCED_BY_TESS_CONTROL_SHADER
+syntax keyword glConstant GL_UNIFORM_BLOCK_REFERENCED_BY_TESS_EVALUATION_SHADER
+"}}}
+
+" Functions
+"{{{
+syntax keyword glFunction glBindTransformFeedback
+syntax keyword glFunction glBeginQueryIndexed
+syntax keyword glFunction glBlendEquationi
+syntax keyword glFunction glBlendEquationSeparatei
+syntax keyword glFunction glBlendFunci
+syntax keyword glFunction glBlendFuncSeparatei
+syntax keyword glFunction glDeleteTransformFeedbacks
+syntax keyword glFunction glDrawArraysIndirect
+syntax keyword glFunction glDrawElementsIndirect
+syntax keyword glFunction glDrawTransformFeedback
+syntax keyword glFunction glDrawTransformFeedbackStream
+syntax keyword glFunction glEndQueryIndexed
+syntax keyword glFunction glGenTransformFeedbacks
+syntax keyword glFunction glGetActiveSubroutineName
+syntax keyword glFunction glGetActiveSubroutineUniformiv
+syntax keyword glFunction glGetActiveSubroutineUniformName
+syntax keyword glFunction glGetProgramStageiv
+syntax keyword glFunction glGetQueryIndexediv
+syntax keyword glFunction glGetSubroutineIndex
+syntax keyword glFunction glGetSubroutineUniformLocation
+syntax keyword glFunction glGetUniformdv
+syntax keyword glFunction glGetUniformSubroutineuiv
+syntax keyword glFunction glIsTransformFeedback
+syntax keyword glFunction glMinSampleShading
+syntax keyword glFunction glPatchParameteri
+syntax keyword glFunction glPatchParameterfv
+syntax keyword glFunction glPauseTransformFeedback
+syntax keyword glFunction glResumeTransformFeedback
+syntax keyword glFunction glUniform1d
+syntax keyword glFunction glUniform2d
+syntax keyword glFunction glUniform3d
+syntax keyword glFunction glUniform4d
+syntax keyword glFunction glUniform1dv
+syntax keyword glFunction glUniform2dv
+syntax keyword glFunction glUniform3dv
+syntax keyword glFunction glUniform4dv
+syntax keyword glFunction glUniformMatrix2dv
+syntax keyword glFunction glUniformMatrix3dv
+syntax keyword glFunction glUniformMatrix4dv
+syntax keyword glFunction glUniformMatrix2x3dv
+syntax keyword glFunction glUniformMatrix2x4dv
+syntax keyword glFunction glUniformMatrix3x2dv
+syntax keyword glFunction glUniformMatrix3x4dv
+syntax keyword glFunction glUniformMatrix4x2dv
+syntax keyword glFunction glUniformMatrix4x3dv
+syntax keyword glFunction glUniformSubroutinesuiv
 "}}}
 "}}}
 
