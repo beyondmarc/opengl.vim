@@ -1,8 +1,8 @@
 " Vim syntax file
 " Language:     C OpenGL
 " Author:       Marc Costa <beyond.marc@gmail.com>
-" Version:      4.0
-" Last Change:  March 15, 2011
+" Version:      4.1
+" Last Change:  March 16, 2011
 " Notes:        Adapted from opengl.vim - Andreeshchev Eugene <admix@pisem.net>
 
 " Usage: 
@@ -10,6 +10,9 @@
 "   Source it from somewhere
 "
 " Changelog: 
+"   2011-03-16
+"       * Updated to OpenGL 4.1 specification.
+"
 "   2011-03-15
 "       * Updated to OpenGL 4.0 specification.
 "
@@ -1735,6 +1738,7 @@ syntax keyword glConstant GL_TRIANGLES_ADJACENCY
 syntax keyword glConstant GL_TRIANGLE_STRIP_ADJACENCY
 
 " Provoking vertex
+syntax keyword glConstant GL_PROVOKING_VERTEX
 syntax keyword glConstant GL_FIRST_VERTEX_CONVENTION
 syntax keyword glConstant GL_LAST_VERTEX_CONVENTION
 
@@ -1765,7 +1769,6 @@ syntax keyword glConstant GL_GEOMETRY_SHADER
 syntax keyword glConstant GL_GEOMETRY_VERTICES_OUT
 syntax keyword glConstant GL_GEOMETRY_INPUT_TYPE
 syntax keyword glConstant GL_GEOMETRY_OUTPUT_TYPE
-syntax keyword glConstant GL_GEOMETRY_SHADER_BIT
 
 " State queries
 syntax keyword glConstant GL_CONTEXT_CORE_PROFILE_BIT
@@ -1918,6 +1921,9 @@ syntax keyword glConstant GL_SAMPLE_MASK_VALUE
 syntax keyword glConstant GL_MIN_SAMPLE_SHADING_VALUE
 
 " Shaders
+syntax keyword glConstant GL_TESS_CONTROL_SHADER
+syntax keyword glConstant GL_TESS_EVALUATION_SHADER
+
 syntax keyword glConstant GL_MAX_VERTEX_TEXTURE_IMAGE_UNITS
 syntax keyword glConstant GL_MAX_GEOMETRY_TEXTURE_IMAGE_UNITS
 syntax keyword glConstant GL_MAX_TESS_CONTROL_TEXTURE_IMAGE_UNITS
@@ -2054,6 +2060,154 @@ syntax keyword glFunction glUniformMatrix3x4dv
 syntax keyword glFunction glUniformMatrix4x2dv
 syntax keyword glFunction glUniformMatrix4x3dv
 syntax keyword glFunction glUniformSubroutinesuiv
+"}}}
+"}}}
+
+" OpenGL 4.1 {{{
+" Data types
+" {{{
+syntax keyword glType GLfixed
+" }}}
+" Constants
+"{{{
+" Hints
+syntax keyword glConstant GL_PROGRAM_BINARY_RETRIEVABLE_HINT
+
+" Pixel Transfer
+syntax keyword glConstant GL_IMPLEMENTATION_COLOR_READ_FORMAT
+syntax keyword glConstant GL_IMPLEMENTATION_COLOR_READ_TYPE
+
+" Provoking vertex
+syntax keyword glConstant GL_LAYER_PROVOKING_VERTEX
+syntax keyword glConstant GL_VIEWPORT_INDEX_PROVOKING_VERTEX
+syntax keyword glConstant GL_UNDEFINED_VERTEX
+
+" Shaders
+syntax keyword glConstant GL_SHADER_COMPILER
+syntax keyword glConstant GL_NUM_SHADER_BINARY_FORMATS
+syntax keyword glConstant GL_SHADER_BINARY_FORMATS
+
+syntax keyword glConstant GL_VERTEX_SHADER_BIT
+syntax keyword glConstant GL_TESS_CONTROL_SHADER_BIT
+syntax keyword glConstant GL_TESS_EVALUATION_SHADER_BIT
+syntax keyword glConstant GL_GEOMETRY_SHADER_BIT
+syntax keyword glConstant GL_FRAGMENT_SHADER_BIT
+syntax keyword glConstant GL_ALL_SHADER_BITS
+
+syntax keyword glConstant GL_ACTIVE_PROGRAM
+syntax keyword glConstant GL_PROGRAM_SEPARABLE
+syntax keyword glConstant GL_NUM_PROGRAM_BINARY_FORMATS
+syntax keyword glConstant GL_PROGRAM_BINARY_FORMATS
+syntax keyword glConstant GL_PROGRAM_BINARY_LENGTH
+syntax keyword glConstant GL_PROGRAM_PIPELINE_BINDING
+
+syntax keyword glConstant GL_MAX_VERTEX_UNIFORM_VECTORS
+syntax keyword glConstant GL_MAX_FRAGMENT_UNIFORM_VECTORS
+syntax keyword glConstant GL_MAX_VARYING_VECTORS
+
+syntax keyword glConstant GL_LOW_FLOAT
+syntax keyword glConstant GL_MEDIUM_FLOAT
+syntax keyword glConstant GL_HIGH_FLOAT
+syntax keyword glConstant GL_LOW_INT
+syntax keyword glConstant GL_MEDIUM_INT
+syntax keyword glConstant GL_HIGH_INT
+
+" Viewport
+syntax keyword glConstant GL_MAX_VIEWPORTS
+syntax keyword glConstant GL_VIEWPORT_BOUNDS_RANGE
+syntax keyword glConstant GL_VIEWPORT_SUBPIXEL_BITS
+"}}}
+
+" Functions
+"{{{
+syntax keyword glFunction glActiveShaderProgram
+syntax keyword glFunction glBindProgramPipeline
+syntax keyword glFunction glClearDepthf
+syntax keyword glFunction glCreateShaderProgramv
+syntax keyword glFunction glDeleteProgramPipelines
+syntax keyword glFunction glDepthRangef
+syntax keyword glFunction glDepthRangeArrayv
+syntax keyword glFunction glDepthRangeIndexed
+syntax keyword glFunction glGenProgramPipelines
+syntax keyword glFunction glGetDoublei_v
+syntax keyword glFunction glGetFloati_v
+syntax keyword glFunction glGetProgramBinary
+syntax keyword glFunction glGetProgramPipelineInfoLog
+syntax keyword glFunction glGetProgramPipelineiv
+syntax keyword glFunction glGetShaderPrecisionFormat
+syntax keyword glFunction glGetVertexAttribLdv
+syntax keyword glFunction glIsProgramPipeline
+syntax keyword glFunction glProgramBinary
+syntax keyword glFunction glProgramParameteri
+syntax keyword glFunction glProgramUniform1i
+syntax keyword glFunction glProgramUniform2i
+syntax keyword glFunction glProgramUniform3i
+syntax keyword glFunction glProgramUniform4i
+syntax keyword glFunction glProgramUniform1f
+syntax keyword glFunction glProgramUniform2f
+syntax keyword glFunction glProgramUniform3f
+syntax keyword glFunction glProgramUniform4f
+syntax keyword glFunction glProgramUniform1d
+syntax keyword glFunction glProgramUniform2d
+syntax keyword glFunction glProgramUniform3d
+syntax keyword glFunction glProgramUniform4d
+syntax keyword glFunction glProgramUniform1iv
+syntax keyword glFunction glProgramUniform2iv
+syntax keyword glFunction glProgramUniform3iv
+syntax keyword glFunction glProgramUniform4iv
+syntax keyword glFunction glProgramUniform1fv
+syntax keyword glFunction glProgramUniform2fv
+syntax keyword glFunction glProgramUniform3fv
+syntax keyword glFunction glProgramUniform4fv
+syntax keyword glFunction glProgramUniform1dv
+syntax keyword glFunction glProgramUniform2dv
+syntax keyword glFunction glProgramUniform3dv
+syntax keyword glFunction glProgramUniform4dv
+syntax keyword glFunction glProgramUniform1ui
+syntax keyword glFunction glProgramUniform2ui
+syntax keyword glFunction glProgramUniform3ui
+syntax keyword glFunction glProgramUniform4ui
+syntax keyword glFunction glProgramUniform1uiv
+syntax keyword glFunction glProgramUniform2uiv
+syntax keyword glFunction glProgramUniform3uiv
+syntax keyword glFunction glProgramUniform4uiv
+syntax keyword glFunction glProgramUniformMatrix2fv
+syntax keyword glFunction glProgramUniformMatrix3fv
+syntax keyword glFunction glProgramUniformMatrix4fv
+syntax keyword glFunction glProgramUniformMatrix2dv
+syntax keyword glFunction glProgramUniformMatrix3dv
+syntax keyword glFunction glProgramUniformMatrix4dv
+syntax keyword glFunction glProgramUniformMatrix2x3fv
+syntax keyword glFunction glProgramUniformMatrix2x4fv
+syntax keyword glFunction glProgramUniformMatrix3x2fv
+syntax keyword glFunction glProgramUniformMatrix3x4fv
+syntax keyword glFunction glProgramUniformMatrix4x2fv
+syntax keyword glFunction glProgramUniformMatrix4x3fv
+syntax keyword glFunction glProgramUniformMatrix2x3dv
+syntax keyword glFunction glProgramUniformMatrix2x4dv
+syntax keyword glFunction glProgramUniformMatrix3x2dv
+syntax keyword glFunction glProgramUniformMatrix3x4dv
+syntax keyword glFunction glProgramUniformMatrix4x2dv
+syntax keyword glFunction glProgramUniformMatrix4x3dv
+syntax keyword glFunction glReleaseShaderCompiler
+syntax keyword glFunction glScissorArrayv
+syntax keyword glFunction glScissorIndexed
+syntax keyword glFunction glScissorIndexedv
+syntax keyword glFunction glShaderBinary
+syntax keyword glFunction glUseProgramStages
+syntax keyword glFunction glValidateProgramPipeline
+syntax keyword glFunction glViewportArrayv
+syntax keyword glFunction glViewportIndexedf
+syntax keyword glFunction glViewportIndexedfv
+syntax keyword glFunction glVertexAttribL1d
+syntax keyword glFunction glVertexAttribL2d
+syntax keyword glFunction glVertexAttribL3d
+syntax keyword glFunction glVertexAttribL4d
+syntax keyword glFunction glVertexAttribL1dv
+syntax keyword glFunction glVertexAttribL2dv
+syntax keyword glFunction glVertexAttribL3dv
+syntax keyword glFunction glVertexAttribL4dv
+syntax keyword glFunction glVertexAttribLPointer
 "}}}
 "}}}
 
