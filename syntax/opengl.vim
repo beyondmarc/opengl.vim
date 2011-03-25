@@ -1712,6 +1712,7 @@ syntax keyword glFunction glGetVertexAttribIuiv
 syntax keyword glFunction glMultiDrawArrays
 syntax keyword glFunction glPrimitiveRestartIndex
 syntax keyword glFunction glTexBuffer
+syntax keyword glFunction glUniformBlockBinding
 "}}}
 "}}}
 
