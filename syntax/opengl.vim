@@ -930,6 +930,8 @@ syntax keyword glConstant GL_PIXEL_UNPACK_BUFFER
 syntax keyword glConstant GL_PIXEL_PACK_BUFFER
 syntax keyword glConstant GL_PIXEL_UNPACK_BUFFER_BINDING
 syntax keyword glConstant GL_PIXEL_PACK_BUFFER_BINDING
+syntax keyword glConstant GL_READ_ONLY
+syntax keyword glConstant GL_WRITE_ONLY
 syntax keyword glConstant GL_READ_WRITE
 syntax keyword glConstant GL_STREAM_DRAW
 syntax keyword glConstant GL_STREAM_READ
