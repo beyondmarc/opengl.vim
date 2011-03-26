@@ -1166,6 +1166,7 @@ syntax keyword glFunction glIsProgram
 syntax keyword glFunction glIsQuery
 syntax keyword glFunction glIsShader
 syntax keyword glFunction glLinkProgram
+syntax keyword glFunction glMapBuffer
 syntax keyword glFunction glMultiDrawElements
 syntax keyword glFunction glPointParameterf
 syntax keyword glFunction glPointParameterfv
