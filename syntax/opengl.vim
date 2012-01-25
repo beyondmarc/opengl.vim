@@ -1410,6 +1410,7 @@ syntax keyword glConstant GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER
 syntax keyword glConstant GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER
 syntax keyword glConstant GL_FRAMEBUFFER_UNSUPPORTED
 syntax keyword glConstant GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE
+syntax keyword glConstant GL_FRAMEBUFFER_INCOMPLETE_LAYER_TARGETS
 
 " Framebuffer
 syntax keyword glConstant GL_FRAMEBUFFER
