@@ -6,7 +6,7 @@ Using the Pathogen plugin:
 (http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/)
 
 From your ~/.vim directory:
-    git submodule add git@github.com:beyondmarc/opengl.vim.git bundle/syntax_opengl
+    git submodule add git://github.com/beyondmarc/opengl.vim.git bundle/syntax_opengl
 
 Add a hard link to your ~/.vim/after/syntax/cpp
     ln bundle/syntax_opengl/syntax/opengl.vim after/syntax/cpp
