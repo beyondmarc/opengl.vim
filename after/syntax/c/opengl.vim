@@ -1,8 +1,8 @@
 " Vim syntax file
 " Language:     C OpenGL
 " Author:       Marc Costa <beyond.marc@gmail.com>
-" Version:      4.1
-" Last Change:  March 16, 2011
+" Version:      4.2
+" Last Change:  November 11, 2012
 " Notes:        Adapted from opengl.vim - Andreeshchev Eugene <admix@pisem.net>
 
 " Usage: 
@@ -10,6 +10,10 @@
 "   Source it from somewhere
 "
 " Changelog: 
+"   2012-11-11
+"       * Updated to OpenGL 4.2 specification.
+"       * OpenGL 4.2 functions and tokens organized by extension
+"
 "   2011-03-16
 "       * Updated to OpenGL 4.1 specification.
 "
@@ -2213,6 +2217,158 @@ syntax keyword glFunction glVertexAttribL2dv
 syntax keyword glFunction glVertexAttribL3dv
 syntax keyword glFunction glVertexAttribL4dv
 syntax keyword glFunction glVertexAttribLPointer
+"}}}
+"}}}
+
+" OpenGL 4.2 {{{
+" Constants
+" {{{
+" ARB_internal_format_query
+syntax keyword glConstant GL_RENDERBUFFER
+syntax keyword glConstant GL_TEXTURE2D_MULTISAMPLE
+syntax keyword glConstant GL_TEXTURE2D_MULTISAMPLE_ARRAY
+syntax keyword glConstant GL_SAMPLES
+syntax keyword glConstant GL_NUM_SAMPLE_COUNTS
+
+" ARB_map_buffer_alignment
+syntax keyword glConstant GL_MIN_MAP_BUFFER_ALIGNMENT
+
+" ARB_shader_atomic_counters
+syntax keyword glConstant GL_ATOMIC_COUNTER_BUFFER
+syntax keyword glConstant GL_ATOMIC_COUNTER_BUFFER_BINDING
+syntax keyword glConstant GL_ATOMIC_COUNTER_BUFFER_START
+syntax keyword glConstant GL_ATOMIC_COUNTER_BUFFER_SIZE
+syntax keyword glConstant GL_ATOMIC_COUNTER_BUFFER_DATA_SIZE
+syntax keyword glConstant GL_ATOMIC_COUNTER_BUFFER_ACTIVE_ATOMIC_COUNTERS
+syntax keyword glConstant GL_ATOMIC_COUNTER_BUFFER_ACTIVE_ATOMIC_COUNTER_INDICES
+syntax keyword glConstant GL_ATOMIC_COUNTER_BUFFER_REFERENCED_BY_VERTEX_SHADER
+syntax keyword glConstant GL_ATOMIC_COUNTER_BUFFER_REFERENCED_BY_TESS_CONTROL_SHADER
+syntax keyword glConstant GL_ATOMIC_COUNTER_BUFFER_REFERENCED_BY_TESS_EVALUATION_SHADER
+syntax keyword glConstant GL_ATOMIC_COUNTER_BUFFER_REFERENCED_BY_GEOMETRY_SHADER
+syntax keyword glConstant GL_ATOMIC_COUNTER_BUFFER_REFERENCED_BY_FRAGMENT_SHADER
+syntax keyword glConstant GL_MAX_VERTEX_ATOMIC_COUNTER_BUFFERS
+syntax keyword glConstant GL_MAX_TESS_CONTROL_ATOMIC_COUNTER_BUFFERS
+syntax keyword glConstant GL_MAX_TESS_EVALUATION_ATOMIC_COUNTER_BUFFERS
+syntax keyword glConstant GL_MAX_GEOMETRY_ATOMIC_COUNTER_BUFFERS
+syntax keyword glConstant GL_MAX_FRAGMENT_ATOMIC_COUNTER_BUFFERS
+syntax keyword glConstant GL_MAX_COMBINED_ATOMIC_COUNTER_BUFFERS
+syntax keyword glConstant GL_MAX_VERTEX_ATOMIC_COUNTERS
+syntax keyword glConstant GL_MAX_TESS_CONTROL_ATOMIC_COUNTERS
+syntax keyword glConstant GL_MAX_TESS_EVALUATION_ATOMIC_COUNTERS
+syntax keyword glConstant GL_MAX_GEOMETRY_ATOMIC_COUNTERS
+syntax keyword glConstant GL_MAX_FRAGMENT_ATOMIC_COUNTERS
+syntax keyword glConstant GL_MAX_COMBINED_ATOMIC_COUNTERS
+syntax keyword glConstant GL_ACTIVE_ATOMIC_COUNTER_BUFFERS
+syntax keyword glConstant GL_UNIFORM_ATOMIC_COUNTER_BUFFER_INDEX
+syntax keyword glConstant GL_UNSIGNED_INT_ATOMIC_COUNTER
+
+" ARB_shader_image_load_store
+syntax keyword glConstant GL_MAX_IMAGE_UNITS
+syntax keyword glConstant GL_MAX_COMBINED_IMAGE_UNITS_AND_FRAGMENT_OUTPUTS
+syntax keyword glConstant GL_MAX_IMAGE_SAMPLES
+syntax keyword glConstant GL_MAX_VERTEX_IMAGE_UNIFORMS
+syntax keyword glConstant GL_MAX_TESS_CONTROL_IMAGE_UNIFORMS
+syntax keyword glConstant GL_MAX_TESS_EVALUATION_IMAGE_UNIFORMS
+syntax keyword glConstant GL_MAX_GEOMETRY_IMAGE_UNIFORMS
+syntax keyword glConstant GL_MAX_FRAGMENT_IMAGE_UNIFORMS
+syntax keyword glConstant GL_MAX_COMBINED_IMAGE_UNIFORMS
+syntax keyword glConstant GL_IMAGE_BINDING_NAME
+syntax keyword glConstant GL_IMAGE_BINDING_LEVEL
+syntax keyword glConstant GL_IMAGE_BINDING_LAYERED
+syntax keyword glConstant GL_IMAGE_BINDING_LAYER
+syntax keyword glConstant GL_IMAGE_BINDING_ACCESS
+syntax keyword glConstant GL_IMAGE_BINDING_FORMAT
+syntax keyword glConstant GL_VERTEX_ATTRIB_ARRAY_BARRIER_BIT
+syntax keyword glConstant GL_ELEMENT_ARRAY_BARRIER_BIT
+syntax keyword glConstant GL_UNIFORM_BARRIER_BIT
+syntax keyword glConstant GL_TEXTURE_FETCH_BARRIER_BIT
+syntax keyword glConstant GL_SHADER_IMAGE_ACCESS_BARRIER_BIT
+syntax keyword glConstant GL_COMMAND_BARRIER_BIT
+syntax keyword glConstant GL_PIXEL_BUFFER_BARRIER_BIT
+syntax keyword glConstant GL_TEXTURE_UPDATE_BARRIER_BIT
+syntax keyword glConstant GL_BUFFER_UPDATE_BARRIER_BIT
+syntax keyword glConstant GL_FRAMEBUFFER_BARRIER_BIT
+syntax keyword glConstant GL_TRANSFORM_FEEDBACK_BARRIER_BIT
+syntax keyword glConstant GL_ATOMIC_COUNTER_BARRIER_BIT
+syntax keyword glConstant GL_ALL_BARRIER_BITS
+syntax keyword glConstant GL_IMAGE_1D
+syntax keyword glConstant GL_IMAGE_2D
+syntax keyword glConstant GL_IMAGE_3D
+syntax keyword glConstant GL_IMAGE_2D_RECT
+syntax keyword glConstant GL_IMAGE_CUBE
+syntax keyword glConstant GL_IMAGE_BUFFER
+syntax keyword glConstant GL_IMAGE_1D_ARRAY
+syntax keyword glConstant GL_IMAGE_2D_ARRAY
+syntax keyword glConstant GL_IMAGE_CUBE_MAP_ARRAY
+syntax keyword glConstant GL_IMAGE_2D_MULTISAMPLE
+syntax keyword glConstant GL_IMAGE_2D_MULTISAMPLE_ARRAY
+syntax keyword glConstant GL_INT_IMAGE_1D
+syntax keyword glConstant GL_INT_IMAGE_2D
+syntax keyword glConstant GL_INT_IMAGE_3D
+syntax keyword glConstant GL_INT_IMAGE_2D_RECT
+syntax keyword glConstant GL_INT_IMAGE_CUBE
+syntax keyword glConstant GL_INT_IMAGE_BUFFER
+syntax keyword glConstant GL_INT_IMAGE_1D_ARRAY
+syntax keyword glConstant GL_INT_IMAGE_2D_ARRAY
+syntax keyword glConstant GL_INT_IMAGE_CUBE_MAP_ARRAY
+syntax keyword glConstant GL_INT_IMAGE_2D_MULTISAMPLE
+syntax keyword glConstant GL_INT_IMAGE_2D_MULTISAMPLE_ARRAY
+syntax keyword glConstant GL_UNSIGNED_INT_IMAGE_1D
+syntax keyword glConstant GL_UNSIGNED_INT_IMAGE_2D
+syntax keyword glConstant GL_UNSIGNED_INT_IMAGE_3D
+syntax keyword glConstant GL_UNSIGNED_INT_IMAGE_2D_RECT
+syntax keyword glConstant GL_UNSIGNED_INT_IMAGE_CUBE
+syntax keyword glConstant GL_UNSIGNED_INT_IMAGE_BUFFER
+syntax keyword glConstant GL_UNSIGNED_INT_IMAGE_1D_ARRAY
+syntax keyword glConstant GL_UNSIGNED_INT_IMAGE_2D_ARRAY
+syntax keyword glConstant GL_UNSIGNED_INT_IMAGE_CUBE_MAP_ARRAY
+syntax keyword glConstant GL_UNSIGNED_INT_IMAGE_2D_MULTISAMPLE
+syntax keyword glConstant GL_UNSIGNED_INT_IMAGE_2D_MULTISAMPLE_ARRAY
+syntax keyword glConstant GL_IMAGE_FORMAT_COMPATIBILITY_TYPE
+syntax keyword glConstant GL_IMAGE_FORMAT_COMPATIBILITY_BY_SIZE
+syntax keyword glConstant GL_IMAGE_FORMAT_COMPATIBILITY_BY_CLASS
+
+" ARB_texture_storage
+syntax keyword glConstant GL_TEXTURE_IMMUTABLE_FORMAT
+syntax keyword glConstant GL_ALPHA8_EXT
+syntax keyword glConstant GL_LUMINANCE8_EXT
+syntax keyword glConstant GL_LUMINANCE8_ALPHA8_EXT
+
+" ARB_texture_compression_bptc
+syntax keyword glConstant GL_COMPRESSED_RGBA_BPTC_UNORM_ARB
+syntax keyword glConstant GL_COMPRESSED_SRGB_ALPHA_BPTC_UNORM_ARB
+syntax keyword glConstant GL_COMPRESSED_RGB_BPTC_SIGNED_FLOAT_ARB
+syntax keyword glConstant GL_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT_ARB
+" }}}
+
+" Functions
+"{{{
+" ARB_base_instance
+syntax keyword glFunction glDrawArraysInstancedBaseInstance
+syntax keyword glFunction glDrawElementsInstancedBaseInstance
+syntax keyword glFunction glDrawElementsInstancedBaseVertexBaseInstance
+
+" ARB_internal_format_query
+syntax keyword glFunction glGetInternalFormativ
+
+" ARB_shader_atomic_counters
+syntax keyword glFunction glGetActiveAtomicCounterBufferiv
+
+" ARB_shader_image_load_store
+syntax keyword glFunction glBindImageTexture
+syntax keyword glFunction glMemoryBarrier
+
+" ARB_texture_storage
+syntax keyword glFunction glTexStorage1D
+syntax keyword glFunction glTexStorage2D
+syntax keyword glFunction glTexStorage3D
+syntax keyword glFunction glTextureStorage1DEXT
+syntax keyword glFunction glTextureStorage2DEXT
+syntax keyword glFunction glTextureStorage3DEXT
+
+" ARB_transform_feedback_instanced
+syntax keyword glFunction glDrawTransformFeedbackInstanced
+syntax keyword glFunction glDrawTransformFeedbackStreamInstanced
 "}}}
 "}}}
 
