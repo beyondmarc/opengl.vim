@@ -1,4 +1,4 @@
-glsl.vim
+opengl.vim
 ========
 
 OpenGL syntax highlighter for C and C++ source files.
