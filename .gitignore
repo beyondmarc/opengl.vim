@@ -1,9 +1,5 @@
-# Can ignore specific files
-# .DS_Store
-
-# Use wildcards as well
+# Ignore teporal files, backups, etc...
+.DS_Store
 *~
 *.swp
 
-# Can also ignore all directories and files in a directory.
-# tmp/**/* 
