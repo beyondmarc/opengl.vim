@@ -10,6 +10,9 @@
 "   Source it from somewhere
 "
 " Changelog: 
+"   2013-04-24
+"       * Update GLUT support for Freeglut 2.8.1 [Released: 5 April 2013]
+"
 "   2012-11-17
 "       * Updated to OpenGL 4.3 specification.
 "       * OpenGL 4.3 functions and tokens organized by extension
@@ -4135,10 +4138,21 @@ if !exists ("c_opengl_no_glut")
 " GLUT {{{
   " Constants {{{
   syntax keyword glConstant GLUT_ACCUM
+  syntax keyword glConstant GLUT_ACTION_CONTINUE_EXECUTION
+  syntax keyword glConstant GLUT_ACTION_EXIT
+  syntax keyword glConstant GLUT_ACTION_GLUTMAINLOOP_RETURNS
+  syntax keyword glConstant GLUT_ACTION_ON_WINDOW_CLOSE
   syntax keyword glConstant GLUT_ACTIVE_ALT
   syntax keyword glConstant GLUT_ACTIVE_CTRL
   syntax keyword glConstant GLUT_ACTIVE_SHIFT
+  syntax keyword glConstant GLUT_ALLOW_DIRECT_CONTEXT
   syntax keyword glConstant GLUT_ALPHA
+  syntax keyword glConstant GLUT_API_VERSION
+  syntax keyword glConstant GLUT_AUX
+  syntax keyword glConstant GLUT_AUX1
+  syntax keyword glConstant GLUT_AUX2
+  syntax keyword glConstant GLUT_AUX3
+  syntax keyword glConstant GLUT_AUX4
   syntax keyword glConstant GLUT_BITMAP_8_BY_13
   syntax keyword glConstant GLUT_BITMAP_8_BY_13
   syntax keyword glConstant GLUT_BITMAP_9_BY_15
@@ -4154,6 +4168,11 @@ if !exists ("c_opengl_no_glut")
   syntax keyword glConstant GLUT_BITMAP_TIMES_ROMAN_24
   syntax keyword glConstant GLUT_BITMAP_TIMES_ROMAN_24
   syntax keyword glConstant GLUT_BLUE
+  syntax keyword glConstant GLUT_BORDERLESS
+  syntax keyword glConstant GLUT_CAPTIONLESS
+  syntax keyword glConstant GLUT_COMPATIBILITY_PROFILE
+  syntax keyword glConstant GLUT_CORE_PROFILE
+  syntax keyword glConstant GLUT_CREATE_NEW_CONTEXT
   syntax keyword glConstant GLUT_CURSOR_BOTTOM_LEFT_CORNER
   syntax keyword glConstant GLUT_CURSOR_BOTTOM_RIGHT_CORNER
   syntax keyword glConstant GLUT_CURSOR_BOTTOM_SIDE
@@ -4177,16 +4196,22 @@ if !exists ("c_opengl_no_glut")
   syntax keyword glConstant GLUT_CURSOR_TOP_SIDE
   syntax keyword glConstant GLUT_CURSOR_UP_DOWN
   syntax keyword glConstant GLUT_CURSOR_WAIT
+  syntax keyword glConstant GLUT_DEBUG
   syntax keyword glConstant GLUT_DEPTH
   syntax keyword glConstant GLUT_DEVICE_IGNORE_KEY_REPEAT
   syntax keyword glConstant GLUT_DEVICE_KEY_REPEAT
+  syntax keyword glConstant GLUT_DIRECT_RENDERING
   syntax keyword glConstant GLUT_DISPLAY_MODE_POSSIBLE
   syntax keyword glConstant GLUT_DOUBLE
   syntax keyword glConstant GLUT_DOWN
   syntax keyword glConstant GLUT_ELAPSED_TIME
   syntax keyword glConstant GLUT_ENTERED
+  syntax keyword glConstant GLUT_FORCE_DIRECT_CONTEXT
+  syntax keyword glConstant GLUT_FORCE_INDIRECT_CONTEXT
+  syntax keyword glConstant GLUT_FORWARD_COMPATIBLE
   syntax keyword glConstant GLUT_FULLY_COVERED
   syntax keyword glConstant GLUT_FULLY_RETAINED
+  syntax keyword glConstant GLUT_FULL_SCREEN
   syntax keyword glConstant GLUT_GAME_MODE_ACTIVE
   syntax keyword glConstant GLUT_GAME_MODE_DISPLAY_CHANGED
   syntax keyword glConstant GLUT_GAME_MODE_HEIGHT
@@ -4199,12 +4224,18 @@ if !exists ("c_opengl_no_glut")
   syntax keyword glConstant GLUT_HAS_JOYSTICK
   syntax keyword glConstant GLUT_HAS_KEYBOARD
   syntax keyword glConstant GLUT_HAS_MOUSE
+  syntax keyword glConstant GLUT_HAS_MULTI
   syntax keyword glConstant GLUT_HAS_OVERLAY
   syntax keyword glConstant GLUT_HAS_SPACEBALL
   syntax keyword glConstant GLUT_HAS_TABLET
   syntax keyword glConstant GLUT_HIDDEN
   syntax keyword glConstant GLUT_INDEX
   syntax keyword glConstant GLUT_INIT_DISPLAY_MODE
+  syntax keyword glConstant GLUT_INIT_FLAGS
+  syntax keyword glConstant GLUT_INIT_MAJOR_VERSION
+  syntax keyword glConstant GLUT_INIT_MINOR_VERSION
+  syntax keyword glConstant GLUT_INIT_PROFILE
+  syntax keyword glConstant GLUT_INIT_STATE
   syntax keyword glConstant GLUT_INIT_WINDOW_HEIGHT
   syntax keyword glConstant GLUT_INIT_WINDOW_WIDTH
   syntax keyword glConstant GLUT_INIT_WINDOW_X
@@ -4216,6 +4247,12 @@ if !exists ("c_opengl_no_glut")
   syntax keyword glConstant GLUT_JOYSTICK_BUTTON_C
   syntax keyword glConstant GLUT_JOYSTICK_BUTTON_D
   syntax keyword glConstant GLUT_JOYSTICK_POLL_RATE
+  syntax keyword glConstant GLUT_KEY_ALT_L
+  syntax keyword glConstant GLUT_KEY_ALT_R
+  syntax keyword glConstant GLUT_KEY_BEGIN
+  syntax keyword glConstant GLUT_KEY_CTRL_L
+  syntax keyword glConstant GLUT_KEY_CTRL_R
+  syntax keyword glConstant GLUT_KEY_DELETE
   syntax keyword glConstant GLUT_KEY_DOWN
   syntax keyword glConstant GLUT_KEY_END
   syntax keyword glConstant GLUT_KEY_F1
@@ -4233,12 +4270,15 @@ if !exists ("c_opengl_no_glut")
   syntax keyword glConstant GLUT_KEY_HOME
   syntax keyword glConstant GLUT_KEY_INSERT
   syntax keyword glConstant GLUT_KEY_LEFT
+  syntax keyword glConstant GLUT_KEY_NUM_LOCK
   syntax keyword glConstant GLUT_KEY_PAGE_DOWN
   syntax keyword glConstant GLUT_KEY_PAGE_UP
   syntax keyword glConstant GLUT_KEY_REPEAT_DEFAULT
   syntax keyword glConstant GLUT_KEY_REPEAT_OFF
   syntax keyword glConstant GLUT_KEY_REPEAT_ON
   syntax keyword glConstant GLUT_KEY_RIGHT
+  syntax keyword glConstant GLUT_KEY_SHIFT_L
+  syntax keyword glConstant GLUT_KEY_SHIFT_R
   syntax keyword glConstant GLUT_KEY_UP
   syntax keyword glConstant GLUT_LAYER_IN_USE
   syntax keyword glConstant GLUT_LEFT
@@ -4250,7 +4290,6 @@ if !exists ("c_opengl_no_glut")
   syntax keyword glConstant GLUT_MIDDLE_BUTTON
   syntax keyword glConstant GLUT_MULTISAMPLE
   syntax keyword glConstant GLUT_NORMAL
-  syntax keyword glConstant GLUT_NORMAL
   syntax keyword glConstant GLUT_NORMAL_DAMAGED
   syntax keyword glConstant GLUT_NOT_VISIBLE
   syntax keyword glConstant GLUT_NUM_BUTTON_BOX_BUTTONS
@@ -4259,12 +4298,12 @@ if !exists ("c_opengl_no_glut")
   syntax keyword glConstant GLUT_NUM_SPACEBALL_BUTTONS
   syntax keyword glConstant GLUT_NUM_TABLET_BUTTONS
   syntax keyword glConstant GLUT_OVERLAY
-  syntax keyword glConstant GLUT_OVERLAY
   syntax keyword glConstant GLUT_OVERLAY_DAMAGED
   syntax keyword glConstant GLUT_OVERLAY_POSSIBLE
   syntax keyword glConstant GLUT_OWNS_JOYSTICK
   syntax keyword glConstant GLUT_PARTIALLY_RETAINED
   syntax keyword glConstant GLUT_RED
+  syntax keyword glConstant GLUT_RENDERING_CONTEXT
   syntax keyword glConstant GLUT_RGB
   syntax keyword glConstant GLUT_RGBA
   syntax keyword glConstant GLUT_RIGHT_BUTTON
@@ -4273,6 +4312,8 @@ if !exists ("c_opengl_no_glut")
   syntax keyword glConstant GLUT_SCREEN_WIDTH
   syntax keyword glConstant GLUT_SCREEN_WIDTH_MM
   syntax keyword glConstant GLUT_SINGLE
+  syntax keyword glConstant GLUT_SKIP_STALE_MOTION_EVENTS
+  syntax keyword glConstant GLUT_SRGB
   syntax keyword glConstant GLUT_STENCIL
   syntax keyword glConstant GLUT_STEREO
   syntax keyword glConstant GLUT_STROKE_MONO_ROMAN
@@ -4280,7 +4321,10 @@ if !exists ("c_opengl_no_glut")
   syntax keyword glConstant GLUT_STROKE_ROMAN
   syntax keyword glConstant GLUT_STROKE_ROMAN
   syntax keyword glConstant GLUT_TRANSPARENT_INDEX
+  syntax keyword glConstant GLUT_TRY_DIRECT_CONTEXT
   syntax keyword glConstant GLUT_UP
+  syntax keyword glConstant GLUT_USE_CURRENT_CONTEXT
+  syntax keyword glConstant GLUT_VERSION
   syntax keyword glConstant GLUT_VIDEO_RESIZE_HEIGHT
   syntax keyword glConstant GLUT_VIDEO_RESIZE_HEIGHT_DELTA
   syntax keyword glConstant GLUT_VIDEO_RESIZE_IN_USE
@@ -4298,6 +4342,8 @@ if !exists ("c_opengl_no_glut")
   syntax keyword glConstant GLUT_WINDOW_ACCUM_RED_SIZE
   syntax keyword glConstant GLUT_WINDOW_ALPHA_SIZE
   syntax keyword glConstant GLUT_WINDOW_BLUE_SIZE
+  syntax keyword glConstant GLUT_WINDOW_BORDER_HEIGHT
+  syntax keyword glConstant GLUT_WINDOW_BORDER_WIDTH
   syntax keyword glConstant GLUT_WINDOW_BUFFER_SIZE
   syntax keyword glConstant GLUT_WINDOW_COLORMAP_SIZE
   syntax keyword glConstant GLUT_WINDOW_CURSOR
@@ -4305,6 +4351,7 @@ if !exists ("c_opengl_no_glut")
   syntax keyword glConstant GLUT_WINDOW_DOUBLEBUFFER
   syntax keyword glConstant GLUT_WINDOW_FORMAT_ID
   syntax keyword glConstant GLUT_WINDOW_GREEN_SIZE
+  syntax keyword glConstant GLUT_WINDOW_HEADER_HEIGHT
   syntax keyword glConstant GLUT_WINDOW_HEIGHT
   syntax keyword glConstant GLUT_WINDOW_NUM_CHILDREN
   syntax keyword glConstant GLUT_WINDOW_NUM_SAMPLES
@@ -4316,6 +4363,7 @@ if !exists ("c_opengl_no_glut")
   syntax keyword glConstant GLUT_WINDOW_WIDTH
   syntax keyword glConstant GLUT_WINDOW_X
   syntax keyword glConstant GLUT_WINDOW_Y
+  syntax keyword glConstant GLUT_XLIB_IMPLEMENTATION
   " }}}
 
   " Functions {{{
@@ -4323,12 +4371,16 @@ if !exists ("c_opengl_no_glut")
   syntax keyword glFunction glutAddSubMenu
   syntax keyword glFunction glutAttachMenu
   syntax keyword glFunction glutBitmapCharacter
+  syntax keyword glFunction glutBitmapHeight
   syntax keyword glFunction glutBitmapLength
+  syntax keyword glFunction glutBitmapString
   syntax keyword glFunction glutBitmapWidth
   syntax keyword glFunction glutButtonBoxFunc
   syntax keyword glFunction glutChangeToMenuEntry
   syntax keyword glFunction glutChangeToSubMenu
+  syntax keyword glFunction glutCloseFunc
   syntax keyword glFunction glutCopyColormap
+  syntax keyword glFunction glutCreateMenu
   syntax keyword glFunction glutCreateSubWindow
   syntax keyword glFunction glutCreateWindow
   syntax keyword glFunction glutDestroyMenu
@@ -4340,36 +4392,56 @@ if !exists ("c_opengl_no_glut")
   syntax keyword glFunction glutEnterGameMode
   syntax keyword glFunction glutEntryFunc
   syntax keyword glFunction glutEstablishOverlay
+  syntax keyword glFunction glutExit
+  syntax keyword glFunction glutExtensionSupported
   syntax keyword glFunction glutForceJoystickFunc
   syntax keyword glFunction glutFullScreen
+  syntax keyword glFunction glutFullScreenToggle
   syntax keyword glFunction glutGameModeGet
   syntax keyword glFunction glutGameModeString
   syntax keyword glFunction glutGet
   syntax keyword glFunction glutGetColor
   syntax keyword glFunction glutGetMenu
+  syntax keyword glFunction glutGetMenuData
+  syntax keyword glFunction glutGetModeValues
   syntax keyword glFunction glutGetModifiers
   syntax keyword glFunction glutGetProcAddress
   syntax keyword glFunction glutGetWindow
+  syntax keyword glFunction glutGetWindowData
   syntax keyword glFunction glutHideOverlay
   syntax keyword glFunction glutHideWindow
   syntax keyword glFunction glutIconifyWindow
   syntax keyword glFunction glutIdleFunc
   syntax keyword glFunction glutIgnoreKeyRepeat
   syntax keyword glFunction glutInit
+  syntax keyword glFunction glutInitContextFlags
+  syntax keyword glFunction glutInitContextProfile
+  syntax keyword glFunction glutInitContextVersion
   syntax keyword glFunction glutInitDisplayMode
   syntax keyword glFunction glutInitDisplayString
+  syntax keyword glFunction glutInitErrorFunc
+  syntax keyword glFunction glutInitWarningFunc
   syntax keyword glFunction glutInitWindowPosition
   syntax keyword glFunction glutInitWindowSize
   syntax keyword glFunction glutJoystickFunc
   syntax keyword glFunction glutKeyboardFunc
   syntax keyword glFunction glutKeyboardUpFunc
   syntax keyword glFunction glutLayerGet
+  syntax keyword glFunction glutLeaveFullScreen
   syntax keyword glFunction glutLeaveGameMode
+  syntax keyword glFunction glutLeaveMainLoop
   syntax keyword glFunction glutMainLoop
+  syntax keyword glFunction glutMainLoopEvent
+  syntax keyword glFunction glutMenuDestroyFunc
   syntax keyword glFunction glutMenuStateFunc
   syntax keyword glFunction glutMenuStatusFunc
   syntax keyword glFunction glutMotionFunc
   syntax keyword glFunction glutMouseFunc
+  syntax keyword glFunction glutMouseWheelFunc
+  syntax keyword glFunction glutMultiButtonFunc
+  syntax keyword glFunction glutMultiEntryFunc
+  syntax keyword glFunction glutMultiMotionFunc
+  syntax keyword glFunction glutMultiPassiveFunc
   syntax keyword glFunction glutOverlayDisplayFunc
   syntax keyword glFunction glutPassiveMotionFunc
   syntax keyword glFunction glutPopWindow
@@ -4389,16 +4461,22 @@ if !exists ("c_opengl_no_glut")
   syntax keyword glFunction glutSetIconTitle
   syntax keyword glFunction glutSetKeyRepeat
   syntax keyword glFunction glutSetMenu
+  syntax keyword glFunction glutSetMenuData
+  syntax keyword glFunction glutSetOption
   syntax keyword glFunction glutSetWindow
+  syntax keyword glFunction glutSetWindowData
   syntax keyword glFunction glutSetWindowTitle
   syntax keyword glFunction glutSetupVideoResizing
   syntax keyword glFunction glutShowOverlay
   syntax keyword glFunction glutShowWindow
   syntax keyword glFunction glutSolidCone
   syntax keyword glFunction glutSolidCube
+  syntax keyword glFunction glutSolidCylinder
   syntax keyword glFunction glutSolidDodecahedron
   syntax keyword glFunction glutSolidIcosahedron
   syntax keyword glFunction glutSolidOctahedron
+  syntax keyword glFunction glutSolidRhombicDodecahedron
+  syntax keyword glFunction glutSolidSierpinskiSponge
   syntax keyword glFunction glutSolidSphere
   syntax keyword glFunction glutSolidTeapot
   syntax keyword glFunction glutSolidTetrahedron
@@ -4410,7 +4488,9 @@ if !exists ("c_opengl_no_glut")
   syntax keyword glFunction glutSpecialUpFunc
   syntax keyword glFunction glutStopVideoResizing
   syntax keyword glFunction glutStrokeCharacter
+  syntax keyword glFunction glutStrokeHeight
   syntax keyword glFunction glutStrokeLength
+  syntax keyword glFunction glutStrokeString
   syntax keyword glFunction glutStrokeWidth
   syntax keyword glFunction glutSwapBuffers
   syntax keyword glFunction glutTabletButtonFunc
@@ -4421,13 +4501,17 @@ if !exists ("c_opengl_no_glut")
   syntax keyword glFunction glutVideoResize
   syntax keyword glFunction glutVideoResizeGet
   syntax keyword glFunction glutVisibilityFunc
+  syntax keyword glFunction glutWMCloseFunc
   syntax keyword glFunction glutWarpPointer
   syntax keyword glFunction glutWindowStatusFunc
   syntax keyword glFunction glutWireCone
   syntax keyword glFunction glutWireCube
+  syntax keyword glFunction glutWireCylinder
   syntax keyword glFunction glutWireDodecahedron
   syntax keyword glFunction glutWireIcosahedron
   syntax keyword glFunction glutWireOctahedron
+  syntax keyword glFunction glutWireRhombicDodecahedron
+  syntax keyword glFunction glutWireSierpinskiSponge
   syntax keyword glFunction glutWireSphere
   syntax keyword glFunction glutWireTeapot
   syntax keyword glFunction glutWireTetrahedron
