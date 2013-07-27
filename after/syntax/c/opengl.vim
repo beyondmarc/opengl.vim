@@ -1,8 +1,8 @@
 " Vim syntax file
 " Language:     C OpenGL
 " Author:       Marc Costa <beyond.marc@gmail.com>
-" Version:      4.3
-" Last Change:  November 17, 2012
+" Version:      4.4
+" Last Change:  July 27, 2013
 " Notes:        Adapted from opengl.vim - Andreeshchev Eugene <admix@pisem.net>
 
 " Usage: 
@@ -10,6 +10,9 @@
 "   Source it from somewhere
 "
 " Changelog: 
+"   2013-07-27
+"       * Updated to OpenGL 4.4 specification.
+"
 "   2013-04-24
 "       * Update GLUT support for Freeglut 2.8.1 [Released: 5 April 2013]
 "
@@ -2694,7 +2697,7 @@ syntax keyword glConstant GL_MAX_LABEL_LENGTH
 
 " Functions
 "{{{
-" ARB_clear_Buffer_object
+" ARB_clear_buffer_object
 syntax keyword glFunction glClearBufferData
 syntax keyword glFunction glClearBufferSubData
 syntax keyword glFunction glClearNamedBufferDataEXT
@@ -2772,6 +2775,64 @@ syntax keyword glFunction glObjectLabel
 syntax keyword glFunction glGetObjectLabel
 syntax keyword glFunction glObjectPtrLabel
 syntax keyword glFunction glGetObjectPtrLabel
+"}}}
+"}}}
+
+" OpenGL 4.4 {{{
+" Constants
+" {{{
+" ARB_buffer_storage
+syntax keyword glConstant GL_MAP_PERSISTENT_BIT
+syntax keyword glConstant GL_MAP_COHERENT_BIT
+syntax keyword glConstant GL_DYNAMIC_STORAGE_MAP
+syntax keyword glConstant GL_CLIENT_STORAGE_MAP
+
+syntax keyword glConstant GL_BUFFER_IMMUTABLE_STORAGE
+syntax keyword glConstant GL_STORAGE_FLAGS
+
+syntax keyword glConstant GL_CLIENT_MAPPED_BUFFER_BARRIER_BIT
+
+" ARB_clear_texture
+syntax keyword glConstant GL_CLEAR_TEXTURE
+
+" ARB_enhanced_layouts
+syntax keyword glConstant GL_LOCATION_COMPONENT
+syntax keyword glConstant GL_TRANSFORM_FEEDBACK_BUFFER_INDEX
+syntax keyword glConstant GL_TRANSFORM_FEEDBACK_BUFFER_STRIDE
+
+" ARB_query_buffer_object
+syntax keyword glConstant GL_QUERY_RESULT_NO_WAIT
+syntax keyword glConstant GL_QUERY_BUFFER
+syntax keyword glConstant GL_QUERY_BUFFER_BINDING
+syntax keyword glConstant GL_QUERY_BUFFER_BARRIER_BIT
+
+" ARB_texture_mirror_clamp_to_edge
+syntax keyword glConstant GL_MIRROR_CLAMP_TO_EDGE
+
+" ARB_texture_stencil
+syntax keyword glConstant GL_STENCIL_INDEX8
+
+" ARB_vertex_type_10f_11f_11f_rev
+syntax keyword glConstant GL_UNSIGNED_INT_10F_11F_11F_REV
+" }}}
+
+" Functions
+"{{{
+" ARB_buffer_storage
+syntax keyword glFunction glBufferStorage
+syntax keyword glFunction glNamedBufferStorageEXT
+
+" ARB_clear_texture
+syntax keyword glFunction glClearTexImage
+syntax keyword glFunction glClearTexSubImage
+
+" ARB_multi_bind
+syntax keyword glFunction glBindBuffersBase
+syntax keyword glFunction glBindBuffersRange
+syntax keyword glFunction glBindTextures
+syntax keyword glFunction glBindSamplers
+syntax keyword glFunction glBindImageTextures
+syntax keyword glFunction glBindVertexBuffers
 "}}}
 "}}}
 
@@ -3452,6 +3513,65 @@ syntax keyword glFunction glGetObjectPtrLabel
     " OpenGL ARB extension GL_ARB_fragment_shader {{{ 
     syntax keyword glConstant GL_MAX_FRAGMENT_UNIFORM_COMPONENTS_ARB
     syntax keyword glType GL_FRAGMENT_SHADER_ARB
+    " }}}
+
+    " OpenGL ARB extension GL_ARB_bindless_texture {{{ 
+    syntax keyword glType GL_UNSIGNED_INT64_ARB
+
+    syntax keyword glFunction glGetTextureHandleARB
+    syntax keyword glFunction glGetTextureSamplerHandleARB
+    syntax keyword glFunction glMakeTextureHandleResidentARB
+    syntax keyword glFunction glMakeTextureHandleNonResidentARB
+    syntax keyword glFunction glGetImageHandleARB
+    syntax keyword glFunction glMakeImageHandleResidentARB
+    syntax keyword glFunction glMakeImageHandleNonResidentARB
+    syntax keyword glFunction glUniformHandleui64ARB
+    syntax keyword glFunction glUniformHandleui64vARB
+    syntax keyword glFunction glProgramUniformHandleui64ARB
+    syntax keyword glFunction glProgramUniformHandleui64vARB
+    syntax keyword glFunction glIsTextureHandleResidentARB
+    syntax keyword glFunction glIsImageHandleResidentARB
+    syntax keyword glFunction glVertexAttribL1ui64ARB
+    syntax keyword glFunction glVertexAttribL1ui64vARB
+    syntax keyword glFunction glGetVertexAttribL1ui64vARB
+    " }}}
+
+    " OpenGL ARB extension GL_ARB_compute_variable_group {{{ 
+    syntax keyword glConstant GL_MAX_COMPUTE_VARIABLE_GROUP_INVOCATIONS_ARB
+    syntax keyword glConstant GL_MAX_COMPUTE_FIXED_GROUP_INVOCATIONS_ARB
+    syntax keyword glConstant GL_MAX_COMPUTE_VARIABLE_GROUP_SIZE_ARB
+    syntax keyword glConstant GL_MAX_COMPUTE_FIXED_GROUP_SIZE_ARB
+
+    syntax keyword glFunction glDispatchComputeGroupSizeARB
+    " }}}
+
+    " OpenGL ARB extension GL_ARB_indirect_parameters {{{ 
+    syntax keyword glConstant GL_PARAMETER_BUFFER_ARB
+    syntax keyword glConstant GL_PARAMETER_BUFFER_BINDING_ARB
+
+    syntax keyword glFunction glMultiDrawArraysIndirectCountARB
+    syntax keyword glFunction glMultiDrawElementsIndirectCountARB
+    " }}}
+
+    " OpenGL ARB extension GL_ARB_seamless_cubemap_per_texture {{{ 
+    syntax keyword glConstant GL_TEXTURE_CUBE_MAP_SEAMLESS
+    " }}}
+
+    " OpenGL ARB extension GL_ARB_sparse_texture {{{ 
+    syntax keyword glConstant GL_TEXTURE_SPARSE_ARB
+    syntax keyword glConstant GL_VIRTUAL_PAGE_SIZE_INDEX_ARB
+    syntax keyword glConstant GL_NUM_SPARSE_LEVELS_ARB
+    syntax keyword glConstant GL_NUM_VIRTUAL_PAGE_SIZES_ARB
+    syntax keyword glConstant GL_VIRTUAL_PAGE_SIZE_X_ARB
+    syntax keyword glConstant GL_VIRTUAL_PAGE_SIZE_Y_ARB
+    syntax keyword glConstant GL_VIRTUAL_PAGE_SIZE_Z_ARB
+    syntax keyword glConstant GL_MAX_SPARSE_TEXTURE_SIZE_ARB
+    syntax keyword glConstant GL_MAX_SPARSE_3D_TEXTURE_SIZE_ARB
+    syntax keyword glConstant GL_MAX_SPARSE_ARRAY_TEXTURE_LAYERS_ARB
+    syntax keyword glConstant GL_SPARSE_TEXTURE_FULL_ARRAY_CUBE_MIPAMPS_ARB
+
+    syntax keyword glFunction glTexturePageCommitmentARB
+    syntax keyword glFunction glTexturePageCommitmentEXT
     " }}}
     
   " }}}
