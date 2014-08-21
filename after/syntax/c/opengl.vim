@@ -1,8 +1,8 @@
 " Vim syntax file
 " Language:     C OpenGL
 " Author:       Marc Costa <beyond.marc@gmail.com>
-" Version:      4.4
-" Last Change:  July 27, 2013
+" Version:      4.5
+" Last Change:  August 21, 2014
 " Notes:        Adapted from opengl.vim - Andreeshchev Eugene <admix@pisem.net>
 
 " Usage:
@@ -10,6 +10,10 @@
 "   Source it from somewhere
 "
 " Changelog:
+"   2014-08-21
+"       * Updated to OpenGL 4.5 specification.
+"       * Deleted trailing whitespace
+"
 "   2013-07-27
 "       * Updated to OpenGL 4.4 specification.
 "
@@ -2836,6 +2840,186 @@ syntax keyword glFunction glBindVertexBuffers
 "}}}
 "}}}
 
+" OpenGL 4.5 {{{
+" Constants
+" {{{
+" ARB_clip_control
+syntax keyword glConstant GL_LOWER_LEFT
+syntax keyword glConstant GL_UPPER_LEFT
+syntax keyword glConstant GL_NEGATIVE_ONE_TO_ONE
+syntax keyword glConstant GL_ZERO_TO_ONE
+syntax keyword glConstant GL_CLIP_ORIGIN
+syntax keyword glConstant GL_CLIP_DEPTH_MODE
+
+" ARB_conditional_render_inverted
+syntax keyword glConstant GL_QUERY_WAIT_INVERTED
+syntax keyword glConstant GL_QUERY_NO_WAIT_INVERTED
+syntax keyword glConstant GL_QUERY_BY_REGION_WAIT_INVERTED
+syntax keyword glConstant GL_QUERY_BY_REGION_NO_WAIT_INVERTED
+
+" ARB_cull_distance
+syntax keyword glConstant GL_MAX_CULL_DISTANCES
+syntax keyword glConstant GL_MAX_COMBINED_CLIP_AND_CULL_DISTANCES
+
+" ARB_direct_state_access
+syntax keyword glConstant GL_TEXTURE_TARGET
+syntax keyword glConstant GL_QUERY_TARGET
+syntax keyword glConstant GL_TEXTURE_BINDING_1D
+syntax keyword glConstant GL_TEXTURE_BINDING_1D_ARRAY
+syntax keyword glConstant GL_TEXTURE_BINDING_2D
+syntax keyword glConstant GL_TEXTURE_BINDING_2D_ARRAY
+syntax keyword glConstant GL_TEXTURE_BINDING_2D_MULTISAMPLE
+syntax keyword glConstant GL_TEXTURE_BINDING_2D_MULTISAMPLE_ARRAY
+syntax keyword glConstant GL_TEXTURE_BINDING_3D
+syntax keyword glConstant GL_TEXTURE_BINDING_BUFFER
+syntax keyword glConstant GL_TEXTURE_BINDING_CUBE_MAP
+syntax keyword glConstant GL_TEXTURE_BINDING_CUBE_MAP_ARRAY
+syntax keyword glConstant GL_TEXTURE_BINDING_RECTANGLE
+syntax keyword glConstant GL_TEXTURE_BINDING
+
+" KHR_robustness
+syntax keyword glConstant GL_NO_ERROR
+syntax keyword glConstant GL_GUILTY_CONTEXT_RESET
+syntax keyword glConstant GL_INNOCENT_CONTEXT_RESET
+syntax keyword glConstant GL_UNKNOWN_CONTEXT_RESET
+syntax keyword glConstant GL_CONTEXT_ROBUST_ACCESS
+syntax keyword glConstant GL_RESET_NOTIFICATION_STRATEGY
+syntax keyword glConstant GL_LOSE_CONTEXT_ON_RESET
+syntax keyword glConstant GL_NO_RESET_NOTIFICATION
+syntax keyword glConstant GL_CONTEXT_LOST
+
+" KHR_context_flush_control
+syntax keyword glConstant GL_CONTEXT_RELEASE_BEHAVIOUR
+syntax keyword glConstant GL_NONE
+syntax keyword glConstant GL_CONTEXT_RELEASE_BEHAVIOUR_FLUSH
+" }}}
+
+" Functions
+"{{{
+" ARB_clip_control
+syntax keyword glFunction glClipControl
+
+" ARB_direct_state_access
+syntax keyword glFunction glCreateTransformFeedbacks
+syntax keyword glFunction glTransformFeedbackBufferBase
+syntax keyword glFunction glTransformFeedbackBufferRange
+syntax keyword glFunction glGetTransformFeedbackiv
+syntax keyword glFunction glGetTransformFeedback64_v
+
+syntax keyword glFunction glCreateBuffers
+syntax keyword glFunction glNamedBufferStorage
+syntax keyword glFunction glNamedBufferData
+syntax keyword glFunction glNamedBufferSubData
+syntax keyword glFunction glCopyNamedBufferSubData
+syntax keyword glFunction glClearNamedBufferData
+syntax keyword glFunction glClearNamedBufferSubData
+syntax keyword glFunction glMapNamedBuffer
+syntax keyword glFunction glMapNamedBufferRange
+syntax keyword glFunction glUnmapNamedBuffer
+syntax keyword glFunction glFlushMappedNamedBufferRange
+syntax keyword glFunction glGetNamedBufferParameteriv
+syntax keyword glFunction glGetNamedBufferParameter64v
+syntax keyword glFunction glGetNamedBufferPointerv
+syntax keyword glFunction glGetNamedBufferSubData
+
+syntax keyword glFunction glCreateFramebuffers
+syntax keyword glFunction glNamedFramebufferRenderbuffer
+syntax keyword glFunction glNamedFramebufferParameteri
+syntax keyword glFunction glNamedFramebufferTexture
+syntax keyword glFunction glNamedFramebufferTextureLayer
+syntax keyword glFunction glNamedFramebufferDrawBuffer
+syntax keyword glFunction glNamedFramebufferDrawBuffers
+syntax keyword glFunction glNamedFramebufferReadBuffer
+syntax keyword glFunction glInvalidateNamedFramebufferData
+syntax keyword glFunction glInvalidateNamedFramebufferSubData
+syntax keyword glFunction glClearNamedFramebufferiv
+syntax keyword glFunction glClearNamedFramebufferuiv
+syntax keyword glFunction glClearNamedFramebufferfv
+syntax keyword glFunction glClearNamedFramebufferfi
+syntax keyword glFunction glBlitNamedFramebuffer
+syntax keyword glFunction glCheckNamedFramebufferStatus
+syntax keyword glFunction glGetNamedFramebufferParameteriv
+syntax keyword glFunction glGetNamedFramebufferAttachmentParameteriv
+
+syntax keyword glFunction glCreateRenderbuffers
+syntax keyword glFunction glNamedRenderbufferStorage
+syntax keyword glFunction glNamedRenderbufferStorageMultisample
+syntax keyword glFunction glGetNamedRenderbufferParameteriv
+
+syntax keyword glFunction glCreateTextures
+syntax keyword glFunction glTextureBuffer
+syntax keyword glFunction glTextureBufferRange
+syntax keyword glFunction glTextureStorage1D
+syntax keyword glFunction glTextureStorage2D
+syntax keyword glFunction glTextureStorage3D
+syntax keyword glFunction glTextureStorage2DMultisample
+syntax keyword glFunction glTextureStorage3DMultisample
+syntax keyword glFunction glTextureSubImage1D
+syntax keyword glFunction glTextureSubImage2D
+syntax keyword glFunction glTextureSubImage3D
+syntax keyword glFunction glCompressedTextureSubImage1D
+syntax keyword glFunction glCompressedTextureSubImage2D
+syntax keyword glFunction glCompressedTextureSubImage3D
+syntax keyword glFunction glCopyTextureSubImage1D
+syntax keyword glFunction glCopyTextureSubImage2D
+syntax keyword glFunction glCopyTextureSubImage3D
+syntax keyword glFunction glTextureParameterf
+syntax keyword glFunction glTextureParameterfv
+syntax keyword glFunction glTextureParameteri
+syntax keyword glFunction glTextureParameterIiv
+syntax keyword glFunction glTextureParameterIuiv
+syntax keyword glFunction glTextureParameteriv
+syntax keyword glFunction glGenerateTextureMipmap
+syntax keyword glFunction glBindTextureUnit
+syntax keyword glFunction glGetTextureImage
+syntax keyword glFunction glGetCompressedTextureImage
+syntax keyword glFunction glGetTextureLevelParameterfv
+syntax keyword glFunction glGetTextureLevelParameteriv
+syntax keyword glFunction glGetTextureParameterfv
+syntax keyword glFunction glGetTextureParameterIiv
+syntax keyword glFunction glGetTextureParameterIuiv
+syntax keyword glFunction glGetTextureParameteriv
+
+syntax keyword glFunction glCreateVertexArrays
+syntax keyword glFunction glDisableVertexArrayAttrib
+syntax keyword glFunction glEnableVertexArrayAttrib
+syntax keyword glFunction glVertexArrayElementBuffer
+syntax keyword glFunction glVertexArrayVertexBuffer
+syntax keyword glFunction glVertexArrayVertexBuffers
+syntax keyword glFunction glVertexArrayAttribFormat
+syntax keyword glFunction glVertexArrayAttribIFormat
+syntax keyword glFunction glVertexArrayAttribLFormat
+syntax keyword glFunction glVertexArrayAttribBinding
+syntax keyword glFunction glVertexArrayAttribBindingDivisor
+syntax keyword glFunction glGetVertexArrayiv
+syntax keyword glFunction glGetVertexArrayIndexediv
+syntax keyword glFunction glGetVertexArrayIndexed64iv
+
+syntax keyword glFunction glCreateSamplers
+
+syntax keyword glFunction glCreateProgramPipelines
+
+syntax keyword glFunction glCreateQueries
+
+" ARB_ES3_1_compatiblity
+syntax keyword glFunction glMemoryBarrierByRegion
+
+" ARB_get_texture_sub_image
+syntax keyword glFunction glGetTextureSubImage
+syntax keyword glFunction glGetCompressedTextureSubImage
+
+" KHR_robustness
+syntax keyword glFunction glGetGraphicsResetStatus
+syntax keyword glFunction glReadnPixels
+syntax keyword glFunction glGetnUniformfv
+syntax keyword glFunction glGetnUniformiv
+syntax keyword glFunction glGetnUniformuiv
+
+" ARB_texture_barrier
+syntax keyword glFunction glTextureBarrier
+"}}}
+"}}}
+
 
 " }}}
 
@@ -3572,6 +3756,55 @@ syntax keyword glFunction glBindVertexBuffers
 
     syntax keyword glFunction glTexturePageCommitmentARB
     syntax keyword glFunction glTexturePageCommitmentEXT
+    " }}}
+
+    " OpenGL ARB extension GL_ARB_pipeline_statistics_query {{{
+    syntax keyword glConstant GL_VERTICES_SUBMITTED_ARB
+    syntax keyword glConstant GL_PRIMITIVES_SUBMITTED_ARB
+    syntax keyword glConstant GL_VERTEX_SHADER_INVOCATIONS_ARB
+    syntax keyword glConstant GL_TESS_CONTROL_SHADER_INVOCATIONS_ARB
+    syntax keyword glConstant GL_TESS_EVALUATION_SHADER_INVOCATIONS_ARB
+    syntax keyword glConstant GL_GEOMETRY_SHADER_INVOCATIONS_ARB
+    syntax keyword glConstant GL_GEOMETRY_SHADER_PRIMITIVES_EMITTED_ARB
+    syntax keyword glConstant GL_FRAGMENT_SHADER_INVOCATIONS_ARB
+    syntax keyword glConstant GL_COMPUTE_SHADER_INVOCATIONS_ARB
+    syntax keyword glConstant GL_CLIPPING_INPUT_PRIMITIVES_ARB
+    syntax keyword glConstant GL_CLIPPING_OUTPUT_PRIMITIVES_ARB
+    " }}}
+
+    " OpenGL ARB extension GL_ARB_sparse_buffer {{{
+    syntax keyword glConstant GL_SPARSE_STORAGE_BIT_ARB
+    syntax keyword glConstant GL_SPARSE_BUFFER_PAGE_SIZE_ARB
+
+    syntax keyword glFunction glBufferPageCommitmentARB
+    syntax keyword glFunction glNamedBufferPageCommitmentARB
+    syntax keyword glFunction glNamedBufferPageCommitmentEXT
+    " }}}
+
+    " OpenGL ARB extension GL_ARB_transform_feedback_overflow_query
+    syntax keyword glConstant GL_TRANSFORM_FEEDBACK_OVERFLOW_ARB
+    syntax keyword glConstant GL_TRANSFORM_FEEDBACK_STREAM_OVERFLOW_ARB
+    " }}}
+
+    " OpenGL ARB extension GL_KHR_blend_equation_advanced & GL_KHR_blend_equation_advanced_coherent
+    syntax keyword glConstant GL_BLEND_ADVANCED_COHERENT_ARB
+    syntax keyword glConstant GL_MULTIPLY_KHR
+    syntax keyword glConstant GL_SCREEN_KHR
+    syntax keyword glConstant GL_OVERLAY_KHR
+    syntax keyword glConstant GL_DARKEN_KHR
+    syntax keyword glConstant GL_LIGHTEN_KHR
+    syntax keyword glConstant GL_COLORDODGE_KHR
+    syntax keyword glConstant GL_COLORBURN_KHR
+    syntax keyword glConstant GL_HARDLIGHT_KHR
+    syntax keyword glConstant GL_SOFTLIGHT_KHR
+    syntax keyword glConstant GL_DIFFERENCE_KHR
+    syntax keyword glConstant GL_EXCLUSION_KHR
+    syntax keyword glConstant GL_HSL_HUE_KHR
+    syntax keyword glConstant GL_HSL_SATURATION_KHR
+    syntax keyword glConstant GL_HSL_COLOR_KHR
+    syntax keyword glConstant GL_HSL_LUMINOSITY_KHR
+
+    syntax keyword glFunction glBlendBarrierKHR
     " }}}
 
   " }}}
