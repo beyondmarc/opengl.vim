@@ -5,11 +5,11 @@
 " Last Change:  July 27, 2013
 " Notes:        Adapted from opengl.vim - Andreeshchev Eugene <admix@pisem.net>
 
-" Usage: 
+" Usage:
 "
 "   Source it from somewhere
 "
-" Changelog: 
+" Changelog:
 "   2013-07-27
 "       * Updated to OpenGL 4.4 specification.
 "
@@ -49,23 +49,23 @@
 "   2011-03-10
 "       * Updated to OpenGL 2.1 specification.
 "
-"   2007-08-30 (v1.5) 
+"   2007-08-30 (v1.5)
 "       * Added OpenGL ES 2.0 and EGL symbols
 "          (thanks to Simon Hosie [sh1 at broadcom dot com]).
-"       * Added following variables: 
+"       * Added following variables:
 "           c_opengl_no_gles2 - turns off GLES2 highlighting
 "           c_opengl_no_egl - turns off EGL highlighting
 "       * Now version numbering is a bit screwed =)
 "
-"   2003-11-07 (v1.4.1) 
+"   2003-11-07 (v1.4.1)
 "       * Added GLUT support
 "          (thanks to Mathias Gumz [gumzat at cs dot uni-magdeburg dot de]).
-"       * Added following variables: 
+"       * Added following variables:
 "           c_opengl_no_glu     - turns off GLU highlighting
 "           c_opengl_no_glut    - turns off GLUT highlighting
 "           c_opengl_no_ext_arb - turns off ARB extensions highlighting
 "
-"   2003-10-31 (v1.4) 
+"   2003-10-31 (v1.4)
 "       * Updated to OpenGL 1.4 ARB extensions for OpenGL Shading Language
 "          (thanks to Eric Boumaour [zongo at nekeme dot net]).
 "       * Now version number match OpenGL version.
@@ -111,7 +111,7 @@ syntax keyword glType GLclampf
 syntax keyword glType GLdouble
 syntax keyword glType GLclampd
 " }}}
- 
+
 " Constants {{{
 syntax keyword glConstant GL_FALSE
 syntax keyword glConstant GL_TRUE
@@ -130,22 +130,22 @@ syntax keyword glConstant GL_POLYGON
 " }}}
 
 " Vertex Arrays {{{
-syntax keyword glConstant GL_VERTEX_ARRAY	      
-syntax keyword glConstant GL_NORMAL_ARRAY	      
-syntax keyword glConstant GL_COLOR_ARRAY	      
-syntax keyword glConstant GL_INDEX_ARRAY	      
+syntax keyword glConstant GL_VERTEX_ARRAY
+syntax keyword glConstant GL_NORMAL_ARRAY
+syntax keyword glConstant GL_COLOR_ARRAY
+syntax keyword glConstant GL_INDEX_ARRAY
 syntax keyword glConstant GL_TEXTURE_COORD_ARRAY
-syntax keyword glConstant GL_EDGE_FLAG_ARRAY    
-syntax keyword glConstant GL_VERTEX_ARRAY_SIZE  
-syntax keyword glConstant GL_VERTEX_ARRAY_TYPE  
+syntax keyword glConstant GL_EDGE_FLAG_ARRAY
+syntax keyword glConstant GL_VERTEX_ARRAY_SIZE
+syntax keyword glConstant GL_VERTEX_ARRAY_TYPE
 syntax keyword glConstant GL_VERTEX_ARRAY_STRIDE
-syntax keyword glConstant GL_NORMAL_ARRAY_TYPE  
+syntax keyword glConstant GL_NORMAL_ARRAY_TYPE
 syntax keyword glConstant GL_NORMAL_ARRAY_STRIDE
-syntax keyword glConstant GL_COLOR_ARRAY_SIZE   
-syntax keyword glConstant GL_COLOR_ARRAY_TYPE   
-syntax keyword glConstant GL_COLOR_ARRAY_STRIDE 
-syntax keyword glConstant GL_INDEX_ARRAY_TYPE   
-syntax keyword glConstant GL_INDEX_ARRAY_STRIDE 
+syntax keyword glConstant GL_COLOR_ARRAY_SIZE
+syntax keyword glConstant GL_COLOR_ARRAY_TYPE
+syntax keyword glConstant GL_COLOR_ARRAY_STRIDE
+syntax keyword glConstant GL_INDEX_ARRAY_TYPE
+syntax keyword glConstant GL_INDEX_ARRAY_STRIDE
 syntax keyword glConstant GL_TEXTURE_COORD_ARRAY_SIZE
 syntax keyword glConstant GL_TEXTURE_COORD_ARRAY_TYPE
 syntax keyword glConstant GL_TEXTURE_COORD_ARRAY_STRIDE
@@ -156,129 +156,129 @@ syntax keyword glConstant GL_COLOR_ARRAY_POINTER
 syntax keyword glConstant GL_INDEX_ARRAY_POINTER
 syntax keyword glConstant GL_TEXTURE_COORD_ARRAY_POINTER
 syntax keyword glConstant GL_EDGE_FLAG_ARRAY_POINTER
-syntax keyword glConstant GL_V2F		      
-syntax keyword glConstant GL_V3F		      
-syntax keyword glConstant GL_C4UB_V2F	      
-syntax keyword glConstant GL_C4UB_V3F	      
-syntax keyword glConstant GL_C3F_V3F	      
-syntax keyword glConstant GL_N3F_V3F	      
-syntax keyword glConstant GL_C4F_N3F_V3F	      
-syntax keyword glConstant GL_T2F_V3F	      
-syntax keyword glConstant GL_T4F_V4F	      
-syntax keyword glConstant GL_T2F_C4UB_V3F	      
-syntax keyword glConstant GL_T2F_C3F_V3F	      
-syntax keyword glConstant GL_T2F_N3F_V3F	      
-syntax keyword glConstant GL_T2F_C4F_N3F_V3F    
-syntax keyword glConstant GL_T4F_C4F_N3F_V4F    
+syntax keyword glConstant GL_V2F
+syntax keyword glConstant GL_V3F
+syntax keyword glConstant GL_C4UB_V2F
+syntax keyword glConstant GL_C4UB_V3F
+syntax keyword glConstant GL_C3F_V3F
+syntax keyword glConstant GL_N3F_V3F
+syntax keyword glConstant GL_C4F_N3F_V3F
+syntax keyword glConstant GL_T2F_V3F
+syntax keyword glConstant GL_T4F_V4F
+syntax keyword glConstant GL_T2F_C4UB_V3F
+syntax keyword glConstant GL_T2F_C3F_V3F
+syntax keyword glConstant GL_T2F_N3F_V3F
+syntax keyword glConstant GL_T2F_C4F_N3F_V3F
+syntax keyword glConstant GL_T4F_C4F_N3F_V4F
 " }}}
 
 " Matrix Mode {{{
 syntax keyword glConstant GL_MATRIX_MODE
-syntax keyword glConstant GL_MODELVIEW  
-syntax keyword glConstant GL_PROJECTION 
-syntax keyword glConstant GL_TEXTURE    
+syntax keyword glConstant GL_MODELVIEW
+syntax keyword glConstant GL_PROJECTION
+syntax keyword glConstant GL_TEXTURE
 " }}}
 
 " Points {{{
-syntax keyword glConstant GL_POINT_SMOOTH      
-syntax keyword glConstant GL_POINT_SIZE        
+syntax keyword glConstant GL_POINT_SMOOTH
+syntax keyword glConstant GL_POINT_SIZE
 syntax keyword glConstant GL_POINT_SIZE_GRANULARITY
-syntax keyword glConstant GL_POINT_SIZE_RANGE  
+syntax keyword glConstant GL_POINT_SIZE_RANGE
 " }}}
-                   
+
 " Lines {{{
-syntax keyword glConstant GL_LINE_SMOOTH         
-syntax keyword glConstant GL_LINE_STIPPLE        
-syntax keyword glConstant GL_LINE_STIPPLE_PATTERN    
-syntax keyword glConstant GL_LINE_STIPPLE_REPEAT     
-syntax keyword glConstant GL_LINE_WIDTH      
+syntax keyword glConstant GL_LINE_SMOOTH
+syntax keyword glConstant GL_LINE_STIPPLE
+syntax keyword glConstant GL_LINE_STIPPLE_PATTERN
+syntax keyword glConstant GL_LINE_STIPPLE_REPEAT
+syntax keyword glConstant GL_LINE_WIDTH
 syntax keyword glConstant GL_LINE_WIDTH_GRANULARITY
-syntax keyword glConstant GL_LINE_WIDTH_RANGE    
+syntax keyword glConstant GL_LINE_WIDTH_RANGE
 " }}}
 
 " Polygons {{{
-syntax keyword glConstant GL_POINT        
-syntax keyword glConstant GL_LINE         
-syntax keyword glConstant GL_FILL         
-syntax keyword glConstant GL_CW           
-syntax keyword glConstant GL_CCW          
-syntax keyword glConstant GL_FRONT        
-syntax keyword glConstant GL_BACK         
-syntax keyword glConstant GL_POLYGON_MODE     
-syntax keyword glConstant GL_POLYGON_SMOOTH   
-syntax keyword glConstant GL_POLYGON_STIPPLE  
-syntax keyword glConstant GL_EDGE_FLAG        
-syntax keyword glConstant GL_CULL_FACE        
-syntax keyword glConstant GL_CULL_FACE_MODE   
-syntax keyword glConstant GL_FRONT_FACE       
+syntax keyword glConstant GL_POINT
+syntax keyword glConstant GL_LINE
+syntax keyword glConstant GL_FILL
+syntax keyword glConstant GL_CW
+syntax keyword glConstant GL_CCW
+syntax keyword glConstant GL_FRONT
+syntax keyword glConstant GL_BACK
+syntax keyword glConstant GL_POLYGON_MODE
+syntax keyword glConstant GL_POLYGON_SMOOTH
+syntax keyword glConstant GL_POLYGON_STIPPLE
+syntax keyword glConstant GL_EDGE_FLAG
+syntax keyword glConstant GL_CULL_FACE
+syntax keyword glConstant GL_CULL_FACE_MODE
+syntax keyword glConstant GL_FRONT_FACE
 syntax keyword glConstant GL_POLYGON_OFFSET_FACTOR
-syntax keyword glConstant GL_POLYGON_OFFSET_UNITS 
-syntax keyword glConstant GL_POLYGON_OFFSET_POINT 
-syntax keyword glConstant GL_POLYGON_OFFSET_LINE  
-syntax keyword glConstant GL_POLYGON_OFFSET_FILL  
+syntax keyword glConstant GL_POLYGON_OFFSET_UNITS
+syntax keyword glConstant GL_POLYGON_OFFSET_POINT
+syntax keyword glConstant GL_POLYGON_OFFSET_LINE
+syntax keyword glConstant GL_POLYGON_OFFSET_FILL
 " }}}
 
 " Display Lists {{{
-syntax keyword glConstant GL_COMPILE        
+syntax keyword glConstant GL_COMPILE
 syntax keyword glConstant GL_COMPILE_AND_EXECUTE
-syntax keyword glConstant GL_LIST_BASE          
-syntax keyword glConstant GL_LIST_INDEX         
-syntax keyword glConstant GL_LIST_MODE          
+syntax keyword glConstant GL_LIST_BASE
+syntax keyword glConstant GL_LIST_INDEX
+syntax keyword glConstant GL_LIST_MODE
 " }}}
 
 " Depth buffer {{{
-syntax keyword glConstant GL_NEVER        
-syntax keyword glConstant GL_LESS         
-syntax keyword glConstant GL_EQUAL        
-syntax keyword glConstant GL_LEQUAL       
-syntax keyword glConstant GL_GREATER      
-syntax keyword glConstant GL_NOTEQUAL     
-syntax keyword glConstant GL_GEQUAL       
-syntax keyword glConstant GL_ALWAYS       
-syntax keyword glConstant GL_DEPTH_TEST       
-syntax keyword glConstant GL_DEPTH_BITS       
+syntax keyword glConstant GL_NEVER
+syntax keyword glConstant GL_LESS
+syntax keyword glConstant GL_EQUAL
+syntax keyword glConstant GL_LEQUAL
+syntax keyword glConstant GL_GREATER
+syntax keyword glConstant GL_NOTEQUAL
+syntax keyword glConstant GL_GEQUAL
+syntax keyword glConstant GL_ALWAYS
+syntax keyword glConstant GL_DEPTH_TEST
+syntax keyword glConstant GL_DEPTH_BITS
 syntax keyword glConstant GL_DEPTH_CLEAR_VALUE
-syntax keyword glConstant GL_DEPTH_FUNC       
-syntax keyword glConstant GL_DEPTH_RANGE      
-syntax keyword glConstant GL_DEPTH_WRITEMASK  
-syntax keyword glConstant GL_DEPTH_COMPONENT  
+syntax keyword glConstant GL_DEPTH_FUNC
+syntax keyword glConstant GL_DEPTH_RANGE
+syntax keyword glConstant GL_DEPTH_WRITEMASK
+syntax keyword glConstant GL_DEPTH_COMPONENT
 " }}}
 
 " Lighting {{{
-syntax keyword glConstant GL_LIGHTING        
-syntax keyword glConstant GL_LIGHT0          
-syntax keyword glConstant GL_LIGHT1          
-syntax keyword glConstant GL_LIGHT2          
-syntax keyword glConstant GL_LIGHT3          
-syntax keyword glConstant GL_LIGHT4          
-syntax keyword glConstant GL_LIGHT5          
-syntax keyword glConstant GL_LIGHT6          
-syntax keyword glConstant GL_LIGHT7          
-syntax keyword glConstant GL_SPOT_EXPONENT       
-syntax keyword glConstant GL_SPOT_CUTOFF         
-syntax keyword glConstant GL_CONSTANT_ATTENUATION    
-syntax keyword glConstant GL_LINEAR_ATTENUATION      
-syntax keyword glConstant GL_QUADRATIC_ATTENUATION   
-syntax keyword glConstant GL_AMBIENT         
-syntax keyword glConstant GL_DIFFUSE         
-syntax keyword glConstant GL_SPECULAR        
-syntax keyword glConstant GL_SHININESS           
-syntax keyword glConstant GL_EMISSION        
-syntax keyword glConstant GL_POSITION        
-syntax keyword glConstant GL_SPOT_DIRECTION      
-syntax keyword glConstant GL_AMBIENT_AND_DIFFUSE     
-syntax keyword glConstant GL_COLOR_INDEXES       
-syntax keyword glConstant GL_LIGHT_MODEL_TWO_SIDE    
+syntax keyword glConstant GL_LIGHTING
+syntax keyword glConstant GL_LIGHT0
+syntax keyword glConstant GL_LIGHT1
+syntax keyword glConstant GL_LIGHT2
+syntax keyword glConstant GL_LIGHT3
+syntax keyword glConstant GL_LIGHT4
+syntax keyword glConstant GL_LIGHT5
+syntax keyword glConstant GL_LIGHT6
+syntax keyword glConstant GL_LIGHT7
+syntax keyword glConstant GL_SPOT_EXPONENT
+syntax keyword glConstant GL_SPOT_CUTOFF
+syntax keyword glConstant GL_CONSTANT_ATTENUATION
+syntax keyword glConstant GL_LINEAR_ATTENUATION
+syntax keyword glConstant GL_QUADRATIC_ATTENUATION
+syntax keyword glConstant GL_AMBIENT
+syntax keyword glConstant GL_DIFFUSE
+syntax keyword glConstant GL_SPECULAR
+syntax keyword glConstant GL_SHININESS
+syntax keyword glConstant GL_EMISSION
+syntax keyword glConstant GL_POSITION
+syntax keyword glConstant GL_SPOT_DIRECTION
+syntax keyword glConstant GL_AMBIENT_AND_DIFFUSE
+syntax keyword glConstant GL_COLOR_INDEXES
+syntax keyword glConstant GL_LIGHT_MODEL_TWO_SIDE
 syntax keyword glConstant GL_LIGHT_MODEL_LOCAL_VIEWER
-syntax keyword glConstant GL_LIGHT_MODEL_AMBIENT     
-syntax keyword glConstant GL_FRONT_AND_BACK      
-syntax keyword glConstant GL_SHADE_MODEL         
-syntax keyword glConstant GL_FLAT            
-syntax keyword glConstant GL_SMOOTH          
-syntax keyword glConstant GL_COLOR_MATERIAL      
-syntax keyword glConstant GL_COLOR_MATERIAL_FACE     
+syntax keyword glConstant GL_LIGHT_MODEL_AMBIENT
+syntax keyword glConstant GL_FRONT_AND_BACK
+syntax keyword glConstant GL_SHADE_MODEL
+syntax keyword glConstant GL_FLAT
+syntax keyword glConstant GL_SMOOTH
+syntax keyword glConstant GL_COLOR_MATERIAL
+syntax keyword glConstant GL_COLOR_MATERIAL_FACE
 syntax keyword glConstant GL_COLOR_MATERIAL_PARAMETER
-syntax keyword glConstant GL_NORMALIZE           
+syntax keyword glConstant GL_NORMALIZE
 " }}}
 
 " Use clipping planes {{{
@@ -291,274 +291,274 @@ syntax keyword glConstant GL_CLIP_PLANE5
 " }}}
 
 " Accumulation buffer {{{
-syntax keyword glConstant GL_ACCUM_RED_BITS   
-syntax keyword glConstant GL_ACCUM_GREEN_BITS 
-syntax keyword glConstant GL_ACCUM_BLUE_BITS  
-syntax keyword glConstant GL_ACCUM_ALPHA_BITS 
+syntax keyword glConstant GL_ACCUM_RED_BITS
+syntax keyword glConstant GL_ACCUM_GREEN_BITS
+syntax keyword glConstant GL_ACCUM_BLUE_BITS
+syntax keyword glConstant GL_ACCUM_ALPHA_BITS
 syntax keyword glConstant GL_ACCUM_CLEAR_VALUE
-syntax keyword glConstant GL_ACCUM        
-syntax keyword glConstant GL_ADD          
-syntax keyword glConstant GL_LOAD         
-syntax keyword glConstant GL_MULT         
-syntax keyword glConstant GL_RETURN       
+syntax keyword glConstant GL_ACCUM
+syntax keyword glConstant GL_ADD
+syntax keyword glConstant GL_LOAD
+syntax keyword glConstant GL_MULT
+syntax keyword glConstant GL_RETURN
 " }}}
-                
+
 " Alpha testing {{{
-syntax keyword glConstant GL_ALPHA_TEST      
-syntax keyword glConstant GL_ALPHA_TEST_REF   
-syntax keyword glConstant GL_ALPHA_TEST_FUNC  
+syntax keyword glConstant GL_ALPHA_TEST
+syntax keyword glConstant GL_ALPHA_TEST_REF
+syntax keyword glConstant GL_ALPHA_TEST_FUNC
 " }}}
 
 " Blending {{{
-syntax keyword glConstant GL_BLEND           
-syntax keyword glConstant GL_BLEND_SRC           
-syntax keyword glConstant GL_BLEND_DST           
-syntax keyword glConstant GL_ZERO            
-syntax keyword glConstant GL_ONE             
-syntax keyword glConstant GL_SRC_COLOR           
-syntax keyword glConstant GL_ONE_MINUS_SRC_COLOR     
-syntax keyword glConstant GL_SRC_ALPHA           
-syntax keyword glConstant GL_ONE_MINUS_SRC_ALPHA     
-syntax keyword glConstant GL_DST_ALPHA           
-syntax keyword glConstant GL_ONE_MINUS_DST_ALPHA     
-syntax keyword glConstant GL_DST_COLOR           
-syntax keyword glConstant GL_ONE_MINUS_DST_COLOR     
-syntax keyword glConstant GL_SRC_ALPHA_SATURATE      
-syntax keyword glConstant GL_CONSTANT_COLOR      
+syntax keyword glConstant GL_BLEND
+syntax keyword glConstant GL_BLEND_SRC
+syntax keyword glConstant GL_BLEND_DST
+syntax keyword glConstant GL_ZERO
+syntax keyword glConstant GL_ONE
+syntax keyword glConstant GL_SRC_COLOR
+syntax keyword glConstant GL_ONE_MINUS_SRC_COLOR
+syntax keyword glConstant GL_SRC_ALPHA
+syntax keyword glConstant GL_ONE_MINUS_SRC_ALPHA
+syntax keyword glConstant GL_DST_ALPHA
+syntax keyword glConstant GL_ONE_MINUS_DST_ALPHA
+syntax keyword glConstant GL_DST_COLOR
+syntax keyword glConstant GL_ONE_MINUS_DST_COLOR
+syntax keyword glConstant GL_SRC_ALPHA_SATURATE
+syntax keyword glConstant GL_CONSTANT_COLOR
 syntax keyword glConstant GL_ONE_MINUS_CONSTANT_COLOR
-syntax keyword glConstant GL_CONSTANT_ALPHA      
+syntax keyword glConstant GL_CONSTANT_ALPHA
 syntax keyword glConstant GL_ONE_MINUS_CONSTANT_ALPHA
 " }}}
 
 " Render mode {{{
 syntax keyword glConstant GL_FEEDBACK
-syntax keyword glConstant GL_RENDER  
-syntax keyword glConstant GL_SELECT  
+syntax keyword glConstant GL_RENDER
+syntax keyword glConstant GL_SELECT
 " }}}
 
 " Feedback {{{
-syntax keyword glConstant GL_2D             
-syntax keyword glConstant GL_3D             
-syntax keyword glConstant GL_3D_COLOR       
-syntax keyword glConstant GL_3D_COLOR_TEXTURE   
-syntax keyword glConstant GL_4D_COLOR_TEXTURE   
-syntax keyword glConstant GL_POINT_TOKEN        
-syntax keyword glConstant GL_LINE_TOKEN         
-syntax keyword glConstant GL_LINE_RESET_TOKEN   
-syntax keyword glConstant GL_POLYGON_TOKEN      
-syntax keyword glConstant GL_BITMAP_TOKEN       
-syntax keyword glConstant GL_DRAW_PIXEL_TOKEN   
-syntax keyword glConstant GL_COPY_PIXEL_TOKEN   
-syntax keyword glConstant GL_PASS_THROUGH_TOKEN     
+syntax keyword glConstant GL_2D
+syntax keyword glConstant GL_3D
+syntax keyword glConstant GL_3D_COLOR
+syntax keyword glConstant GL_3D_COLOR_TEXTURE
+syntax keyword glConstant GL_4D_COLOR_TEXTURE
+syntax keyword glConstant GL_POINT_TOKEN
+syntax keyword glConstant GL_LINE_TOKEN
+syntax keyword glConstant GL_LINE_RESET_TOKEN
+syntax keyword glConstant GL_POLYGON_TOKEN
+syntax keyword glConstant GL_BITMAP_TOKEN
+syntax keyword glConstant GL_DRAW_PIXEL_TOKEN
+syntax keyword glConstant GL_COPY_PIXEL_TOKEN
+syntax keyword glConstant GL_PASS_THROUGH_TOKEN
 syntax keyword glConstant GL_FEEDBACK_BUFFER_POINTER
-syntax keyword glConstant GL_FEEDBACK_BUFFER_SIZE   
-syntax keyword glConstant GL_FEEDBACK_BUFFER_TYPE   
+syntax keyword glConstant GL_FEEDBACK_BUFFER_SIZE
+syntax keyword glConstant GL_FEEDBACK_BUFFER_TYPE
 " }}}
 
 " Selection {{{
 syntax keyword glConstant GL_SELECTION_BUFFER_POINTER
-syntax keyword glConstant GL_SELECTION_BUFFER_SIZE   
+syntax keyword glConstant GL_SELECTION_BUFFER_SIZE
 " }}}
 
 " Fog {{{
-syntax keyword glConstant GL_FOG        
-syntax keyword glConstant GL_FOG_MODE   
+syntax keyword glConstant GL_FOG
+syntax keyword glConstant GL_FOG_MODE
 syntax keyword glConstant GL_FOG_DENSITY
-syntax keyword glConstant GL_FOG_COLOR  
-syntax keyword glConstant GL_FOG_INDEX  
-syntax keyword glConstant GL_FOG_START  
-syntax keyword glConstant GL_FOG_END    
-syntax keyword glConstant GL_LINEAR     
-syntax keyword glConstant GL_EXP        
-syntax keyword glConstant GL_EXP2       
+syntax keyword glConstant GL_FOG_COLOR
+syntax keyword glConstant GL_FOG_INDEX
+syntax keyword glConstant GL_FOG_START
+syntax keyword glConstant GL_FOG_END
+syntax keyword glConstant GL_LINEAR
+syntax keyword glConstant GL_EXP
+syntax keyword glConstant GL_EXP2
 " }}}
 
 " Logic ops {{{
-syntax keyword glConstant GL_LOGIC_OP  
+syntax keyword glConstant GL_LOGIC_OP
 syntax keyword glConstant GL_INDEX_LOGIC_OP
 syntax keyword glConstant GL_COLOR_LOGIC_OP
-syntax keyword glConstant GL_LOGIC_OP_MODE 
-syntax keyword glConstant GL_CLEAR     
-syntax keyword glConstant GL_SET       
-syntax keyword glConstant GL_COPY      
-syntax keyword glConstant GL_COPY_INVERTED 
-syntax keyword glConstant GL_NOOP      
-syntax keyword glConstant GL_INVERT    
-syntax keyword glConstant GL_AND       
-syntax keyword glConstant GL_NAND      
-syntax keyword glConstant GL_OR        
-syntax keyword glConstant GL_NOR       
-syntax keyword glConstant GL_XOR       
-syntax keyword glConstant GL_EQUIV     
-syntax keyword glConstant GL_AND_REVERSE   
-syntax keyword glConstant GL_AND_INVERTED  
-syntax keyword glConstant GL_OR_REVERSE    
-syntax keyword glConstant GL_OR_INVERTED   
+syntax keyword glConstant GL_LOGIC_OP_MODE
+syntax keyword glConstant GL_CLEAR
+syntax keyword glConstant GL_SET
+syntax keyword glConstant GL_COPY
+syntax keyword glConstant GL_COPY_INVERTED
+syntax keyword glConstant GL_NOOP
+syntax keyword glConstant GL_INVERT
+syntax keyword glConstant GL_AND
+syntax keyword glConstant GL_NAND
+syntax keyword glConstant GL_OR
+syntax keyword glConstant GL_NOR
+syntax keyword glConstant GL_XOR
+syntax keyword glConstant GL_EQUIV
+syntax keyword glConstant GL_AND_REVERSE
+syntax keyword glConstant GL_AND_INVERTED
+syntax keyword glConstant GL_OR_REVERSE
+syntax keyword glConstant GL_OR_INVERTED
 " }}}
 
 " Stencil {{{
-syntax keyword glConstant GL_STENCIL_TEST       
-syntax keyword glConstant GL_STENCIL_WRITEMASK      
-syntax keyword glConstant GL_STENCIL_BITS       
-syntax keyword glConstant GL_STENCIL_FUNC       
-syntax keyword glConstant GL_STENCIL_VALUE_MASK     
-syntax keyword glConstant GL_STENCIL_REF        
-syntax keyword glConstant GL_STENCIL_FAIL       
+syntax keyword glConstant GL_STENCIL_TEST
+syntax keyword glConstant GL_STENCIL_WRITEMASK
+syntax keyword glConstant GL_STENCIL_BITS
+syntax keyword glConstant GL_STENCIL_FUNC
+syntax keyword glConstant GL_STENCIL_VALUE_MASK
+syntax keyword glConstant GL_STENCIL_REF
+syntax keyword glConstant GL_STENCIL_FAIL
 syntax keyword glConstant GL_STENCIL_PASS_DEPTH_PASS
 syntax keyword glConstant GL_STENCIL_PASS_DEPTH_FAIL
-syntax keyword glConstant GL_STENCIL_CLEAR_VALUE    
-syntax keyword glConstant GL_STENCIL_INDEX      
-syntax keyword glConstant GL_KEEP           
-syntax keyword glConstant GL_REPLACE        
-syntax keyword glConstant GL_INCR           
-syntax keyword glConstant GL_DECR           
+syntax keyword glConstant GL_STENCIL_CLEAR_VALUE
+syntax keyword glConstant GL_STENCIL_INDEX
+syntax keyword glConstant GL_KEEP
+syntax keyword glConstant GL_REPLACE
+syntax keyword glConstant GL_INCR
+syntax keyword glConstant GL_DECR
 " }}}
 
 " Buffers, Pixel Drawing/Reading {{{
-syntax keyword glConstant GL_NONE        
-syntax keyword glConstant GL_LEFT        
-syntax keyword glConstant GL_RIGHT       
-syntax keyword glConstant GL_FRONT_LEFT  
-syntax keyword glConstant GL_FRONT_RIGHT 
-syntax keyword glConstant GL_BACK_LEFT   
-syntax keyword glConstant GL_BACK_RIGHT  
-syntax keyword glConstant GL_AUX0        
-syntax keyword glConstant GL_AUX1        
-syntax keyword glConstant GL_AUX2        
-syntax keyword glConstant GL_AUX3        
-syntax keyword glConstant GL_COLOR_INDEX 
-syntax keyword glConstant GL_RED         
-syntax keyword glConstant GL_GREEN       
-syntax keyword glConstant GL_BLUE        
-syntax keyword glConstant GL_ALPHA       
-syntax keyword glConstant GL_LUMINANCE   
+syntax keyword glConstant GL_NONE
+syntax keyword glConstant GL_LEFT
+syntax keyword glConstant GL_RIGHT
+syntax keyword glConstant GL_FRONT_LEFT
+syntax keyword glConstant GL_FRONT_RIGHT
+syntax keyword glConstant GL_BACK_LEFT
+syntax keyword glConstant GL_BACK_RIGHT
+syntax keyword glConstant GL_AUX0
+syntax keyword glConstant GL_AUX1
+syntax keyword glConstant GL_AUX2
+syntax keyword glConstant GL_AUX3
+syntax keyword glConstant GL_COLOR_INDEX
+syntax keyword glConstant GL_RED
+syntax keyword glConstant GL_GREEN
+syntax keyword glConstant GL_BLUE
+syntax keyword glConstant GL_ALPHA
+syntax keyword glConstant GL_LUMINANCE
 syntax keyword glConstant GL_LUMINANCE_ALPHA
-syntax keyword glConstant GL_ALPHA_BITS  
-syntax keyword glConstant GL_RED_BITS    
-syntax keyword glConstant GL_GREEN_BITS  
-syntax keyword glConstant GL_BLUE_BITS   
-syntax keyword glConstant GL_INDEX_BITS  
+syntax keyword glConstant GL_ALPHA_BITS
+syntax keyword glConstant GL_RED_BITS
+syntax keyword glConstant GL_GREEN_BITS
+syntax keyword glConstant GL_BLUE_BITS
+syntax keyword glConstant GL_INDEX_BITS
 syntax keyword glConstant GL_SUBPIXEL_BIT
-syntax keyword glConstant GL_AUX_BUFFERS 
-syntax keyword glConstant GL_READ_BUFFER 
-syntax keyword glConstant GL_DRAW_BUFFER 
+syntax keyword glConstant GL_AUX_BUFFERS
+syntax keyword glConstant GL_READ_BUFFER
+syntax keyword glConstant GL_DRAW_BUFFER
 syntax keyword glConstant GL_DOUBLEBUFFER
-syntax keyword glConstant GL_STEREO      
-syntax keyword glConstant GL_BITMAP      
-syntax keyword glConstant GL_COLOR       
-syntax keyword glConstant GL_DEPTH       
-syntax keyword glConstant GL_STENCIL     
-syntax keyword glConstant GL_DITHER      
-syntax keyword glConstant GL_RGB         
-syntax keyword glConstant GL_RGBA        
+syntax keyword glConstant GL_STEREO
+syntax keyword glConstant GL_BITMAP
+syntax keyword glConstant GL_COLOR
+syntax keyword glConstant GL_DEPTH
+syntax keyword glConstant GL_STENCIL
+syntax keyword glConstant GL_DITHER
+syntax keyword glConstant GL_RGB
+syntax keyword glConstant GL_RGBA
 " }}}
 
 " Implementation limits {{{
-syntax keyword glConstant GL_MAX_LIST_NESTING        
-syntax keyword glConstant GL_MAX_ATTRIB_STACK_DEPTH  
-syntax keyword glConstant GL_MAX_MODELVIEW_STACK_DEPTH   
-syntax keyword glConstant GL_MAX_NAME_STACK_DEPTH        
-syntax keyword glConstant GL_MAX_PROJECTION_STACK_DEPTH  
-syntax keyword glConstant GL_MAX_TEXTURE_STACK_DEPTH 
-syntax keyword glConstant GL_MAX_EVAL_ORDER      
-syntax keyword glConstant GL_MAX_LIGHTS          
-syntax keyword glConstant GL_MAX_CLIP_PLANES     
-syntax keyword glConstant GL_MAX_TEXTURE_SIZE        
-syntax keyword glConstant GL_MAX_PIXEL_MAP_TABLE     
-syntax keyword glConstant GL_MAX_VIEWPORT_DIMS       
-syntax keyword glConstant GL_MAX_CLIENT_ATTRIB_STACK_DEPTH 
+syntax keyword glConstant GL_MAX_LIST_NESTING
+syntax keyword glConstant GL_MAX_ATTRIB_STACK_DEPTH
+syntax keyword glConstant GL_MAX_MODELVIEW_STACK_DEPTH
+syntax keyword glConstant GL_MAX_NAME_STACK_DEPTH
+syntax keyword glConstant GL_MAX_PROJECTION_STACK_DEPTH
+syntax keyword glConstant GL_MAX_TEXTURE_STACK_DEPTH
+syntax keyword glConstant GL_MAX_EVAL_ORDER
+syntax keyword glConstant GL_MAX_LIGHTS
+syntax keyword glConstant GL_MAX_CLIP_PLANES
+syntax keyword glConstant GL_MAX_TEXTURE_SIZE
+syntax keyword glConstant GL_MAX_PIXEL_MAP_TABLE
+syntax keyword glConstant GL_MAX_VIEWPORT_DIMS
+syntax keyword glConstant GL_MAX_CLIENT_ATTRIB_STACK_DEPTH
 " }}}
 
 " Gets {{{
-syntax keyword glConstant GL_ATTRIB_STACK_DEPTH       
-syntax keyword glConstant GL_CLIENT_ATTRIB_STACK_DEPTH    
-syntax keyword glConstant GL_COLOR_CLEAR_VALUE        
-syntax keyword glConstant GL_COLOR_WRITEMASK      
-syntax keyword glConstant GL_CURRENT_INDEX        
-syntax keyword glConstant GL_CURRENT_COLOR        
-syntax keyword glConstant GL_CURRENT_NORMAL       
-syntax keyword glConstant GL_CURRENT_RASTER_COLOR     
-syntax keyword glConstant GL_CURRENT_RASTER_DISTANCE  
-syntax keyword glConstant GL_CURRENT_RASTER_INDEX     
-syntax keyword glConstant GL_CURRENT_RASTER_POSITION  
+syntax keyword glConstant GL_ATTRIB_STACK_DEPTH
+syntax keyword glConstant GL_CLIENT_ATTRIB_STACK_DEPTH
+syntax keyword glConstant GL_COLOR_CLEAR_VALUE
+syntax keyword glConstant GL_COLOR_WRITEMASK
+syntax keyword glConstant GL_CURRENT_INDEX
+syntax keyword glConstant GL_CURRENT_COLOR
+syntax keyword glConstant GL_CURRENT_NORMAL
+syntax keyword glConstant GL_CURRENT_RASTER_COLOR
+syntax keyword glConstant GL_CURRENT_RASTER_DISTANCE
+syntax keyword glConstant GL_CURRENT_RASTER_INDEX
+syntax keyword glConstant GL_CURRENT_RASTER_POSITION
 syntax keyword glConstant GL_CURRENT_RASTER_TEXTURE_COORDS
 syntax keyword glConstant GL_CURRENT_RASTER_POSITION_VALID
-syntax keyword glConstant GL_CURRENT_TEXTURE_COORDS   
-syntax keyword glConstant GL_INDEX_CLEAR_VALUE        
-syntax keyword glConstant GL_INDEX_MODE           
-syntax keyword glConstant GL_INDEX_WRITEMASK      
-syntax keyword glConstant GL_MODELVIEW_MATRIX     
-syntax keyword glConstant GL_MODELVIEW_STACK_DEPTH    
-syntax keyword glConstant GL_NAME_STACK_DEPTH     
-syntax keyword glConstant GL_PROJECTION_MATRIX        
-syntax keyword glConstant GL_PROJECTION_STACK_DEPTH   
-syntax keyword glConstant GL_RENDER_MODE          
-syntax keyword glConstant GL_RGBA_MODE            
-syntax keyword glConstant GL_TEXTURE_MATRIX       
-syntax keyword glConstant GL_TEXTURE_STACK_DEPTH      
-syntax keyword glConstant GL_VIEWPORT         
+syntax keyword glConstant GL_CURRENT_TEXTURE_COORDS
+syntax keyword glConstant GL_INDEX_CLEAR_VALUE
+syntax keyword glConstant GL_INDEX_MODE
+syntax keyword glConstant GL_INDEX_WRITEMASK
+syntax keyword glConstant GL_MODELVIEW_MATRIX
+syntax keyword glConstant GL_MODELVIEW_STACK_DEPTH
+syntax keyword glConstant GL_NAME_STACK_DEPTH
+syntax keyword glConstant GL_PROJECTION_MATRIX
+syntax keyword glConstant GL_PROJECTION_STACK_DEPTH
+syntax keyword glConstant GL_RENDER_MODE
+syntax keyword glConstant GL_RGBA_MODE
+syntax keyword glConstant GL_TEXTURE_MATRIX
+syntax keyword glConstant GL_TEXTURE_STACK_DEPTH
+syntax keyword glConstant GL_VIEWPORT
 " }}}
 
 " Evaluators {{{
-syntax keyword glConstant GL_AUTO_NORMAL         
-syntax keyword glConstant GL_MAP1_COLOR_4        
-syntax keyword glConstant GL_MAP1_GRID_DOMAIN    
-syntax keyword glConstant GL_MAP1_GRID_SEGMENTS  
-syntax keyword glConstant GL_MAP1_INDEX          
-syntax keyword glConstant GL_MAP1_NORMAL         
+syntax keyword glConstant GL_AUTO_NORMAL
+syntax keyword glConstant GL_MAP1_COLOR_4
+syntax keyword glConstant GL_MAP1_GRID_DOMAIN
+syntax keyword glConstant GL_MAP1_GRID_SEGMENTS
+syntax keyword glConstant GL_MAP1_INDEX
+syntax keyword glConstant GL_MAP1_NORMAL
 syntax keyword glConstant GL_MAP1_TEXTURE_COORD_1
 syntax keyword glConstant GL_MAP1_TEXTURE_COORD_2
 syntax keyword glConstant GL_MAP1_TEXTURE_COORD_3
 syntax keyword glConstant GL_MAP1_TEXTURE_COORD_4
-syntax keyword glConstant GL_MAP1_VERTEX_3       
-syntax keyword glConstant GL_MAP1_VERTEX_4       
-syntax keyword glConstant GL_MAP2_COLOR_4        
-syntax keyword glConstant GL_MAP2_GRID_DOMAIN    
-syntax keyword glConstant GL_MAP2_GRID_SEGMENTS  
-syntax keyword glConstant GL_MAP2_INDEX          
-syntax keyword glConstant GL_MAP2_NORMAL         
+syntax keyword glConstant GL_MAP1_VERTEX_3
+syntax keyword glConstant GL_MAP1_VERTEX_4
+syntax keyword glConstant GL_MAP2_COLOR_4
+syntax keyword glConstant GL_MAP2_GRID_DOMAIN
+syntax keyword glConstant GL_MAP2_GRID_SEGMENTS
+syntax keyword glConstant GL_MAP2_INDEX
+syntax keyword glConstant GL_MAP2_NORMAL
 syntax keyword glConstant GL_MAP2_TEXTURE_COORD_1
 syntax keyword glConstant GL_MAP2_TEXTURE_COORD_2
 syntax keyword glConstant GL_MAP2_TEXTURE_COORD_3
 syntax keyword glConstant GL_MAP2_TEXTURE_COORD_4
-syntax keyword glConstant GL_MAP2_VERTEX_3       
-syntax keyword glConstant GL_MAP2_VERTEX_4       
-syntax keyword glConstant GL_COEFF           
-syntax keyword glConstant GL_DOMAIN          
-syntax keyword glConstant GL_ORDER           
+syntax keyword glConstant GL_MAP2_VERTEX_3
+syntax keyword glConstant GL_MAP2_VERTEX_4
+syntax keyword glConstant GL_COEFF
+syntax keyword glConstant GL_DOMAIN
+syntax keyword glConstant GL_ORDER
 " }}}
 
 " Hints {{{
-syntax keyword glConstant GL_FOG_HINT           
-syntax keyword glConstant GL_LINE_SMOOTH_HINT       
+syntax keyword glConstant GL_FOG_HINT
+syntax keyword glConstant GL_LINE_SMOOTH_HINT
 syntax keyword glConstant GL_PERSPECTIVE_CORRECTION_HINT
-syntax keyword glConstant GL_POINT_SMOOTH_HINT          
-syntax keyword glConstant GL_POLYGON_SMOOTH_HINT        
-syntax keyword glConstant GL_DONT_CARE              
-syntax keyword glConstant GL_FASTEST            
-syntax keyword glConstant GL_NICEST             
+syntax keyword glConstant GL_POINT_SMOOTH_HINT
+syntax keyword glConstant GL_POLYGON_SMOOTH_HINT
+syntax keyword glConstant GL_DONT_CARE
+syntax keyword glConstant GL_FASTEST
+syntax keyword glConstant GL_NICEST
 " }}}
 
 " Scissor box {{{
 syntax keyword glConstant GL_SCISSOR_TEST
-syntax keyword glConstant GL_SCISSOR_BOX 
+syntax keyword glConstant GL_SCISSOR_BOX
 " }}}
 
 " Pixel Mode / Transfer {{{
-syntax keyword glConstant GL_MAP_COLOR        
-syntax keyword glConstant GL_MAP_STENCIL      
-syntax keyword glConstant GL_INDEX_SHIFT      
-syntax keyword glConstant GL_INDEX_OFFSET     
-syntax keyword glConstant GL_RED_SCALE        
-syntax keyword glConstant GL_RED_BIAS     
-syntax keyword glConstant GL_GREEN_SCALE      
-syntax keyword glConstant GL_GREEN_BIAS       
-syntax keyword glConstant GL_BLUE_SCALE       
-syntax keyword glConstant GL_BLUE_BIAS        
-syntax keyword glConstant GL_ALPHA_SCALE      
-syntax keyword glConstant GL_ALPHA_BIAS       
-syntax keyword glConstant GL_DEPTH_SCALE      
-syntax keyword glConstant GL_DEPTH_BIAS       
+syntax keyword glConstant GL_MAP_COLOR
+syntax keyword glConstant GL_MAP_STENCIL
+syntax keyword glConstant GL_INDEX_SHIFT
+syntax keyword glConstant GL_INDEX_OFFSET
+syntax keyword glConstant GL_RED_SCALE
+syntax keyword glConstant GL_RED_BIAS
+syntax keyword glConstant GL_GREEN_SCALE
+syntax keyword glConstant GL_GREEN_BIAS
+syntax keyword glConstant GL_BLUE_SCALE
+syntax keyword glConstant GL_BLUE_BIAS
+syntax keyword glConstant GL_ALPHA_SCALE
+syntax keyword glConstant GL_ALPHA_BIAS
+syntax keyword glConstant GL_DEPTH_SCALE
+syntax keyword glConstant GL_DEPTH_BIAS
 syntax keyword glConstant GL_PIXEL_MAP_S_TO_S_SIZE
 syntax keyword glConstant GL_PIXEL_MAP_I_TO_I_SIZE
 syntax keyword glConstant GL_PIXEL_MAP_I_TO_R_SIZE
@@ -569,307 +569,307 @@ syntax keyword glConstant GL_PIXEL_MAP_R_TO_R_SIZE
 syntax keyword glConstant GL_PIXEL_MAP_G_TO_G_SIZE
 syntax keyword glConstant GL_PIXEL_MAP_B_TO_B_SIZE
 syntax keyword glConstant GL_PIXEL_MAP_A_TO_A_SIZE
-syntax keyword glConstant GL_PIXEL_MAP_S_TO_S 
-syntax keyword glConstant GL_PIXEL_MAP_I_TO_I 
-syntax keyword glConstant GL_PIXEL_MAP_I_TO_R 
-syntax keyword glConstant GL_PIXEL_MAP_I_TO_G 
-syntax keyword glConstant GL_PIXEL_MAP_I_TO_B 
-syntax keyword glConstant GL_PIXEL_MAP_I_TO_A 
-syntax keyword glConstant GL_PIXEL_MAP_R_TO_R 
-syntax keyword glConstant GL_PIXEL_MAP_G_TO_G 
-syntax keyword glConstant GL_PIXEL_MAP_B_TO_B 
-syntax keyword glConstant GL_PIXEL_MAP_A_TO_A 
-syntax keyword glConstant GL_PACK_ALIGNMENT   
-syntax keyword glConstant GL_PACK_LSB_FIRST   
-syntax keyword glConstant GL_PACK_ROW_LENGTH  
-syntax keyword glConstant GL_PACK_SKIP_PIXELS 
-syntax keyword glConstant GL_PACK_SKIP_ROWS   
-syntax keyword glConstant GL_PACK_SWAP_BYTES  
-syntax keyword glConstant GL_UNPACK_ALIGNMENT 
-syntax keyword glConstant GL_UNPACK_ROW_LENGTH    
-syntax keyword glConstant GL_UNPACK_SKIP_PIXELS   
-syntax keyword glConstant GL_UNPACK_SKIP_ROWS 
-syntax keyword glConstant GL_UNPACK_SWAP_BYTES    
-syntax keyword glConstant GL_ZOOM_X       
-syntax keyword glConstant GL_ZOOM_Y       
+syntax keyword glConstant GL_PIXEL_MAP_S_TO_S
+syntax keyword glConstant GL_PIXEL_MAP_I_TO_I
+syntax keyword glConstant GL_PIXEL_MAP_I_TO_R
+syntax keyword glConstant GL_PIXEL_MAP_I_TO_G
+syntax keyword glConstant GL_PIXEL_MAP_I_TO_B
+syntax keyword glConstant GL_PIXEL_MAP_I_TO_A
+syntax keyword glConstant GL_PIXEL_MAP_R_TO_R
+syntax keyword glConstant GL_PIXEL_MAP_G_TO_G
+syntax keyword glConstant GL_PIXEL_MAP_B_TO_B
+syntax keyword glConstant GL_PIXEL_MAP_A_TO_A
+syntax keyword glConstant GL_PACK_ALIGNMENT
+syntax keyword glConstant GL_PACK_LSB_FIRST
+syntax keyword glConstant GL_PACK_ROW_LENGTH
+syntax keyword glConstant GL_PACK_SKIP_PIXELS
+syntax keyword glConstant GL_PACK_SKIP_ROWS
+syntax keyword glConstant GL_PACK_SWAP_BYTES
+syntax keyword glConstant GL_UNPACK_ALIGNMENT
+syntax keyword glConstant GL_UNPACK_ROW_LENGTH
+syntax keyword glConstant GL_UNPACK_SKIP_PIXELS
+syntax keyword glConstant GL_UNPACK_SKIP_ROWS
+syntax keyword glConstant GL_UNPACK_SWAP_BYTES
+syntax keyword glConstant GL_ZOOM_X
+syntax keyword glConstant GL_ZOOM_Y
 " }}}
 
 " Texture mapping {{{
-syntax keyword glConstant GL_TEXTURE_ENV       
-syntax keyword glConstant GL_TEXTURE_ENV_MODE  
-syntax keyword glConstant GL_TEXTURE_1D        
-syntax keyword glConstant GL_TEXTURE_2D        
-syntax keyword glConstant GL_TEXTURE_WRAP_S    
-syntax keyword glConstant GL_TEXTURE_WRAP_T    
-syntax keyword glConstant GL_TEXTURE_MAG_FILTER    
-syntax keyword glConstant GL_TEXTURE_MIN_FILTER    
-syntax keyword glConstant GL_TEXTURE_ENV_COLOR     
-syntax keyword glConstant GL_TEXTURE_GEN_S     
-syntax keyword glConstant GL_TEXTURE_GEN_T     
-syntax keyword glConstant GL_TEXTURE_GEN_MODE  
-syntax keyword glConstant GL_TEXTURE_BORDER_COLOR  
-syntax keyword glConstant GL_TEXTURE_WIDTH     
-syntax keyword glConstant GL_TEXTURE_HEIGHT    
-syntax keyword glConstant GL_TEXTURE_BORDER    
-syntax keyword glConstant GL_TEXTURE_COMPONENTS    
-syntax keyword glConstant GL_TEXTURE_RED_SIZE  
-syntax keyword glConstant GL_TEXTURE_GREEN_SIZE    
-syntax keyword glConstant GL_TEXTURE_BLUE_SIZE     
-syntax keyword glConstant GL_TEXTURE_ALPHA_SIZE    
+syntax keyword glConstant GL_TEXTURE_ENV
+syntax keyword glConstant GL_TEXTURE_ENV_MODE
+syntax keyword glConstant GL_TEXTURE_1D
+syntax keyword glConstant GL_TEXTURE_2D
+syntax keyword glConstant GL_TEXTURE_WRAP_S
+syntax keyword glConstant GL_TEXTURE_WRAP_T
+syntax keyword glConstant GL_TEXTURE_MAG_FILTER
+syntax keyword glConstant GL_TEXTURE_MIN_FILTER
+syntax keyword glConstant GL_TEXTURE_ENV_COLOR
+syntax keyword glConstant GL_TEXTURE_GEN_S
+syntax keyword glConstant GL_TEXTURE_GEN_T
+syntax keyword glConstant GL_TEXTURE_GEN_MODE
+syntax keyword glConstant GL_TEXTURE_BORDER_COLOR
+syntax keyword glConstant GL_TEXTURE_WIDTH
+syntax keyword glConstant GL_TEXTURE_HEIGHT
+syntax keyword glConstant GL_TEXTURE_BORDER
+syntax keyword glConstant GL_TEXTURE_COMPONENTS
+syntax keyword glConstant GL_TEXTURE_RED_SIZE
+syntax keyword glConstant GL_TEXTURE_GREEN_SIZE
+syntax keyword glConstant GL_TEXTURE_BLUE_SIZE
+syntax keyword glConstant GL_TEXTURE_ALPHA_SIZE
 syntax keyword glConstant GL_TEXTURE_LUMINANCE_SIZE
 syntax keyword glConstant GL_TEXTURE_INTENSITY_SIZE
 syntax keyword glConstant GL_NEAREST_MIPMAP_NEAREST
-syntax keyword glConstant GL_NEAREST_MIPMAP_LINEAR 
-syntax keyword glConstant GL_LINEAR_MIPMAP_NEAREST 
-syntax keyword glConstant GL_LINEAR_MIPMAP_LINEAR  
-syntax keyword glConstant GL_OBJECT_LINEAR     
-syntax keyword glConstant GL_OBJECT_PLANE      
-syntax keyword glConstant GL_EYE_LINEAR        
-syntax keyword glConstant GL_EYE_PLANE         
-syntax keyword glConstant GL_SPHERE_MAP        
-syntax keyword glConstant GL_DECAL         
-syntax keyword glConstant GL_MODULATE      
-syntax keyword glConstant GL_NEAREST       
-syntax keyword glConstant GL_REPEAT        
-syntax keyword glConstant GL_CLAMP         
-syntax keyword glConstant GL_S             
-syntax keyword glConstant GL_T             
-syntax keyword glConstant GL_R             
-syntax keyword glConstant GL_Q             
-syntax keyword glConstant GL_TEXTURE_GEN_R     
-syntax keyword glConstant GL_TEXTURE_GEN_Q     
+syntax keyword glConstant GL_NEAREST_MIPMAP_LINEAR
+syntax keyword glConstant GL_LINEAR_MIPMAP_NEAREST
+syntax keyword glConstant GL_LINEAR_MIPMAP_LINEAR
+syntax keyword glConstant GL_OBJECT_LINEAR
+syntax keyword glConstant GL_OBJECT_PLANE
+syntax keyword glConstant GL_EYE_LINEAR
+syntax keyword glConstant GL_EYE_PLANE
+syntax keyword glConstant GL_SPHERE_MAP
+syntax keyword glConstant GL_DECAL
+syntax keyword glConstant GL_MODULATE
+syntax keyword glConstant GL_NEAREST
+syntax keyword glConstant GL_REPEAT
+syntax keyword glConstant GL_CLAMP
+syntax keyword glConstant GL_S
+syntax keyword glConstant GL_T
+syntax keyword glConstant GL_R
+syntax keyword glConstant GL_Q
+syntax keyword glConstant GL_TEXTURE_GEN_R
+syntax keyword glConstant GL_TEXTURE_GEN_Q
 "}}}
 
 " Utility {{{
-syntax keyword glConstant GL_VENDOR    
-syntax keyword glConstant GL_RENDERER  
-syntax keyword glConstant GL_VERSION   
+syntax keyword glConstant GL_VENDOR
+syntax keyword glConstant GL_RENDERER
+syntax keyword glConstant GL_VERSION
 syntax keyword glConstant GL_EXTENSIONS
 "}}}
 
 " Errors {{{
-syntax keyword glConstant GL_NO_ERROR         
-syntax keyword glConstant GL_INVALID_VALUE    
-syntax keyword glConstant GL_INVALID_ENUM     
+syntax keyword glConstant GL_NO_ERROR
+syntax keyword glConstant GL_INVALID_VALUE
+syntax keyword glConstant GL_INVALID_ENUM
 syntax keyword glConstant GL_INVALID_OPERATION
-syntax keyword glConstant GL_STACK_OVERFLOW   
-syntax keyword glConstant GL_STACK_UNDERFLOW  
-syntax keyword glConstant GL_OUT_OF_MEMORY    
-syntax keyword glConstant GL_TABLE_TOO_LARGE    
+syntax keyword glConstant GL_STACK_OVERFLOW
+syntax keyword glConstant GL_STACK_UNDERFLOW
+syntax keyword glConstant GL_OUT_OF_MEMORY
+syntax keyword glConstant GL_TABLE_TOO_LARGE
 "}}}
 
 " glPush/PopAttrib bits {{{
-syntax keyword glConstant GL_CURRENT_BIT        
-syntax keyword glConstant GL_POINT_BIT          
-syntax keyword glConstant GL_LINE_BIT       
-syntax keyword glConstant GL_POLYGON_BIT        
+syntax keyword glConstant GL_CURRENT_BIT
+syntax keyword glConstant GL_POINT_BIT
+syntax keyword glConstant GL_LINE_BIT
+syntax keyword glConstant GL_POLYGON_BIT
 syntax keyword glConstant GL_POLYGON_STIPPLE_BIT
-syntax keyword glConstant GL_PIXEL_MODE_BIT     
-syntax keyword glConstant GL_LIGHTING_BIT       
-syntax keyword glConstant GL_FOG_BIT        
-syntax keyword glConstant GL_DEPTH_BUFFER_BIT   
-syntax keyword glConstant GL_ACCUM_BUFFER_BIT   
-syntax keyword glConstant GL_STENCIL_BUFFER_BIT 
-syntax keyword glConstant GL_VIEWPORT_BIT       
-syntax keyword glConstant GL_TRANSFORM_BIT      
-syntax keyword glConstant GL_ENABLE_BIT         
-syntax keyword glConstant GL_COLOR_BUFFER_BIT   
-syntax keyword glConstant GL_HINT_BIT       
-syntax keyword glConstant GL_EVAL_BIT       
-syntax keyword glConstant GL_LIST_BIT       
-syntax keyword glConstant GL_TEXTURE_BIT        
-syntax keyword glConstant GL_SCISSOR_BIT        
-syntax keyword glConstant GL_ALL_ATTRIB_BITS    
+syntax keyword glConstant GL_PIXEL_MODE_BIT
+syntax keyword glConstant GL_LIGHTING_BIT
+syntax keyword glConstant GL_FOG_BIT
+syntax keyword glConstant GL_DEPTH_BUFFER_BIT
+syntax keyword glConstant GL_ACCUM_BUFFER_BIT
+syntax keyword glConstant GL_STENCIL_BUFFER_BIT
+syntax keyword glConstant GL_VIEWPORT_BIT
+syntax keyword glConstant GL_TRANSFORM_BIT
+syntax keyword glConstant GL_ENABLE_BIT
+syntax keyword glConstant GL_COLOR_BUFFER_BIT
+syntax keyword glConstant GL_HINT_BIT
+syntax keyword glConstant GL_EVAL_BIT
+syntax keyword glConstant GL_LIST_BIT
+syntax keyword glConstant GL_TEXTURE_BIT
+syntax keyword glConstant GL_SCISSOR_BIT
+syntax keyword glConstant GL_ALL_ATTRIB_BITS
 "}}}
 
 " OpenGL 1.1 {{{
-syntax keyword glConstant GL_PROXY_TEXTURE_1D   
-syntax keyword glConstant GL_PROXY_TEXTURE_2D   
-syntax keyword glConstant GL_TEXTURE_PRIORITY   
-syntax keyword glConstant GL_TEXTURE_RESIDENT   
-syntax keyword glConstant GL_TEXTURE_BINDING_1D     
-syntax keyword glConstant GL_TEXTURE_BINDING_2D     
+syntax keyword glConstant GL_PROXY_TEXTURE_1D
+syntax keyword glConstant GL_PROXY_TEXTURE_2D
+syntax keyword glConstant GL_TEXTURE_PRIORITY
+syntax keyword glConstant GL_TEXTURE_RESIDENT
+syntax keyword glConstant GL_TEXTURE_BINDING_1D
+syntax keyword glConstant GL_TEXTURE_BINDING_2D
 syntax keyword glConstant GL_TEXTURE_INTERNAL_FORMAT
-syntax keyword glConstant GL_ALPHA4         
-syntax keyword glConstant GL_ALPHA8         
-syntax keyword glConstant GL_ALPHA12        
-syntax keyword glConstant GL_ALPHA16        
-syntax keyword glConstant GL_LUMINANCE4         
-syntax keyword glConstant GL_LUMINANCE8         
-syntax keyword glConstant GL_LUMINANCE12        
-syntax keyword glConstant GL_LUMINANCE16        
-syntax keyword glConstant GL_LUMINANCE4_ALPHA4      
-syntax keyword glConstant GL_LUMINANCE6_ALPHA2      
-syntax keyword glConstant GL_LUMINANCE8_ALPHA8      
-syntax keyword glConstant GL_LUMINANCE12_ALPHA4     
-syntax keyword glConstant GL_LUMINANCE12_ALPHA12    
-syntax keyword glConstant GL_LUMINANCE16_ALPHA16    
-syntax keyword glConstant GL_INTENSITY          
-syntax keyword glConstant GL_INTENSITY4         
-syntax keyword glConstant GL_INTENSITY8         
-syntax keyword glConstant GL_INTENSITY12        
-syntax keyword glConstant GL_INTENSITY16        
-syntax keyword glConstant GL_R3_G3_B2       
-syntax keyword glConstant GL_RGB4           
-syntax keyword glConstant GL_RGB5           
-syntax keyword glConstant GL_RGB8           
-syntax keyword glConstant GL_RGB10          
-syntax keyword glConstant GL_RGB12          
-syntax keyword glConstant GL_RGB16          
-syntax keyword glConstant GL_RGBA2          
-syntax keyword glConstant GL_RGBA4          
-syntax keyword glConstant GL_RGB5_A1        
-syntax keyword glConstant GL_RGBA8          
-syntax keyword glConstant GL_RGB10_A2       
-syntax keyword glConstant GL_RGBA12         
-syntax keyword glConstant GL_RGBA16         
-syntax keyword glConstant GL_CLIENT_PIXEL_STORE_BIT 
+syntax keyword glConstant GL_ALPHA4
+syntax keyword glConstant GL_ALPHA8
+syntax keyword glConstant GL_ALPHA12
+syntax keyword glConstant GL_ALPHA16
+syntax keyword glConstant GL_LUMINANCE4
+syntax keyword glConstant GL_LUMINANCE8
+syntax keyword glConstant GL_LUMINANCE12
+syntax keyword glConstant GL_LUMINANCE16
+syntax keyword glConstant GL_LUMINANCE4_ALPHA4
+syntax keyword glConstant GL_LUMINANCE6_ALPHA2
+syntax keyword glConstant GL_LUMINANCE8_ALPHA8
+syntax keyword glConstant GL_LUMINANCE12_ALPHA4
+syntax keyword glConstant GL_LUMINANCE12_ALPHA12
+syntax keyword glConstant GL_LUMINANCE16_ALPHA16
+syntax keyword glConstant GL_INTENSITY
+syntax keyword glConstant GL_INTENSITY4
+syntax keyword glConstant GL_INTENSITY8
+syntax keyword glConstant GL_INTENSITY12
+syntax keyword glConstant GL_INTENSITY16
+syntax keyword glConstant GL_R3_G3_B2
+syntax keyword glConstant GL_RGB4
+syntax keyword glConstant GL_RGB5
+syntax keyword glConstant GL_RGB8
+syntax keyword glConstant GL_RGB10
+syntax keyword glConstant GL_RGB12
+syntax keyword glConstant GL_RGB16
+syntax keyword glConstant GL_RGBA2
+syntax keyword glConstant GL_RGBA4
+syntax keyword glConstant GL_RGB5_A1
+syntax keyword glConstant GL_RGBA8
+syntax keyword glConstant GL_RGB10_A2
+syntax keyword glConstant GL_RGBA12
+syntax keyword glConstant GL_RGBA16
+syntax keyword glConstant GL_CLIENT_PIXEL_STORE_BIT
 syntax keyword glConstant GL_CLIENT_VERTEX_ARRAY_BIT
-syntax keyword glConstant GL_ALL_CLIENT_ATTRIB_BITS 
-syntax keyword glConstant GL_CLIENT_ALL_ATTRIB_BITS 
+syntax keyword glConstant GL_ALL_CLIENT_ATTRIB_BITS
+syntax keyword glConstant GL_CLIENT_ALL_ATTRIB_BITS
 "}}}
 
 " OpenGL 1.2 {{{
-syntax keyword glConstant GL_RESCALE_NORMAL       
-syntax keyword glConstant GL_CLAMP_TO_EDGE        
-syntax keyword glConstant GL_MAX_ELEMENTS_VERTICES    
-syntax keyword glConstant GL_MAX_ELEMENTS_INDICES     
-syntax keyword glConstant GL_BGR              
-syntax keyword glConstant GL_BGRA             
-syntax keyword glConstant GL_UNSIGNED_BYTE_3_3_2      
-syntax keyword glConstant GL_UNSIGNED_BYTE_2_3_3_REV  
-syntax keyword glConstant GL_UNSIGNED_SHORT_5_6_5     
-syntax keyword glConstant GL_UNSIGNED_SHORT_5_6_5_REV 
-syntax keyword glConstant GL_UNSIGNED_SHORT_4_4_4_4   
-syntax keyword glConstant GL_UNSIGNED_SHORT_4_4_4_4_REV   
-syntax keyword glConstant GL_UNSIGNED_SHORT_5_5_5_1   
-syntax keyword glConstant GL_UNSIGNED_SHORT_1_5_5_5_REV   
-syntax keyword glConstant GL_UNSIGNED_INT_8_8_8_8     
-syntax keyword glConstant GL_UNSIGNED_INT_8_8_8_8_REV 
-syntax keyword glConstant GL_UNSIGNED_INT_10_10_10_2  
-syntax keyword glConstant GL_UNSIGNED_INT_2_10_10_10_REV  
-syntax keyword glConstant GL_LIGHT_MODEL_COLOR_CONTROL    
-syntax keyword glConstant GL_SINGLE_COLOR         
-syntax keyword glConstant GL_SEPARATE_SPECULAR_COLOR  
-syntax keyword glConstant GL_TEXTURE_MIN_LOD      
-syntax keyword glConstant GL_TEXTURE_MAX_LOD      
-syntax keyword glConstant GL_TEXTURE_BASE_LEVEL       
-syntax keyword glConstant GL_TEXTURE_MAX_LEVEL        
-syntax keyword glConstant GL_SMOOTH_POINT_SIZE_RANGE  
+syntax keyword glConstant GL_RESCALE_NORMAL
+syntax keyword glConstant GL_CLAMP_TO_EDGE
+syntax keyword glConstant GL_MAX_ELEMENTS_VERTICES
+syntax keyword glConstant GL_MAX_ELEMENTS_INDICES
+syntax keyword glConstant GL_BGR
+syntax keyword glConstant GL_BGRA
+syntax keyword glConstant GL_UNSIGNED_BYTE_3_3_2
+syntax keyword glConstant GL_UNSIGNED_BYTE_2_3_3_REV
+syntax keyword glConstant GL_UNSIGNED_SHORT_5_6_5
+syntax keyword glConstant GL_UNSIGNED_SHORT_5_6_5_REV
+syntax keyword glConstant GL_UNSIGNED_SHORT_4_4_4_4
+syntax keyword glConstant GL_UNSIGNED_SHORT_4_4_4_4_REV
+syntax keyword glConstant GL_UNSIGNED_SHORT_5_5_5_1
+syntax keyword glConstant GL_UNSIGNED_SHORT_1_5_5_5_REV
+syntax keyword glConstant GL_UNSIGNED_INT_8_8_8_8
+syntax keyword glConstant GL_UNSIGNED_INT_8_8_8_8_REV
+syntax keyword glConstant GL_UNSIGNED_INT_10_10_10_2
+syntax keyword glConstant GL_UNSIGNED_INT_2_10_10_10_REV
+syntax keyword glConstant GL_LIGHT_MODEL_COLOR_CONTROL
+syntax keyword glConstant GL_SINGLE_COLOR
+syntax keyword glConstant GL_SEPARATE_SPECULAR_COLOR
+syntax keyword glConstant GL_TEXTURE_MIN_LOD
+syntax keyword glConstant GL_TEXTURE_MAX_LOD
+syntax keyword glConstant GL_TEXTURE_BASE_LEVEL
+syntax keyword glConstant GL_TEXTURE_MAX_LEVEL
+syntax keyword glConstant GL_SMOOTH_POINT_SIZE_RANGE
 syntax keyword glConstant GL_SMOOTH_POINT_SIZE_GRANULARITY
-syntax keyword glConstant GL_SMOOTH_LINE_WIDTH_RANGE  
+syntax keyword glConstant GL_SMOOTH_LINE_WIDTH_RANGE
 syntax keyword glConstant GL_SMOOTH_LINE_WIDTH_GRANULARITY
-syntax keyword glConstant GL_ALIASED_POINT_SIZE_RANGE 
-syntax keyword glConstant GL_ALIASED_LINE_WIDTH_RANGE 
-syntax keyword glConstant GL_PACK_SKIP_IMAGES     
-syntax keyword glConstant GL_PACK_IMAGE_HEIGHT        
-syntax keyword glConstant GL_UNPACK_SKIP_IMAGES       
-syntax keyword glConstant GL_UNPACK_IMAGE_HEIGHT      
-syntax keyword glConstant GL_TEXTURE_3D           
-syntax keyword glConstant GL_PROXY_TEXTURE_3D     
-syntax keyword glConstant GL_TEXTURE_DEPTH        
-syntax keyword glConstant GL_TEXTURE_WRAP_R       
-syntax keyword glConstant GL_MAX_3D_TEXTURE_SIZE      
-syntax keyword glConstant GL_TEXTURE_BINDING_3D       
+syntax keyword glConstant GL_ALIASED_POINT_SIZE_RANGE
+syntax keyword glConstant GL_ALIASED_LINE_WIDTH_RANGE
+syntax keyword glConstant GL_PACK_SKIP_IMAGES
+syntax keyword glConstant GL_PACK_IMAGE_HEIGHT
+syntax keyword glConstant GL_UNPACK_SKIP_IMAGES
+syntax keyword glConstant GL_UNPACK_IMAGE_HEIGHT
+syntax keyword glConstant GL_TEXTURE_3D
+syntax keyword glConstant GL_PROXY_TEXTURE_3D
+syntax keyword glConstant GL_TEXTURE_DEPTH
+syntax keyword glConstant GL_TEXTURE_WRAP_R
+syntax keyword glConstant GL_MAX_3D_TEXTURE_SIZE
+syntax keyword glConstant GL_TEXTURE_BINDING_3D
 "}}}
 
 " OpenGL 1.3 {{{
-syntax keyword glConstant GL_TEXTURE0          
-syntax keyword glConstant GL_TEXTURE1          
-syntax keyword glConstant GL_TEXTURE2          
-syntax keyword glConstant GL_TEXTURE3          
-syntax keyword glConstant GL_TEXTURE4          
-syntax keyword glConstant GL_TEXTURE5          
-syntax keyword glConstant GL_TEXTURE6          
-syntax keyword glConstant GL_TEXTURE7          
-syntax keyword glConstant GL_TEXTURE8          
-syntax keyword glConstant GL_TEXTURE9          
-syntax keyword glConstant GL_TEXTURE10             
-syntax keyword glConstant GL_TEXTURE11             
-syntax keyword glConstant GL_TEXTURE12             
-syntax keyword glConstant GL_TEXTURE13             
-syntax keyword glConstant GL_TEXTURE14             
-syntax keyword glConstant GL_TEXTURE15             
-syntax keyword glConstant GL_TEXTURE16             
-syntax keyword glConstant GL_TEXTURE17             
-syntax keyword glConstant GL_TEXTURE18             
-syntax keyword glConstant GL_TEXTURE19             
-syntax keyword glConstant GL_TEXTURE20             
-syntax keyword glConstant GL_TEXTURE21             
-syntax keyword glConstant GL_TEXTURE22             
-syntax keyword glConstant GL_TEXTURE23             
-syntax keyword glConstant GL_TEXTURE24             
-syntax keyword glConstant GL_TEXTURE25             
-syntax keyword glConstant GL_TEXTURE26             
-syntax keyword glConstant GL_TEXTURE27             
-syntax keyword glConstant GL_TEXTURE28             
-syntax keyword glConstant GL_TEXTURE29             
-syntax keyword glConstant GL_TEXTURE30             
-syntax keyword glConstant GL_TEXTURE31             
-syntax keyword glConstant GL_ACTIVE_TEXTURE        
-syntax keyword glConstant GL_CLIENT_ACTIVE_TEXTURE     
-syntax keyword glConstant GL_MAX_TEXTURE_UNITS         
-syntax keyword glConstant GL_NORMAL_MAP            
-syntax keyword glConstant GL_REFLECTION_MAP        
-syntax keyword glConstant GL_TEXTURE_CUBE_MAP      
-syntax keyword glConstant GL_TEXTURE_BINDING_CUBE_MAP  
-syntax keyword glConstant GL_TEXTURE_CUBE_MAP_POSITIVE_X   
-syntax keyword glConstant GL_TEXTURE_CUBE_MAP_NEGATIVE_X   
-syntax keyword glConstant GL_TEXTURE_CUBE_MAP_POSITIVE_Y   
-syntax keyword glConstant GL_TEXTURE_CUBE_MAP_NEGATIVE_Y   
-syntax keyword glConstant GL_TEXTURE_CUBE_MAP_POSITIVE_Z   
-syntax keyword glConstant GL_TEXTURE_CUBE_MAP_NEGATIVE_Z   
-syntax keyword glConstant GL_PROXY_TEXTURE_CUBE_MAP    
-syntax keyword glConstant GL_MAX_CUBE_MAP_TEXTURE_SIZE     
-syntax keyword glConstant GL_COMPRESSED_ALPHA      
-syntax keyword glConstant GL_COMPRESSED_LUMINANCE      
-syntax keyword glConstant GL_COMPRESSED_LUMINANCE_ALPHA    
-syntax keyword glConstant GL_COMPRESSED_INTENSITY      
-syntax keyword glConstant GL_COMPRESSED_RGB        
-syntax keyword glConstant GL_COMPRESSED_RGBA       
-syntax keyword glConstant GL_TEXTURE_COMPRESSION_HINT  
-syntax keyword glConstant GL_TEXTURE_COMPRESSED_IMAGE_SIZE 
-syntax keyword glConstant GL_TEXTURE_COMPRESSED        
+syntax keyword glConstant GL_TEXTURE0
+syntax keyword glConstant GL_TEXTURE1
+syntax keyword glConstant GL_TEXTURE2
+syntax keyword glConstant GL_TEXTURE3
+syntax keyword glConstant GL_TEXTURE4
+syntax keyword glConstant GL_TEXTURE5
+syntax keyword glConstant GL_TEXTURE6
+syntax keyword glConstant GL_TEXTURE7
+syntax keyword glConstant GL_TEXTURE8
+syntax keyword glConstant GL_TEXTURE9
+syntax keyword glConstant GL_TEXTURE10
+syntax keyword glConstant GL_TEXTURE11
+syntax keyword glConstant GL_TEXTURE12
+syntax keyword glConstant GL_TEXTURE13
+syntax keyword glConstant GL_TEXTURE14
+syntax keyword glConstant GL_TEXTURE15
+syntax keyword glConstant GL_TEXTURE16
+syntax keyword glConstant GL_TEXTURE17
+syntax keyword glConstant GL_TEXTURE18
+syntax keyword glConstant GL_TEXTURE19
+syntax keyword glConstant GL_TEXTURE20
+syntax keyword glConstant GL_TEXTURE21
+syntax keyword glConstant GL_TEXTURE22
+syntax keyword glConstant GL_TEXTURE23
+syntax keyword glConstant GL_TEXTURE24
+syntax keyword glConstant GL_TEXTURE25
+syntax keyword glConstant GL_TEXTURE26
+syntax keyword glConstant GL_TEXTURE27
+syntax keyword glConstant GL_TEXTURE28
+syntax keyword glConstant GL_TEXTURE29
+syntax keyword glConstant GL_TEXTURE30
+syntax keyword glConstant GL_TEXTURE31
+syntax keyword glConstant GL_ACTIVE_TEXTURE
+syntax keyword glConstant GL_CLIENT_ACTIVE_TEXTURE
+syntax keyword glConstant GL_MAX_TEXTURE_UNITS
+syntax keyword glConstant GL_NORMAL_MAP
+syntax keyword glConstant GL_REFLECTION_MAP
+syntax keyword glConstant GL_TEXTURE_CUBE_MAP
+syntax keyword glConstant GL_TEXTURE_BINDING_CUBE_MAP
+syntax keyword glConstant GL_TEXTURE_CUBE_MAP_POSITIVE_X
+syntax keyword glConstant GL_TEXTURE_CUBE_MAP_NEGATIVE_X
+syntax keyword glConstant GL_TEXTURE_CUBE_MAP_POSITIVE_Y
+syntax keyword glConstant GL_TEXTURE_CUBE_MAP_NEGATIVE_Y
+syntax keyword glConstant GL_TEXTURE_CUBE_MAP_POSITIVE_Z
+syntax keyword glConstant GL_TEXTURE_CUBE_MAP_NEGATIVE_Z
+syntax keyword glConstant GL_PROXY_TEXTURE_CUBE_MAP
+syntax keyword glConstant GL_MAX_CUBE_MAP_TEXTURE_SIZE
+syntax keyword glConstant GL_COMPRESSED_ALPHA
+syntax keyword glConstant GL_COMPRESSED_LUMINANCE
+syntax keyword glConstant GL_COMPRESSED_LUMINANCE_ALPHA
+syntax keyword glConstant GL_COMPRESSED_INTENSITY
+syntax keyword glConstant GL_COMPRESSED_RGB
+syntax keyword glConstant GL_COMPRESSED_RGBA
+syntax keyword glConstant GL_TEXTURE_COMPRESSION_HINT
+syntax keyword glConstant GL_TEXTURE_COMPRESSED_IMAGE_SIZE
+syntax keyword glConstant GL_TEXTURE_COMPRESSED
 syntax keyword glConstant GL_NUM_COMPRESSED_TEXTURE_FORMATS
-syntax keyword glConstant GL_COMPRESSED_TEXTURE_FORMATS    
-syntax keyword glConstant GL_MULTISAMPLE           
-syntax keyword glConstant GL_SAMPLE_ALPHA_TO_COVERAGE  
-syntax keyword glConstant GL_SAMPLE_ALPHA_TO_ONE       
-syntax keyword glConstant GL_SAMPLE_COVERAGE       
-syntax keyword glConstant GL_SAMPLE_BUFFERS        
-syntax keyword glConstant GL_SAMPLES           
-syntax keyword glConstant GL_SAMPLE_COVERAGE_VALUE     
-syntax keyword glConstant GL_SAMPLE_COVERAGE_INVERT    
-syntax keyword glConstant GL_MULTISAMPLE_BIT       
-syntax keyword glConstant GL_TRANSPOSE_MODELVIEW_MATRIX    
-syntax keyword glConstant GL_TRANSPOSE_PROJECTION_MATRIX   
-syntax keyword glConstant GL_TRANSPOSE_TEXTURE_MATRIX  
-syntax keyword glConstant GL_TRANSPOSE_COLOR_MATRIX    
-syntax keyword glConstant GL_COMBINE           
-syntax keyword glConstant GL_COMBINE_RGB           
-syntax keyword glConstant GL_COMBINE_ALPHA         
-syntax keyword glConstant GL_SOURCE0_RGB           
-syntax keyword glConstant GL_SOURCE1_RGB           
-syntax keyword glConstant GL_SOURCE2_RGB           
-syntax keyword glConstant GL_SOURCE0_ALPHA         
-syntax keyword glConstant GL_SOURCE1_ALPHA         
-syntax keyword glConstant GL_SOURCE2_ALPHA         
-syntax keyword glConstant GL_OPERAND0_RGB          
-syntax keyword glConstant GL_OPERAND1_RGB          
-syntax keyword glConstant GL_OPERAND2_RGB          
-syntax keyword glConstant GL_OPERAND0_ALPHA        
-syntax keyword glConstant GL_OPERAND1_ALPHA        
-syntax keyword glConstant GL_OPERAND2_ALPHA        
-syntax keyword glConstant GL_RGB_SCALE             
-syntax keyword glConstant GL_ADD_SIGNED            
-syntax keyword glConstant GL_INTERPOLATE           
-syntax keyword glConstant GL_SUBTRACT          
-syntax keyword glConstant GL_CONSTANT          
-syntax keyword glConstant GL_PRIMARY_COLOR         
-syntax keyword glConstant GL_PREVIOUS          
-syntax keyword glConstant GL_DOT3_RGB          
-syntax keyword glConstant GL_DOT3_RGBA             
-syntax keyword glConstant GL_CLAMP_TO_BORDER       
+syntax keyword glConstant GL_COMPRESSED_TEXTURE_FORMATS
+syntax keyword glConstant GL_MULTISAMPLE
+syntax keyword glConstant GL_SAMPLE_ALPHA_TO_COVERAGE
+syntax keyword glConstant GL_SAMPLE_ALPHA_TO_ONE
+syntax keyword glConstant GL_SAMPLE_COVERAGE
+syntax keyword glConstant GL_SAMPLE_BUFFERS
+syntax keyword glConstant GL_SAMPLES
+syntax keyword glConstant GL_SAMPLE_COVERAGE_VALUE
+syntax keyword glConstant GL_SAMPLE_COVERAGE_INVERT
+syntax keyword glConstant GL_MULTISAMPLE_BIT
+syntax keyword glConstant GL_TRANSPOSE_MODELVIEW_MATRIX
+syntax keyword glConstant GL_TRANSPOSE_PROJECTION_MATRIX
+syntax keyword glConstant GL_TRANSPOSE_TEXTURE_MATRIX
+syntax keyword glConstant GL_TRANSPOSE_COLOR_MATRIX
+syntax keyword glConstant GL_COMBINE
+syntax keyword glConstant GL_COMBINE_RGB
+syntax keyword glConstant GL_COMBINE_ALPHA
+syntax keyword glConstant GL_SOURCE0_RGB
+syntax keyword glConstant GL_SOURCE1_RGB
+syntax keyword glConstant GL_SOURCE2_RGB
+syntax keyword glConstant GL_SOURCE0_ALPHA
+syntax keyword glConstant GL_SOURCE1_ALPHA
+syntax keyword glConstant GL_SOURCE2_ALPHA
+syntax keyword glConstant GL_OPERAND0_RGB
+syntax keyword glConstant GL_OPERAND1_RGB
+syntax keyword glConstant GL_OPERAND2_RGB
+syntax keyword glConstant GL_OPERAND0_ALPHA
+syntax keyword glConstant GL_OPERAND1_ALPHA
+syntax keyword glConstant GL_OPERAND2_ALPHA
+syntax keyword glConstant GL_RGB_SCALE
+syntax keyword glConstant GL_ADD_SIGNED
+syntax keyword glConstant GL_INTERPOLATE
+syntax keyword glConstant GL_SUBTRACT
+syntax keyword glConstant GL_CONSTANT
+syntax keyword glConstant GL_PRIMARY_COLOR
+syntax keyword glConstant GL_PREVIOUS
+syntax keyword glConstant GL_DOT3_RGB
+syntax keyword glConstant GL_DOT3_RGBA
+syntax keyword glConstant GL_CLAMP_TO_BORDER
 "}}}
 
 " OpenGL 1.4 {{{
@@ -961,15 +961,15 @@ syntax keyword glConstant GL_MAX_COLOR_MATRIX_STACK_DEPTH
 
 " Color Table
 syntax keyword glConstant GL_COLOR_TABLE
-syntax keyword glConstant GL_COLOR_TABLE_BIAS      
-syntax keyword glConstant GL_COLOR_TABLE_FORMAT      
-syntax keyword glConstant GL_COLOR_TABLE_SCALE      
-syntax keyword glConstant GL_COLOR_TABLE_WIDTH      
-syntax keyword glConstant GL_POST_COLOR_COLOR_TABLE        
-syntax keyword glConstant GL_POST_CONVOLUTION_COLOR_TABLE        
+syntax keyword glConstant GL_COLOR_TABLE_BIAS
+syntax keyword glConstant GL_COLOR_TABLE_FORMAT
+syntax keyword glConstant GL_COLOR_TABLE_SCALE
+syntax keyword glConstant GL_COLOR_TABLE_WIDTH
+syntax keyword glConstant GL_POST_COLOR_COLOR_TABLE
+syntax keyword glConstant GL_POST_CONVOLUTION_COLOR_TABLE
 syntax keyword glConstant GL_PROXY_COLOR_TABLE
-syntax keyword glConstant GL_PROXY_POST_COLOR_COLOR_TABLE        
-syntax keyword glConstant GL_PROXY_POST_CONVOLUTION_COLOR_TABLE        
+syntax keyword glConstant GL_PROXY_POST_COLOR_COLOR_TABLE
+syntax keyword glConstant GL_PROXY_POST_CONVOLUTION_COLOR_TABLE
 
 " Convolution
 syntax keyword glConstant GL_CONSTANT_BORDER
@@ -1015,23 +1015,23 @@ syntax keyword glConstant GL_MINMAX_FORMAT
 syntax keyword glConstant GL_MINMAX_SINK
 
 " Pixel Mode / Transfer
-syntax keyword glConstant GL_UNPACK_LSB_FIRST      
-syntax keyword glConstant GL_POST_COLOR_RED_SCALE        
-syntax keyword glConstant GL_POST_COLOR_RED_BIAS     
-syntax keyword glConstant GL_POST_COLOR_GREEN_SCALE      
-syntax keyword glConstant GL_POST_COLOR_GREEN_BIAS       
-syntax keyword glConstant GL_POST_COLOR_BLUE_SCALE       
-syntax keyword glConstant GL_POST_COLOR_BLUE_BIAS        
-syntax keyword glConstant GL_POST_COLOR_ALPHA_SCALE      
-syntax keyword glConstant GL_POST_COLOR_ALPHA_BIAS       
-syntax keyword glConstant GL_POST_CONVOLUTION_RED_SCALE        
-syntax keyword glConstant GL_POST_CONVOLUTION_RED_BIAS     
-syntax keyword glConstant GL_POST_CONVOLUTION_GREEN_SCALE      
-syntax keyword glConstant GL_POST_CONVOLUTION_GREEN_BIAS       
-syntax keyword glConstant GL_POST_CONVOLUTION_BLUE_SCALE       
-syntax keyword glConstant GL_POST_CONVOLUTION_BLUE_BIAS        
-syntax keyword glConstant GL_POST_CONVOLUTION_ALPHA_SCALE      
-syntax keyword glConstant GL_POST_CONVOLUTION_ALPHA_BIAS       
+syntax keyword glConstant GL_UNPACK_LSB_FIRST
+syntax keyword glConstant GL_POST_COLOR_RED_SCALE
+syntax keyword glConstant GL_POST_COLOR_RED_BIAS
+syntax keyword glConstant GL_POST_COLOR_GREEN_SCALE
+syntax keyword glConstant GL_POST_COLOR_GREEN_BIAS
+syntax keyword glConstant GL_POST_COLOR_BLUE_SCALE
+syntax keyword glConstant GL_POST_COLOR_BLUE_BIAS
+syntax keyword glConstant GL_POST_COLOR_ALPHA_SCALE
+syntax keyword glConstant GL_POST_COLOR_ALPHA_BIAS
+syntax keyword glConstant GL_POST_CONVOLUTION_RED_SCALE
+syntax keyword glConstant GL_POST_CONVOLUTION_RED_BIAS
+syntax keyword glConstant GL_POST_CONVOLUTION_GREEN_SCALE
+syntax keyword glConstant GL_POST_CONVOLUTION_GREEN_BIAS
+syntax keyword glConstant GL_POST_CONVOLUTION_BLUE_SCALE
+syntax keyword glConstant GL_POST_CONVOLUTION_BLUE_BIAS
+syntax keyword glConstant GL_POST_CONVOLUTION_ALPHA_SCALE
+syntax keyword glConstant GL_POST_CONVOLUTION_ALPHA_BIAS
 
 " Points
 syntax keyword glConstant GL_COORD_REPLACE
@@ -1108,12 +1108,12 @@ syntax keyword glConstant GL_COMPRESSED_SRGB
 syntax keyword glConstant GL_COMPRESSED_SRGB_ALPHA
 syntax keyword glConstant GL_COMPRESSED_SLUMINANCE
 syntax keyword glConstant GL_COMPRESSED_SLUMINANCE_ALPHA
-syntax keyword glConstant GL_SRC0_RGB           
-syntax keyword glConstant GL_SRC1_RGB           
-syntax keyword glConstant GL_SRC2_RGB           
-syntax keyword glConstant GL_SRC0_ALPHA         
-syntax keyword glConstant GL_SRC1_ALPHA         
-syntax keyword glConstant GL_SRC2_ALPHA         
+syntax keyword glConstant GL_SRC0_RGB
+syntax keyword glConstant GL_SRC1_RGB
+syntax keyword glConstant GL_SRC2_RGB
+syntax keyword glConstant GL_SRC0_ALPHA
+syntax keyword glConstant GL_SRC1_ALPHA
+syntax keyword glConstant GL_SRC2_ALPHA
 syntax keyword glConstant GL_SRGB
 syntax keyword glConstant GL_SRGB_ALPHA
 syntax keyword glConstant GL_SRGB8
@@ -1298,7 +1298,7 @@ syntax keyword glConstant GL_HALF_FLOAT
 syntax keyword glConstant GL_UNSIGNED_INT_24_8
 syntax keyword glConstant GL_UNSIGNED_INT_10F_11F_11F_REV
 syntax keyword glConstant GL_UNSIGNED_INT_5_9_9_9_REV
-syntax keyword glConstant GL_FLOAT_32_UNSIGNED_INT_24_8_REV  
+syntax keyword glConstant GL_FLOAT_32_UNSIGNED_INT_24_8_REV
 
 syntax keyword glConstant GL_INDEX
 syntax keyword glConstant GL_UNSIGNED_NORMALIZED
@@ -2837,49 +2837,49 @@ syntax keyword glFunction glBindVertexBuffers
 "}}}
 
 
-" }}}  
+" }}}
 
 " Extensions {{{
 
   if !exists ("c_opengl_no_ext_arb")
   " ARB extensions {{{
-    
+
     " GL_ARB_multitexture (ARB extension and OpenGL 1.2.1) {{{
-    syntax keyword glConstant GL_TEXTURE0_ARB         
-    syntax keyword glConstant GL_TEXTURE1_ARB         
-    syntax keyword glConstant GL_TEXTURE2_ARB         
-    syntax keyword glConstant GL_TEXTURE3_ARB         
-    syntax keyword glConstant GL_TEXTURE4_ARB         
-    syntax keyword glConstant GL_TEXTURE5_ARB         
-    syntax keyword glConstant GL_TEXTURE6_ARB         
-    syntax keyword glConstant GL_TEXTURE7_ARB         
-    syntax keyword glConstant GL_TEXTURE8_ARB         
-    syntax keyword glConstant GL_TEXTURE9_ARB         
-    syntax keyword glConstant GL_TEXTURE10_ARB        
-    syntax keyword glConstant GL_TEXTURE11_ARB        
-    syntax keyword glConstant GL_TEXTURE12_ARB        
-    syntax keyword glConstant GL_TEXTURE13_ARB        
-    syntax keyword glConstant GL_TEXTURE14_ARB        
-    syntax keyword glConstant GL_TEXTURE15_ARB        
-    syntax keyword glConstant GL_TEXTURE16_ARB        
-    syntax keyword glConstant GL_TEXTURE17_ARB        
-    syntax keyword glConstant GL_TEXTURE18_ARB        
-    syntax keyword glConstant GL_TEXTURE19_ARB        
-    syntax keyword glConstant GL_TEXTURE20_ARB        
-    syntax keyword glConstant GL_TEXTURE21_ARB        
-    syntax keyword glConstant GL_TEXTURE22_ARB        
-    syntax keyword glConstant GL_TEXTURE23_ARB        
-    syntax keyword glConstant GL_TEXTURE24_ARB        
-    syntax keyword glConstant GL_TEXTURE25_ARB        
-    syntax keyword glConstant GL_TEXTURE26_ARB        
-    syntax keyword glConstant GL_TEXTURE27_ARB        
-    syntax keyword glConstant GL_TEXTURE28_ARB        
-    syntax keyword glConstant GL_TEXTURE29_ARB        
-    syntax keyword glConstant GL_TEXTURE30_ARB        
-    syntax keyword glConstant GL_TEXTURE31_ARB        
-    syntax keyword glConstant GL_ACTIVE_TEXTURE_ARB       
+    syntax keyword glConstant GL_TEXTURE0_ARB
+    syntax keyword glConstant GL_TEXTURE1_ARB
+    syntax keyword glConstant GL_TEXTURE2_ARB
+    syntax keyword glConstant GL_TEXTURE3_ARB
+    syntax keyword glConstant GL_TEXTURE4_ARB
+    syntax keyword glConstant GL_TEXTURE5_ARB
+    syntax keyword glConstant GL_TEXTURE6_ARB
+    syntax keyword glConstant GL_TEXTURE7_ARB
+    syntax keyword glConstant GL_TEXTURE8_ARB
+    syntax keyword glConstant GL_TEXTURE9_ARB
+    syntax keyword glConstant GL_TEXTURE10_ARB
+    syntax keyword glConstant GL_TEXTURE11_ARB
+    syntax keyword glConstant GL_TEXTURE12_ARB
+    syntax keyword glConstant GL_TEXTURE13_ARB
+    syntax keyword glConstant GL_TEXTURE14_ARB
+    syntax keyword glConstant GL_TEXTURE15_ARB
+    syntax keyword glConstant GL_TEXTURE16_ARB
+    syntax keyword glConstant GL_TEXTURE17_ARB
+    syntax keyword glConstant GL_TEXTURE18_ARB
+    syntax keyword glConstant GL_TEXTURE19_ARB
+    syntax keyword glConstant GL_TEXTURE20_ARB
+    syntax keyword glConstant GL_TEXTURE21_ARB
+    syntax keyword glConstant GL_TEXTURE22_ARB
+    syntax keyword glConstant GL_TEXTURE23_ARB
+    syntax keyword glConstant GL_TEXTURE24_ARB
+    syntax keyword glConstant GL_TEXTURE25_ARB
+    syntax keyword glConstant GL_TEXTURE26_ARB
+    syntax keyword glConstant GL_TEXTURE27_ARB
+    syntax keyword glConstant GL_TEXTURE28_ARB
+    syntax keyword glConstant GL_TEXTURE29_ARB
+    syntax keyword glConstant GL_TEXTURE30_ARB
+    syntax keyword glConstant GL_TEXTURE31_ARB
+    syntax keyword glConstant GL_ACTIVE_TEXTURE_ARB
     syntax keyword glConstant GL_CLIENT_ACTIVE_TEXTURE_ARB
-    syntax keyword glConstant GL_MAX_TEXTURE_UNITS_ARB    
+    syntax keyword glConstant GL_MAX_TEXTURE_UNITS_ARB
 
     syntax keyword glFunction glActiveTextureARB
     syntax keyword glFunction glClientActiveTextureARB
@@ -3113,7 +3113,7 @@ syntax keyword glFunction glBindVertexBuffers
     syntax keyword glFunction glGetQueryObjectivARB
     syntax keyword glFunction glGetQueryObjectuivARB
     " }}}
-  
+
     " GL_ARB_vertex_buffer_object {{{
     syntax keyword glConstant GL_ARRAY_BUFFER_ARB
     syntax keyword glConstant GL_ELEMENT_ARRAY_BUFFER_ARB
@@ -3213,7 +3213,7 @@ syntax keyword glFunction glBindVertexBuffers
     syntax keyword glConstant GL_PROXY_TEXTURE_CUBE_MAP_ARB
     syntax keyword glConstant GL_MAX_CUBE_MAP_TEXTURE_SIZE_ARB
     " }}}
-    
+
     " GL_ARB_texture_env_combine {{{
     syntax keyword glConstant GL_COMBINE_ARB
     syntax keyword glConstant GL_COMBINE_RGB_ARB
@@ -3510,12 +3510,12 @@ syntax keyword glFunction glBindVertexBuffers
     syntax keyword glFunction glGetAttribLocationARB
     " }}}
 
-    " OpenGL ARB extension GL_ARB_fragment_shader {{{ 
+    " OpenGL ARB extension GL_ARB_fragment_shader {{{
     syntax keyword glConstant GL_MAX_FRAGMENT_UNIFORM_COMPONENTS_ARB
     syntax keyword glType GL_FRAGMENT_SHADER_ARB
     " }}}
 
-    " OpenGL ARB extension GL_ARB_bindless_texture {{{ 
+    " OpenGL ARB extension GL_ARB_bindless_texture {{{
     syntax keyword glType GL_UNSIGNED_INT64_ARB
 
     syntax keyword glFunction glGetTextureHandleARB
@@ -3536,7 +3536,7 @@ syntax keyword glFunction glBindVertexBuffers
     syntax keyword glFunction glGetVertexAttribL1ui64vARB
     " }}}
 
-    " OpenGL ARB extension GL_ARB_compute_variable_group {{{ 
+    " OpenGL ARB extension GL_ARB_compute_variable_group {{{
     syntax keyword glConstant GL_MAX_COMPUTE_VARIABLE_GROUP_INVOCATIONS_ARB
     syntax keyword glConstant GL_MAX_COMPUTE_FIXED_GROUP_INVOCATIONS_ARB
     syntax keyword glConstant GL_MAX_COMPUTE_VARIABLE_GROUP_SIZE_ARB
@@ -3545,7 +3545,7 @@ syntax keyword glFunction glBindVertexBuffers
     syntax keyword glFunction glDispatchComputeGroupSizeARB
     " }}}
 
-    " OpenGL ARB extension GL_ARB_indirect_parameters {{{ 
+    " OpenGL ARB extension GL_ARB_indirect_parameters {{{
     syntax keyword glConstant GL_PARAMETER_BUFFER_ARB
     syntax keyword glConstant GL_PARAMETER_BUFFER_BINDING_ARB
 
@@ -3553,11 +3553,11 @@ syntax keyword glFunction glBindVertexBuffers
     syntax keyword glFunction glMultiDrawElementsIndirectCountARB
     " }}}
 
-    " OpenGL ARB extension GL_ARB_seamless_cubemap_per_texture {{{ 
+    " OpenGL ARB extension GL_ARB_seamless_cubemap_per_texture {{{
     syntax keyword glConstant GL_TEXTURE_CUBE_MAP_SEAMLESS
     " }}}
 
-    " OpenGL ARB extension GL_ARB_sparse_texture {{{ 
+    " OpenGL ARB extension GL_ARB_sparse_texture {{{
     syntax keyword glConstant GL_TEXTURE_SPARSE_ARB
     syntax keyword glConstant GL_VIRTUAL_PAGE_SIZE_INDEX_ARB
     syntax keyword glConstant GL_NUM_SPARSE_LEVELS_ARB
@@ -3573,13 +3573,13 @@ syntax keyword glFunction glBindVertexBuffers
     syntax keyword glFunction glTexturePageCommitmentARB
     syntax keyword glFunction glTexturePageCommitmentEXT
     " }}}
-    
-  " }}}
-  endif 
- 
-" }}} 
 
-" Functions {{{ 
+  " }}}
+  endif
+
+" }}}
+
+" Functions {{{
 syntax keyword glFunction glClearIndex
 syntax keyword glFunction glClearColor
 syntax keyword glFunction glClear
@@ -4008,7 +4008,7 @@ syntax keyword glFunction glSampleCoverage
 " glu.h
 if !exists ("c_opengl_no_glu")
 " GLU {{{
-  " Constants {{{ 
+  " Constants {{{
   syn keyword glConstant GLU_EXT_object_space_tess
   syn keyword glConstant GLU_EXT_nurbs_tessellator
   syn keyword glConstant GLU_FALSE GLU_TRUE
@@ -4027,43 +4027,43 @@ if !exists ("c_opengl_no_glu")
   syn keyword glConstant GLU_OUTLINE_PATCH
 
   "NurbsCallback"
-  syn keyword glConstant GLU_NURBS_ERROR             
-  syn keyword glConstant GLU_ERROR                   
-  syn keyword glConstant GLU_NURBS_BEGIN             
-  syn keyword glConstant GLU_NURBS_BEGIN_EXT         
-  syn keyword glConstant GLU_NURBS_VERTEX            
-  syn keyword glConstant GLU_NURBS_VERTEX_EXT        
-  syn keyword glConstant GLU_NURBS_NORMAL            
-  syn keyword glConstant GLU_NURBS_NORMAL_EXT        
-  syn keyword glConstant GLU_NURBS_COLOR             
-  syn keyword glConstant GLU_NURBS_COLOR_EXT         
-  syn keyword glConstant GLU_NURBS_TEXTURE_COORD     
-  syn keyword glConstant GLU_NURBS_TEX_COORD_EXT     
-  syn keyword glConstant GLU_NURBS_END               
-  syn keyword glConstant GLU_NURBS_END_EXT           
-  syn keyword glConstant GLU_NURBS_BEGIN_DATA        
-  syn keyword glConstant GLU_NURBS_BEGIN_DATA_EXT    
-  syn keyword glConstant GLU_NURBS_VERTEX_DATA       
-  syn keyword glConstant GLU_NURBS_VERTEX_DATA_EXT   
-  syn keyword glConstant GLU_NURBS_NORMAL_DATA       
-  syn keyword glConstant GLU_NURBS_NORMAL_DATA_EXT   
-  syn keyword glConstant GLU_NURBS_COLOR_DATA        
-  syn keyword glConstant GLU_NURBS_COLOR_DATA_EXT    
+  syn keyword glConstant GLU_NURBS_ERROR
+  syn keyword glConstant GLU_ERROR
+  syn keyword glConstant GLU_NURBS_BEGIN
+  syn keyword glConstant GLU_NURBS_BEGIN_EXT
+  syn keyword glConstant GLU_NURBS_VERTEX
+  syn keyword glConstant GLU_NURBS_VERTEX_EXT
+  syn keyword glConstant GLU_NURBS_NORMAL
+  syn keyword glConstant GLU_NURBS_NORMAL_EXT
+  syn keyword glConstant GLU_NURBS_COLOR
+  syn keyword glConstant GLU_NURBS_COLOR_EXT
+  syn keyword glConstant GLU_NURBS_TEXTURE_COORD
+  syn keyword glConstant GLU_NURBS_TEX_COORD_EXT
+  syn keyword glConstant GLU_NURBS_END
+  syn keyword glConstant GLU_NURBS_END_EXT
+  syn keyword glConstant GLU_NURBS_BEGIN_DATA
+  syn keyword glConstant GLU_NURBS_BEGIN_DATA_EXT
+  syn keyword glConstant GLU_NURBS_VERTEX_DATA
+  syn keyword glConstant GLU_NURBS_VERTEX_DATA_EXT
+  syn keyword glConstant GLU_NURBS_NORMAL_DATA
+  syn keyword glConstant GLU_NURBS_NORMAL_DATA_EXT
+  syn keyword glConstant GLU_NURBS_COLOR_DATA
+  syn keyword glConstant GLU_NURBS_COLOR_DATA_EXT
   syn keyword glConstant GLU_NURBS_TEXTURE_COORD_DATA
   syn keyword glConstant GLU_NURBS_TEX_COORD_DATA_EXT
-  syn keyword glConstant GLU_NURBS_END_DATA          
-  syn keyword glConstant GLU_NURBS_END_DATA_EXT      
+  syn keyword glConstant GLU_NURBS_END_DATA
+  syn keyword glConstant GLU_NURBS_END_DATA_EXT
 
   "NurbsError"
-  syn keyword glConstant GLU_NURBS_ERROR1 
-  syn keyword glConstant GLU_NURBS_ERROR2 
-  syn keyword glConstant GLU_NURBS_ERROR3 
-  syn keyword glConstant GLU_NURBS_ERROR4 
-  syn keyword glConstant GLU_NURBS_ERROR5 
-  syn keyword glConstant GLU_NURBS_ERROR6 
-  syn keyword glConstant GLU_NURBS_ERROR7 
-  syn keyword glConstant GLU_NURBS_ERROR8 
-  syn keyword glConstant GLU_NURBS_ERROR9 
+  syn keyword glConstant GLU_NURBS_ERROR1
+  syn keyword glConstant GLU_NURBS_ERROR2
+  syn keyword glConstant GLU_NURBS_ERROR3
+  syn keyword glConstant GLU_NURBS_ERROR4
+  syn keyword glConstant GLU_NURBS_ERROR5
+  syn keyword glConstant GLU_NURBS_ERROR6
+  syn keyword glConstant GLU_NURBS_ERROR7
+  syn keyword glConstant GLU_NURBS_ERROR8
+  syn keyword glConstant GLU_NURBS_ERROR9
   syn keyword glConstant GLU_NURBS_ERROR10
   syn keyword glConstant GLU_NURBS_ERROR11
   syn keyword glConstant GLU_NURBS_ERROR12
@@ -4094,29 +4094,29 @@ if !exists ("c_opengl_no_glu")
   syn keyword glConstant GLU_NURBS_ERROR37
 
   "NurbsProperty"
-  syn keyword glConstant GLU_AUTO_LOAD_MATRIX     
-  syn keyword glConstant GLU_CULLING              
-  syn keyword glConstant GLU_SAMPLING_TOLERANCE   
-  syn keyword glConstant GLU_DISPLAY_MODE         
-  syn keyword glConstant GLU_PARAMETRIC_TOLERANCE 
-  syn keyword glConstant GLU_SAMPLING_METHOD      
-  syn keyword glConstant GLU_U_STEP               
-  syn keyword glConstant GLU_V_STEP               
-  syn keyword glConstant GLU_NURBS_MODE           
-  syn keyword glConstant GLU_NURBS_MODE_EXT       
-  syn keyword glConstant GLU_NURBS_TESSELLATOR    
+  syn keyword glConstant GLU_AUTO_LOAD_MATRIX
+  syn keyword glConstant GLU_CULLING
+  syn keyword glConstant GLU_SAMPLING_TOLERANCE
+  syn keyword glConstant GLU_DISPLAY_MODE
+  syn keyword glConstant GLU_PARAMETRIC_TOLERANCE
+  syn keyword glConstant GLU_SAMPLING_METHOD
+  syn keyword glConstant GLU_U_STEP
+  syn keyword glConstant GLU_V_STEP
+  syn keyword glConstant GLU_NURBS_MODE
+  syn keyword glConstant GLU_NURBS_MODE_EXT
+  syn keyword glConstant GLU_NURBS_TESSELLATOR
   syn keyword glConstant GLU_NURBS_TESSELLATOR_EXT
-  syn keyword glConstant GLU_NURBS_RENDERER       
-  syn keyword glConstant GLU_NURBS_RENDERER_EXT   
+  syn keyword glConstant GLU_NURBS_RENDERER
+  syn keyword glConstant GLU_NURBS_RENDERER_EXT
 
   " NurbsSampling
-  syn keyword glConstant GLU_OBJECT_PARAMETRIC_ERROR    
+  syn keyword glConstant GLU_OBJECT_PARAMETRIC_ERROR
   syn keyword glConstant GLU_OBJECT_PARAMETRIC_ERROR_EXT
-  syn keyword glConstant GLU_OBJECT_PATH_LENGTH         
-  syn keyword glConstant GLU_OBJECT_PATH_LENGTH_EXT     
-  syn keyword glConstant GLU_PATH_LENGTH                
-  syn keyword glConstant GLU_PARAMETRIC_ERROR           
-  syn keyword glConstant GLU_DOMAIN_DISTANCE            
+  syn keyword glConstant GLU_OBJECT_PATH_LENGTH
+  syn keyword glConstant GLU_OBJECT_PATH_LENGTH_EXT
+  syn keyword glConstant GLU_PATH_LENGTH
+  syn keyword glConstant GLU_PARAMETRIC_ERROR
+  syn keyword glConstant GLU_DOMAIN_DISTANCE
 
   "NurbsTrim"
   syn keyword glConstant GLU_MAP1_TRIM_2
@@ -4133,56 +4133,56 @@ if !exists ("c_opengl_no_glu")
   syn keyword glConstant GLU_INSIDE
 
   " TessCallback
-  syn keyword glConstant GLU_TESS_BEGIN         
-  syn keyword glConstant GLU_BEGIN              
-  syn keyword glConstant GLU_TESS_VERTEX        
-  syn keyword glConstant GLU_VERTEX             
-  syn keyword glConstant GLU_TESS_END           
-  syn keyword glConstant GLU_END                
-  syn keyword glConstant GLU_TESS_ERROR         
-  syn keyword glConstant GLU_TESS_EDGE_FLAG     
-  syn keyword glConstant GLU_EDGE_FLAG          
-  syn keyword glConstant GLU_TESS_COMBINE       
-  syn keyword glConstant GLU_TESS_BEGIN_DATA    
-  syn keyword glConstant GLU_TESS_VERTEX_DATA   
-  syn keyword glConstant GLU_TESS_END_DATA      
-  syn keyword glConstant GLU_TESS_ERROR_DATA    
+  syn keyword glConstant GLU_TESS_BEGIN
+  syn keyword glConstant GLU_BEGIN
+  syn keyword glConstant GLU_TESS_VERTEX
+  syn keyword glConstant GLU_VERTEX
+  syn keyword glConstant GLU_TESS_END
+  syn keyword glConstant GLU_END
+  syn keyword glConstant GLU_TESS_ERROR
+  syn keyword glConstant GLU_TESS_EDGE_FLAG
+  syn keyword glConstant GLU_EDGE_FLAG
+  syn keyword glConstant GLU_TESS_COMBINE
+  syn keyword glConstant GLU_TESS_BEGIN_DATA
+  syn keyword glConstant GLU_TESS_VERTEX_DATA
+  syn keyword glConstant GLU_TESS_END_DATA
+  syn keyword glConstant GLU_TESS_ERROR_DATA
   syn keyword glConstant GLU_TESS_EDGE_FLAG_DATA
-  syn keyword glConstant GLU_TESS_COMBINE_DATA  
+  syn keyword glConstant GLU_TESS_COMBINE_DATA
 
   " TessContour
-  syn keyword glConstant GLU_CW      
-  syn keyword glConstant GLU_CCW     
+  syn keyword glConstant GLU_CW
+  syn keyword glConstant GLU_CCW
   syn keyword glConstant GLU_INTERIOR
   syn keyword glConstant GLU_EXTERIOR
-  syn keyword glConstant GLU_UNKNOWN 
+  syn keyword glConstant GLU_UNKNOWN
 
   " TessProperty
-  syn keyword glConstant GLU_TESS_WINDING_RULE 
+  syn keyword glConstant GLU_TESS_WINDING_RULE
   syn keyword glConstant GLU_TESS_BOUNDARY_ONLY
-  syn keyword glConstant GLU_TESS_TOLERANCE    
+  syn keyword glConstant GLU_TESS_TOLERANCE
 
   " TessError
-  syn keyword glConstant GLU_TESS_ERROR1               
-  syn keyword glConstant GLU_TESS_ERROR2               
-  syn keyword glConstant GLU_TESS_ERROR3               
-  syn keyword glConstant GLU_TESS_ERROR4               
-  syn keyword glConstant GLU_TESS_ERROR5               
-  syn keyword glConstant GLU_TESS_ERROR6               
-  syn keyword glConstant GLU_TESS_ERROR7               
-  syn keyword glConstant GLU_TESS_ERROR8               
+  syn keyword glConstant GLU_TESS_ERROR1
+  syn keyword glConstant GLU_TESS_ERROR2
+  syn keyword glConstant GLU_TESS_ERROR3
+  syn keyword glConstant GLU_TESS_ERROR4
+  syn keyword glConstant GLU_TESS_ERROR5
+  syn keyword glConstant GLU_TESS_ERROR6
+  syn keyword glConstant GLU_TESS_ERROR7
+  syn keyword glConstant GLU_TESS_ERROR8
   syn keyword glConstant GLU_TESS_MISSING_BEGIN_POLYGON
   syn keyword glConstant GLU_TESS_MISSING_BEGIN_CONTOUR
-  syn keyword glConstant GLU_TESS_MISSING_END_POLYGON  
-  syn keyword glConstant GLU_TESS_MISSING_END_CONTOUR  
-  syn keyword glConstant GLU_TESS_COORD_TOO_LARGE      
+  syn keyword glConstant GLU_TESS_MISSING_END_POLYGON
+  syn keyword glConstant GLU_TESS_MISSING_END_CONTOUR
+  syn keyword glConstant GLU_TESS_COORD_TOO_LARGE
   syn keyword glConstant GLU_TESS_NEED_COMBINE_CALLBACK
 
   " TessWinding
-  syn keyword glConstant GLU_TESS_WINDING_ODD        
-  syn keyword glConstant GLU_TESS_WINDING_NONZERO    
-  syn keyword glConstant GLU_TESS_WINDING_POSITIVE   
-  syn keyword glConstant GLU_TESS_WINDING_NEGATIVE   
+  syn keyword glConstant GLU_TESS_WINDING_ODD
+  syn keyword glConstant GLU_TESS_WINDING_NONZERO
+  syn keyword glConstant GLU_TESS_WINDING_POSITIVE
+  syn keyword glConstant GLU_TESS_WINDING_NEGATIVE
   syn keyword glConstant GLU_TESS_WINDING_ABS_GEQ_TWO
 
 " }}}
@@ -4249,8 +4249,8 @@ if !exists ("c_opengl_no_glu")
   syntax keyword glFunction gluUnProject
   syntax keyword glFunction gluUnProject4
   " }}}
-" }}} 
-endif 
+" }}}
+endif
 
 
 " glut.h
@@ -4945,7 +4945,7 @@ if !exists ("c_opengl_no_egl")
   " }}}
 
   " Constants {{{
-  " API handles 
+  " API handles
   syntax keyword glConstant EGL_DEFAULT_DISPLAY
   syntax keyword glConstant EGL_NO_CONTEXT
   syntax keyword glConstant EGL_NO_DISPLAY
@@ -5086,51 +5086,51 @@ if !exists ("c_opengl_no_egl")
   " }}}
 
   " Functions {{{
-  syntax keyword glFunction eglGetError                                 
+  syntax keyword glFunction eglGetError
 
-  syntax keyword glFunction eglGetDisplay                       
-  syntax keyword glFunction eglInitialize                       
-  syntax keyword glFunction eglTerminate                        
+  syntax keyword glFunction eglGetDisplay
+  syntax keyword glFunction eglInitialize
+  syntax keyword glFunction eglTerminate
 
-  syntax keyword glFunction eglQueryString                      
+  syntax keyword glFunction eglQueryString
 
-  syntax keyword glFunction eglGetConfigs                       
-  syntax keyword glFunction eglChooseConfig                     
-  syntax keyword glFunction eglGetConfigAttrib                  
+  syntax keyword glFunction eglGetConfigs
+  syntax keyword glFunction eglChooseConfig
+  syntax keyword glFunction eglGetConfigAttrib
 
-  syntax keyword glFunction eglCreateWindowSurface      
-  syntax keyword glFunction eglCreatePbufferSurface     
-  syntax keyword glFunction eglCreatePixmapSurface      
-  syntax keyword glFunction eglDestroySurface                   
-  syntax keyword glFunction eglQuerySurface                     
+  syntax keyword glFunction eglCreateWindowSurface
+  syntax keyword glFunction eglCreatePbufferSurface
+  syntax keyword glFunction eglCreatePixmapSurface
+  syntax keyword glFunction eglDestroySurface
+  syntax keyword glFunction eglQuerySurface
 
-  syntax keyword glFunction eglSurfaceAttrib                    
-  syntax keyword glFunction eglBindTexImage                     
-  syntax keyword glFunction eglReleaseTexImage                  
+  syntax keyword glFunction eglSurfaceAttrib
+  syntax keyword glFunction eglBindTexImage
+  syntax keyword glFunction eglReleaseTexImage
 
-  syntax keyword glFunction eglSwapInterval                     
+  syntax keyword glFunction eglSwapInterval
 
-  syntax keyword glFunction eglCreateContext                    
-  syntax keyword glFunction eglDestroyContext                   
-  syntax keyword glFunction eglMakeCurrent                      
+  syntax keyword glFunction eglCreateContext
+  syntax keyword glFunction eglDestroyContext
+  syntax keyword glFunction eglMakeCurrent
 
-  syntax keyword glFunction eglGetCurrentContext        
-  syntax keyword glFunction eglGetCurrentSurface        
-  syntax keyword glFunction eglGetCurrentDisplay        
-  syntax keyword glFunction eglQueryContext                     
+  syntax keyword glFunction eglGetCurrentContext
+  syntax keyword glFunction eglGetCurrentSurface
+  syntax keyword glFunction eglGetCurrentDisplay
+  syntax keyword glFunction eglQueryContext
 
-  syntax keyword glFunction eglWaitGL                                   
-  syntax keyword glFunction eglWaitNative                       
-  syntax keyword glFunction eglSwapBuffers                      
-  syntax keyword glFunction eglCopyBuffers                      
+  syntax keyword glFunction eglWaitGL
+  syntax keyword glFunction eglWaitNative
+  syntax keyword glFunction eglSwapBuffers
+  syntax keyword glFunction eglCopyBuffers
 
   syntax keyword glFunction eglGetProcAddress
 
   syntax keyword glFunction eglCreatePbufferFromClientBuffer
-  syntax keyword glFunction eglWaitClient                       
-  syntax keyword glFunction eglBindAPI                                  
-  syntax keyword glFunction eglQueryAPI                                 
-  syntax keyword glFunction eglReleaseThread                    
+  syntax keyword glFunction eglWaitClient
+  syntax keyword glFunction eglBindAPI
+  syntax keyword glFunction eglQueryAPI
+  syntax keyword glFunction eglReleaseThread
   " }}}
 " }}}
 endif
