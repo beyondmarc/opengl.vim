@@ -1739,6 +1739,13 @@ syntax keyword glFunction glUniformBlockBinding
 "}}}
 
 " OpenGL 3.2 {{{
+" Types
+"{{{
+syntax keyword glType GLint64
+syntax keyword glType GLuint64
+syntax keyword glType GLsync
+"}}}
+
 " Constants
 "{{{
 " Color formats
