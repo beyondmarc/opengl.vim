@@ -2,7 +2,7 @@
 " Language:     C OpenGL
 " Author:       Marc Costa <beyond.marc@gmail.com>
 " Version:      4.5
-" Last Change:  August 21, 2014
+" Last Change:  April 23, 2017
 " Notes:        Adapted from opengl.vim - Andreeshchev Eugene <admix@pisem.net>
 
 " Usage:
@@ -10,6 +10,10 @@
 "   Source it from somewhere
 "
 " Changelog:
+"   2017-04-23
+"       * Added missing functions
+"       * Fixed typos
+"
 "   2014-08-21
 "       * Updated to OpenGL 4.5 specification.
 "       * Deleted trailing whitespace
@@ -1190,6 +1194,8 @@ syntax keyword glFunction glMapBuffer
 syntax keyword glFunction glMultiDrawElements
 syntax keyword glFunction glPointParameterf
 syntax keyword glFunction glPointParameterfv
+syntax keyword glFunction glPointParameteri
+syntax keyword glFunction glPointParameteriv
 syntax keyword glFunction glShaderSource
 syntax keyword glFunction glSecondaryColor3b
 syntax keyword glFunction glSecondaryColor3d
@@ -1838,6 +1844,7 @@ syntax keyword glConstant GL_UNIFORM_BLOCK_REFERENCED_BY_GEOMETRY_SHADER
 syntax keyword glFunction glClientWaitSync
 syntax keyword glFunction glDeleteSync
 syntax keyword glFunction glFenceSync
+syntax keyword glFunction glFramebufferTexture
 syntax keyword glFunction glGetBufferParameteri64v
 syntax keyword glFunction glGetInteger64i_v
 syntax keyword glFunction glGetInteger64v
@@ -1845,6 +1852,7 @@ syntax keyword glFunction glGetMultisamplefv
 syntax keyword glFunction glGetSynciv
 syntax keyword glFunction glIsSync
 syntax keyword glFunction glProvokingVertex
+syntax keyword glFunction glSampleMaski
 syntax keyword glFunction glTexImage2DMultisample
 syntax keyword glFunction glTexImage3DMultisample
 syntax keyword glFunction glWaitSync
@@ -2911,7 +2919,8 @@ syntax keyword glFunction glCreateTransformFeedbacks
 syntax keyword glFunction glTransformFeedbackBufferBase
 syntax keyword glFunction glTransformFeedbackBufferRange
 syntax keyword glFunction glGetTransformFeedbackiv
-syntax keyword glFunction glGetTransformFeedback64_v
+syntax keyword glFunction glGetTransformFeedbacki_v
+syntax keyword glFunction glGetTransformFeedbacki64_v
 
 syntax keyword glFunction glCreateBuffers
 syntax keyword glFunction glNamedBufferStorage
@@ -2925,7 +2934,7 @@ syntax keyword glFunction glMapNamedBufferRange
 syntax keyword glFunction glUnmapNamedBuffer
 syntax keyword glFunction glFlushMappedNamedBufferRange
 syntax keyword glFunction glGetNamedBufferParameteriv
-syntax keyword glFunction glGetNamedBufferParameter64v
+syntax keyword glFunction glGetNamedBufferParameteri64v
 syntax keyword glFunction glGetNamedBufferPointerv
 syntax keyword glFunction glGetNamedBufferSubData
 
@@ -2986,10 +2995,15 @@ syntax keyword glFunction glGetTextureParameterfv
 syntax keyword glFunction glGetTextureParameterIiv
 syntax keyword glFunction glGetTextureParameterIuiv
 syntax keyword glFunction glGetTextureParameteriv
+syntax keyword glFunction glGetQueryBufferObjectiv;
+syntax keyword glFunction glGetQueryBufferObjectuiv;
+syntax keyword glFunction glGetQueryBufferObjecti64v;
+syntax keyword glFunction glGetQueryBufferObjectui64v;
 
 syntax keyword glFunction glCreateVertexArrays
 syntax keyword glFunction glDisableVertexArrayAttrib
 syntax keyword glFunction glEnableVertexArrayAttrib
+syntax keyword glFunction glVertexArrayBindingDivisor
 syntax keyword glFunction glVertexArrayElementBuffer
 syntax keyword glFunction glVertexArrayVertexBuffer
 syntax keyword glFunction glVertexArrayVertexBuffers
@@ -3021,6 +3035,9 @@ syntax keyword glFunction glReadnPixels
 syntax keyword glFunction glGetnUniformfv
 syntax keyword glFunction glGetnUniformiv
 syntax keyword glFunction glGetnUniformuiv
+syntax keyword glFunction glGetnUniformdv;
+syntax keyword glFunction glGetnTexImage;
+syntax keyword glFunction glGetnCompressedTexImage;
 
 " ARB_texture_barrier
 syntax keyword glFunction glTextureBarrier
@@ -3724,7 +3741,7 @@ syntax keyword glFunction glTextureBarrier
     syntax keyword glFunction glIsImageHandleResidentARB
     syntax keyword glFunction glVertexAttribL1ui64ARB
     syntax keyword glFunction glVertexAttribL1ui64vARB
-    syntax keyword glFunction glGetVertexAttribL1ui64vARB
+    syntax keyword glFunction glGetVertexAttribLui64vARB
     " }}}
 
     " OpenGL ARB extension GL_ARB_compute_variable_group {{{
