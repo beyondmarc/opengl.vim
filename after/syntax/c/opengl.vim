@@ -2377,8 +2377,8 @@ syntax keyword glFunction glDrawArraysInstancedBaseInstance
 syntax keyword glFunction glDrawElementsInstancedBaseInstance
 syntax keyword glFunction glDrawElementsInstancedBaseVertexBaseInstance
 
-" ARB_internal_format_query
-syntax keyword glFunction glGetInternalFormativ
+" ARB_internalformat_query
+syntax keyword glFunction glGetInternalformativ
 
 " ARB_shader_atomic_counters
 syntax keyword glFunction glGetActiveAtomicCounterBufferiv
@@ -2735,8 +2735,8 @@ syntax keyword glFunction glGetFramebufferParameteriv
 syntax keyword glFunction glNamedFramebufferParameteriEXT
 syntax keyword glFunction glGetNamedFramebufferParameterivEXT
 
-" ARB_internal_format_query2
-syntax keyword glFunction glGetInternalFormati64v
+" ARB_internalformat_query2
+syntax keyword glFunction glGetInternalformati64v
 
 " ARB_invalidate_subdata
 syntax keyword glFunction glInvalidateTexSubImage
