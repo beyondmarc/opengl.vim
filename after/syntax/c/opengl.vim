@@ -10,6 +10,10 @@
 "   Source it from somewhere
 "
 " Changelog:
+"   2017-07-02
+"       * Deleted trailing semicolons
+"         (prevented some functions from being properly highlighted)
+"
 "   2017-04-23
 "       * Added missing functions
 "       * Fixed typos
@@ -2995,10 +2999,10 @@ syntax keyword glFunction glGetTextureParameterfv
 syntax keyword glFunction glGetTextureParameterIiv
 syntax keyword glFunction glGetTextureParameterIuiv
 syntax keyword glFunction glGetTextureParameteriv
-syntax keyword glFunction glGetQueryBufferObjectiv;
-syntax keyword glFunction glGetQueryBufferObjectuiv;
-syntax keyword glFunction glGetQueryBufferObjecti64v;
-syntax keyword glFunction glGetQueryBufferObjectui64v;
+syntax keyword glFunction glGetQueryBufferObjectiv
+syntax keyword glFunction glGetQueryBufferObjectuiv
+syntax keyword glFunction glGetQueryBufferObjecti64v
+syntax keyword glFunction glGetQueryBufferObjectui64v
 
 syntax keyword glFunction glCreateVertexArrays
 syntax keyword glFunction glDisableVertexArrayAttrib
@@ -3035,9 +3039,9 @@ syntax keyword glFunction glReadnPixels
 syntax keyword glFunction glGetnUniformfv
 syntax keyword glFunction glGetnUniformiv
 syntax keyword glFunction glGetnUniformuiv
-syntax keyword glFunction glGetnUniformdv;
-syntax keyword glFunction glGetnTexImage;
-syntax keyword glFunction glGetnCompressedTexImage;
+syntax keyword glFunction glGetnUniformdv
+syntax keyword glFunction glGetnTexImage
+syntax keyword glFunction glGetnCompressedTexImage
 
 " ARB_texture_barrier
 syntax keyword glFunction glTextureBarrier
